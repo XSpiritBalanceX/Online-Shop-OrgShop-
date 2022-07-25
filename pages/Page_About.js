@@ -20,3 +20,4 @@ class Page_Company extends React.PureComponent {
 }
     
 export default Page_Company;
+//аиаиапираприпарапрпа
