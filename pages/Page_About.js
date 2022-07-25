@@ -1,23 +1,17 @@
 import React from 'react';
 
-import MobileCompany from '../components/MobileCompany';
+import './Page_About.css'
 
-import appData from '../appData';
-
-class Page_Company extends React.PureComponent {
+class Page_About extends React.PureComponent {
           
   render() {
 
     return (
-      <MobileCompany 
-        name={appData.companyName}
-        clients={appData.clientsArr}
-      />
+      <div>jfhvgjfdhvghfdhg</div>
     );
     
   }
 
 }
     
-export default Page_Company;
-//аиаиапираприпарапрпа
+export default Page_About;
