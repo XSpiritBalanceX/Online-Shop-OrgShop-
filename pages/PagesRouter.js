@@ -13,7 +13,7 @@ class PagesRouter extends React.Component {
   render() {
 
     return (
-      <div style={{position:'absolute', top: "60px"}}>
+      <div style={{position:'absolute', top: "15%"}}>
         <Routes>
         <Route path="/" element={<Page_Main/>} />
         <Route path="/catalog" element={<Page_Catalog/>} />

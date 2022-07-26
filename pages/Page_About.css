@@ -1,0 +1,138 @@
+.aboutShop{margin: 1% 0 0 7%;}
+.firstImg{background: url('/images/imag1.png') center / contain no-repeat;
+  width: 40%;
+  height: 20em; 
+  margin-right: 5%;}
+.secImg{background: url('/images/imag2.png') center / contain no-repeat;
+    width: 15em;
+    height: 20em;}
+.thirImg{background: url('/images/imag3.png') center / contain no-repeat;
+  width: 15em;
+  height: 20em;}
+.firstContent, .secondContent{display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 7% 0 7%;}
+.secondContent{margin-top: 1%;}
+.firstInfo{width: 50%;
+  margin-top: 3%;
+  line-height: 1.5em;}
+.firstStat{display: flex;
+  flex-direction: row;
+  justify-content: space-around;}
+.countInfo{font-size: 40px;
+  margin-bottom: -5px;}
+.secImg{margin: 0 2% 0 5%;}
+.secStat{margin-left: -60px;}
+
+
+.inputAll{margin: 5% 7% 5% 1%; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;}
+.text-field_floating-2 {
+  position: relative;
+}
+
+.text-field_floating-2 .text-field__input {
+  margin-top: 3%;
+  height: 15px;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: rgb(232, 232, 212);
+  border: #757575 solid 1px;
+}
+
+.text-field_floating-2 .text-field__label {
+  position: absolute;
+  font-size: 13px;
+  top: 40%;
+  left: 0.3125rem;
+  display: flex;
+  transform: translateY(-50%);
+  pointer-events: none;
+  border: none;
+  background-color: rgb(232, 232, 212);
+  color: #757575;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+}
+
+.text-field_floating-2 .text-field__input::placeholder {
+  color: transparent;
+}
+
+.text-field_floating-2 .text-field__input:focus~.text-field__label,
+.text-field_floating-2 .text-field__input:not(:placeholder-shown)~.text-field__label {
+  top: 5px;
+  transform: translateY(-50%) scale(0.75);
+}
+.checkForRule{width: 20%;}
+.agrFoRu{font-size: 13px;}
+.podpiska{background-color: rgb(232, 232, 212); 
+  border: solid 1px rgb(232, 232, 212);
+  margin: 2% 7% 2% 7%;}
+.aboutPodp{margin: 3% -30px 0 1%;}
+
+.orderPerDay{animation: glowing 1300ms infinite;  border-radius: 50%;}
+  @keyframes glowing {
+    0% {border-color: #f0b29e; box-shadow: inset 0 0 10px  rgb(255, 239, 38,0.5); }
+    50% { border-color: #e5997f; box-shadow: inset 0 0 30px rgb(255, 239, 38,0.5); }
+    100% { border-color: #e3947a; box-shadow: inset 0 0 10px rgb(255, 239, 38,0.5); }
+    }
+.moreInfo{position: relative;}
+.moreInfo:hover::after { 
+  content: attr(data-title);
+  position: absolute; 
+  left: 20%; top: 3%; 
+  z-index: 1; 
+  background: rgba(255,255,230,0.9); 
+  font-family: Arial, sans-serif; 
+  font-size: 11px; 
+  padding: 3px 5px; 
+  border: 1px solid #333; 
+  width: auto;
+}
+.buttonPodp{height: 40px; 
+  width: 210px;
+  background-color: rgba(253, 223, 65, 1);
+  border: none;
+ border-radius: 10px 10px 10px 10px ; 
+ cursor: pointer;
+  margin-bottom: 2%;
+  margin-left: 38%;}
+.error{font-size: 13px;}
+
+@media all and (max-width: 60em){
+  .secStat{margin-left: 5%;}
+  .firstInfo{font-size: 15px;}
+  .firstStat{font-size: 13px;}
+  .countInfo{font-size: 30px;}
+  .text-field_floating-2 .text-field__label{top: 55%;}
+  .inputAll{flex-direction: column;margin-top: 2%;}
+  .checkForRule{width: 70%; margin-top: 2%;}
+  .text-field_floating-2{margin-bottom: 1%;}
+  .text-field_floating-2 .text-field__input:focus~.text-field__label,
+.text-field_floating-2 .text-field__input:not(:placeholder-shown)~.text-field__label {
+  top: 15px;
+}
+.buttonPodp{margin-left: 30%;}
+}
+
+@media all and (max-width: 40em){
+  .secondContent{margin-top: 2%;}
+  .firstImg{height: 15em;}
+  .firstInfo{font-size: 13px;}
+  .firstStat{font-size: 11px;}
+  .countInfo{font-size: 25px;}
+  .secImg, .thirImg{width: 10em;}
+  .secStat{margin-left: 3%;}
+  .checkForRule{width: 90%; }
+  .text-field_floating-2{margin-bottom: 3%;}
+  .text-field_floating-2 .text-field__input:focus~.text-field__label,
+.text-field_floating-2 .text-field__input:not(:placeholder-shown)~.text-field__label {
+  top: 10px;
+}
+.buttonPodp{margin-left: 20%;}
+}

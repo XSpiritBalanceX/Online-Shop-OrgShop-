@@ -5,12 +5,12 @@ import './Page_Main.css';
 
 class Page_Main extends React.PureComponent {
 
-  /* getTest=()=>{
+   /* getTest=()=>{
     fetch('https://my-json-server.typicode.com/XSpiritBalanceX/myjsonser/posts')
     .then(response => response.json())
     .then(json => console.log(json))
     .catch( error => { alert('ошибка!\n'+error); } );
-  } */ 
+  }  */
 
   goToDirrect=()=>{
     
@@ -23,7 +23,7 @@ class Page_Main extends React.PureComponent {
         <div className='leftInfo'>
         <h1>Косметика с любовью к твоей коже</h1>
         <p style={{marginTop:'30px'}}> Мы заботимся о красоте и здоровье любого типа кожи. Здесь ты найдешь только органическую косметику, без опасных веществ в своем составе.</p>
-        <button className='buttonNewProduct' style={{marginTop:'30px'}}>
+        <button className='buttonNewProduct' style={{marginTop:'30px'}} >
          <NavLink to="/catalog" >Посмотреть новинки</NavLink >
         </button>
       </div>

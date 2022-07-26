@@ -7,8 +7,8 @@
 .leftInfo{width: 50%;
    margin-right: 2%;
    line-height: 1.5em;}
-.buttonNewProduct {height: 50px; 
-    width: 230px;
+.buttonNewProduct {height: 40px; 
+    width: 210px;
     background-color: rgba(253, 223, 65, 1);
     border: none;
    border-radius: 10px 10px 10px 10px ; 

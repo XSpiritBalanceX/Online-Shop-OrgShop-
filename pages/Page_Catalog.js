@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MobileCompany from '../components/MobileCompany';
+import MobileClients from '../components/MobileClients';
 
 import appData from '../appData';
 
@@ -9,7 +9,7 @@ class Page_Company extends React.PureComponent {
   render() {
 
     return (
-      <MobileCompany 
+      <MobileClients
         name={appData.companyName}
         clients={appData.clientsArr}
       />
