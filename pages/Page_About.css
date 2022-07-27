@@ -36,17 +36,18 @@
 
 .text-field_floating-2 .text-field__input {
   margin-top: 3%;
+  position: relative;
   height: 15px;
-  width: 100%;
+  width: 20em;
   padding: 0.5rem 0.75rem;
   background-color: rgb(232, 232, 212);
-  border: #757575 solid 1px;
+  border: #757575 solid 1px; 
 }
 
 .text-field_floating-2 .text-field__label {
   position: absolute;
   font-size: 13px;
-  top: 40%;
+  top: 25px;
   left: 0.3125rem;
   display: flex;
   transform: translateY(-50%);
@@ -102,21 +103,23 @@
  cursor: pointer;
   margin-bottom: 2%;
   margin-left: 38%;}
-.error{font-size: 13px;}
+.error{font-size: 11px;
+  color: red;}
 
 @media all and (max-width: 60em){
   .secStat{margin-left: 5%;}
   .firstInfo{font-size: 15px;}
   .firstStat{font-size: 13px;}
   .countInfo{font-size: 30px;}
-  .text-field_floating-2 .text-field__label{top: 55%;}
+  .text-field_floating-2 .text-field__label{top: 35px;}
   .inputAll{flex-direction: column;margin-top: 2%;}
   .checkForRule{width: 70%; margin-top: 2%;}
   .text-field_floating-2{margin-bottom: 1%;}
   .text-field_floating-2 .text-field__input:focus~.text-field__label,
 .text-field_floating-2 .text-field__input:not(:placeholder-shown)~.text-field__label {
-  top: 15px;
+  top: 22px;
 }
+.text-field_floating-2 .text-field__input {width: 35em;}
 .buttonPodp{margin-left: 30%;}
 }
 
@@ -134,5 +137,8 @@
 .text-field_floating-2 .text-field__input:not(:placeholder-shown)~.text-field__label {
   top: 10px;
 }
+.text-field_floating-2 .text-field__label{top:27px}
+.text-field_floating-2 .text-field__input {width: 20em;}
 .buttonPodp{margin-left: 20%;}
+.aboutPodp{font-size: 13px;}
 }
