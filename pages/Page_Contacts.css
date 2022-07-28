@@ -1,0 +1,17 @@
+.loading{width: 30em;
+ margin-left: 60%;
+  margin-top: 50%;}
+.imgShop{width: 40em;
+  height: 27em;}
+.floating{ width: 100%;
+  margin: 3% 7% 3% 7%;}
+.floating:nth-child(2n) img{
+    float: left;}
+.floating:nth-child(2n+1) img{
+    float: right;}
+.floating:nth-child(2n+1) .floatP{float: left;
+  padding-right: 30px;
+  margin-top: 7%;}
+.floating:nth-child(2n) .floatP{float: right; 
+  margin-top: 7%; }
+

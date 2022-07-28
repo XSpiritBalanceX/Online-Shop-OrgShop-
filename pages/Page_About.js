@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import './Page_About.css'
 
 export default props=>{
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   useEffect(
     ()=>{
-      const timer1=setInterval(()=>setCount(prevCnt=>(prevCnt<10)?prevCnt+1:10),100);
+      const timer1=setInterval(()=>setCount(prevCnt=>(prevCnt<25)?prevCnt+1:25),100);
       return ()=>{
         clearTimeout(timer1);
       };
@@ -42,26 +42,51 @@ export default props=>{
       setForPolitic(errorCheck);
   }
 
+  //получаем данные о сутрудниках
+  function testClick(){
+    fetch('https://my-json-server.typicode.com/XSpiritBalanceX/datast/posts11')
+    .then(response => response.json())
+    .then(json => readData(json))
+    .catch( error => { alert('ошибка!\n'+error); } );
+    setShowData(true);
+  }
+
+  function readData(arr){
+    let arrNew=[];
+    arr.map(el=>arrNew.push(<div key={el.code} style={{textAlign:'center'}}>    
+      <img src={el.urlStaff} style={{width:'10em', height:'10em', borderRadius:'20px 20px 20px 20px'}}/>
+      <p>{el.name}</p>
+      <p>Опыт в сфере красоты: {el.exper}</p>
+      <p>Особенность: {el.feature}</p>
+      <hr/>
+      </div>));
+    setDopData(arrNew);
+  }
+
+  const [dopData, setDopData] = useState('Загрузка данных...');
+  //показ дополнительной информации о сотрудниках
+  const [showDopData, setShowData] = useState(false);
   return (
     <React.Fragment>
+       {showDopData?<div className='showStaff'><input type={'button'} defaultValue='&times;' className='buttonClose' onClick={()=>setShowData(false)}/>{dopData}</div>:null} 
       <div className='aboutShop'>
-      <h3>О МАГАЗИНЕ</h3>
+      <h3>О МАГАЗИНЕ</h3> <input type={'button'} defaultValue='сотрудники online магазина' className='onlineStaff' onClick={testClick}/>
     </div>
     <div className='firstContent'>
       <div className='firstImg'></div>
       <div className='firstInfo'><p>Наш магазин не только продает безопасную органическую косметику, 
         мы внимательны к каждому нашему клиенту, также мы хотим продлить красоту 
-        и молодость Вашей кожи.  </p>
+        и молодость Вашей кожи с помощью уходовой и декоративной косметики.  </p>
         <div className='firstStat'>
-        <div ><p className='countInfo ' >{count}</p><p>Магазинов</p></div>
+        <div ><p className='countInfo ' >8</p><p>Магазинов</p></div>
         <div className='orderPerDay'><p className='countInfo'>100+</p><p>Заказов в день</p></div>
-        <div><p className='countInfo'>25</p><p>Сотрудников</p></div>
+        <div><p className='countInfo'>{count}</p><p>Сотрудников</p></div>
         </div>
         </div>
     </div>
     <div className='secondContent'><div className='firstInfo'><p>Магазин был основан в 2021 году и 
       с тех пор мы постоянно растем, чтобы каждая женщина могла  радовать себя 
-      органической косметикой. Наши консультанты постоянно проходят обучение, 
+      хорошими косметическими товарами. Наши консультанты постоянно проходят обучение, 
       чтобы ты могла получить профессиональный совет в уходе за своей кожей.   </p>
         <div className='firstStat secStat'>
         <div className='moreInfo' data-title="Для большей информации перейдите в каталог"><p className='countInfo'>20</p><p>Брендов</p></div>

@@ -22,7 +22,7 @@ class Page_Main extends React.PureComponent {
       <div className='contanerMain'>
         <div className='leftInfo'>
         <h1>Косметика с любовью к твоей коже</h1>
-        <p style={{marginTop:'30px'}}> Мы заботимся о красоте и здоровье любого типа кожи. Здесь ты найдешь только органическую косметику, без опасных веществ в своем составе.</p>
+        <p style={{marginTop:'30px'}}> Мы заботимся о красоте и здоровье любого типа кожи. Здесь ты найдешь только органическую уходовую косметику, без опасных веществ в своем составе, а также премиальную декоративную косметику.</p>
         <button className='buttonNewProduct' style={{marginTop:'30px'}} >
          <NavLink to="/catalog" >Посмотреть новинки</NavLink >
         </button>
