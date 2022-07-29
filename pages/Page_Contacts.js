@@ -7,20 +7,41 @@ class Page_Contacts extends React.PureComponent {
    state={
     error:null,
     isLoaded:false,
+    dopArr:[],
     resultArr:[],
+    currentValue:'',
    }
 
    componentDidMount(){
-     fetch('https://my-json-server.typicode.com/XSpiritBalanceX/myjsonser/posts')
+     fetch('https://my-json-server.typicode.com/XSpiritBalanceX/infoshop/posts')
      .then(response=>response.json())
-     .then(json=>{this.setState({isLoaded:true, resultArr:json})},
+     .then(json=>{this.setState({isLoaded:true, resultArr:json, dopArr:json})},
        error=>{this.setState({isLoaded:true, error})});
+   };
+
+   sortSityShop=(EO)=>{
+     this.setState({currentValue:EO.target.value}, this.createNewShop)
+   };
+
+   createNewShop=()=>{
+     var newArrShop;
+     if(!this.state.currentValue){
+      newArrShop=this.state.dopArr.slice();
+     }
+     else{
+      newArrShop=[];
+      this.state.dopArr.forEach(el=>{
+        if(el.city.toLowerCase().includes(this.state.currentValue.toLowerCase())){
+          newArrShop.push(el);        
+        }
+      })
+     }
+     this.setState({resultArr:newArrShop});
    };
           
   render() {
-
     const {error, isLoaded, resultArr} = this.state;
-     console.log(resultArr);
+     
      if(error){
       return <div>Ошибка: {error.message}</div>;
      }
@@ -29,11 +50,16 @@ class Page_Contacts extends React.PureComponent {
     }
     else{
       return(
-        <React.Fragment>{resultArr.map(element=>(
+        <React.Fragment>
+          <div className='divSearch'>
+           <label htmlFor='searchInput' className='labelForSearch'> Для поиска магазина введите Ваш город</label>
+          <input type={'text'} value={this.state.currentValue} name='searchInput' onChange={this.sortSityShop} className='searchI'/> 
+          </div>          
+          {resultArr.map(element=>(
           <div key={element.code} className='floating'>
           <div className='floatP'>
             <p>{element.nameShop}</p>
-          <p>{element.adress}</p>
+          <p>{element.city} {element.adress}</p>
           <p>Время работы: {element.time}</p>
           <p>Контактный номер: {element.phone}</p>
           </div>          
