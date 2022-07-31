@@ -1,22 +1,21 @@
 import React from 'react';
 
-import MobileCompany from '../components/MobileCompany';
 
-import appData from '../appData';
 
-class Page_Company extends React.PureComponent {
+
+class Page_Basket extends React.PureComponent {
           
   render() {
-
-    return (
+  return null
+    /* return (
       <MobileCompany 
         name={appData.companyName}
         clients={appData.clientsArr}
       />
-    );
+    ); */
     
   }
 
 }
     
-export default Page_Company;
+export default Page_Basket;

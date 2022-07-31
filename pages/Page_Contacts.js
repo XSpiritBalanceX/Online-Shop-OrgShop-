@@ -13,7 +13,7 @@ class Page_Contacts extends React.PureComponent {
    }
 
    componentDidMount(){
-     fetch('https://my-json-server.typicode.com/XSpiritBalanceX/infoshop/posts')
+     fetch('https://my-json-server.typicode.com/XSpiritBalanceX/contactsShop/posts')
      .then(response=>response.json())
      .then(json=>{this.setState({isLoaded:true, resultArr:json, dopArr:json})},
        error=>{this.setState({isLoaded:true, error})});

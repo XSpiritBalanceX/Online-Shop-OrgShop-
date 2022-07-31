@@ -17,7 +17,7 @@ class PagesRouter extends React.Component {
         <Routes>
         <Route path="/" element={<Page_Main/>} />
         <Route path="/catalog" element={<Page_Catalog/>} />
-        <Route path="/catalog/:clid" element={<Page_Item/>} />
+        <Route path="/catalog/:prodcode" element={<Page_Item/>} />
         <Route path="/about_shop" element={<Page_About/>} />
         <Route path="/contacts" element={<Page_Contacts/>} />  
         <Route path="/basket" element={<Page_Basket/>} />       
