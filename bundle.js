@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,109 +261,31 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(11);
+  module.exports = __webpack_require__(32);
 } else {
-  module.exports = __webpack_require__(12);
+  module.exports = __webpack_require__(33);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+const ReactReduxContext = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext(null);
+/* harmony export (immutable) */ __webpack_exports__["a"] = ReactReduxContext;
 
 
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
+if (process.env.NODE_ENV !== 'production') {
+  ReactReduxContext.displayName = 'ReactRedux';
 }
 
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
+/* unused harmony default export */ var _unused_webpack_default_export = (ReactReduxContext);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -381,8 +303,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useSearchParams", function() { return useSearchParams; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(14);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_2_react_router__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Navigate", function() { return __WEBPACK_IMPORTED_MODULE_2_react_router__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationType", function() { return __WEBPACK_IMPORTED_MODULE_2_react_router__["c"]; });
@@ -787,6 +709,103 @@ function createSearchParams(init) {
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -796,7 +815,7 @@ function createSearchParams(init) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return createMemoryHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createPath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return parsePath; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(6);
 
 
 /**
@@ -1598,7 +1617,104 @@ function parsePath(path) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = _extends;
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(45);
+} else {
+  module.exports = __webpack_require__(46);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(52);
+} else {
+  module.exports = __webpack_require__(53);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = warning;
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = createInvalidArgFactory;
+function createInvalidArgFactory(arg, name) {
+  return (dispatch, options) => {
+    throw new Error(`Invalid value of type ${typeof arg} for ${name} argument when connecting component ${options.wrappedComponentName}.`);
+  };
+}
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1617,22 +1733,68 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 6 */
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (process.env.NODE_ENV !== 'production') {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(34);
+} else {
+  module.exports = __webpack_require__(37);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
+  module.exports = __webpack_require__(35);
 } else {
-  module.exports = __webpack_require__(16);
+  module.exports = __webpack_require__(36);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 7 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1662,7 +1824,7 @@ if (process.env.NODE_ENV === 'production') {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return useParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return useResolvedPath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return useRoutes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history__ = __webpack_require__(5);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0_history__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_0_history__["e"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_0_history__["f"]; });
@@ -2613,29 +2775,1098 @@ function renderMatches(matches) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_batch__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_connect__ = __webpack_require__(20);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "batch", function() { return __WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports__ = __webpack_require__(64);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ReactReduxContext", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useDispatch", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["h"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createDispatchHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useSelector", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["i"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createSelectorHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["j"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["f"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "shallowEqual", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["g"]; });
+// The primary entry point assumes we're working with standard ReactDOM/RN, but
+// older versions that do not include `useSyncExternalStore` (React 16.9 - 17.x).
+// Because of that, the useSyncExternalStore compat shim is needed.
+
+
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__["b" /* initializeUseSelector */])(__WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__["useSyncExternalStoreWithSelector"]);
+Object(__WEBPACK_IMPORTED_MODULE_5__components_connect__["b" /* initializeConnect */])(__WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__["useSyncExternalStore"]); // Enable batched updates in our subscriptions for use
+// with standard React renderers (ReactDOM, React Native)
+
+Object(__WEBPACK_IMPORTED_MODULE_3__utils_batch__["b" /* setBatch */])(__WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__["a" /* unstable_batchedUpdates */]);
+
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// Default to a dummy "batch" implementation that just runs the callback
+function defaultNoopBatch(callback) {
+  callback();
+}
+
+let batch = defaultNoopBatch; // Allow injecting another batching function later
+
+const setBatch = newBatch => batch = newBatch;
+/* harmony export (immutable) */ __webpack_exports__["b"] = setBatch;
+ // Supply a getter just to skip dealing with ESM bindings
+
+const getBatch = () => batch;
+/* harmony export (immutable) */ __webpack_exports__["a"] = getBatch;
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = createSelectorHook;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__useReduxContext__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_useSyncExternalStore__ = __webpack_require__(19);
+
+
+
+
+let useSyncExternalStoreWithSelector = __WEBPACK_IMPORTED_MODULE_3__utils_useSyncExternalStore__["a" /* notInitialized */];
+const initializeUseSelector = fn => {
+  useSyncExternalStoreWithSelector = fn;
+};
+/* harmony export (immutable) */ __webpack_exports__["b"] = initializeUseSelector;
+
+
+const refEquality = (a, b) => a === b;
+/**
+ * Hook factory, which creates a `useSelector` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useSelector` hook bound to the specified context.
+ */
+
+
+function createSelectorHook(context = __WEBPACK_IMPORTED_MODULE_2__components_Context__["a" /* ReactReduxContext */]) {
+  const useReduxContext = context === __WEBPACK_IMPORTED_MODULE_2__components_Context__["a" /* ReactReduxContext */] ? __WEBPACK_IMPORTED_MODULE_1__useReduxContext__["a" /* useReduxContext */] : () => Object(__WEBPACK_IMPORTED_MODULE_0_react__["useContext"])(context);
+  return function useSelector(selector, equalityFn = refEquality) {
+    if (process.env.NODE_ENV !== 'production') {
+      if (!selector) {
+        throw new Error(`You must pass a selector to useSelector`);
+      }
+
+      if (typeof selector !== 'function') {
+        throw new Error(`You must pass a function as a selector to useSelector`);
+      }
+
+      if (typeof equalityFn !== 'function') {
+        throw new Error(`You must pass a function as an equality function to useSelector`);
+      }
+    }
+
+    const {
+      store,
+      subscription,
+      getServerState
+    } = useReduxContext();
+    const selectedState = useSyncExternalStoreWithSelector(subscription.addNestedSub, store.getState, getServerState || store.getState, selector, equalityFn);
+    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useDebugValue"])(selectedState);
+    return selectedState;
+  };
+}
+/**
+ * A hook to access the redux store's state. This hook takes a selector function
+ * as an argument. The selector is called with the store state.
+ *
+ * This hook takes an optional equality comparison function as the second parameter
+ * that allows you to customize the way the selected state is compared to determine
+ * whether the component needs to be re-rendered.
+ *
+ * @param {Function} selector the selector function
+ * @param {Function=} equalityFn the function that will be used to determine equality
+ *
+ * @returns {any} the selected state
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useSelector } from 'react-redux'
+ *
+ * export const CounterComponent = () => {
+ *   const counter = useSelector(state => state.counter)
+ *   return <div>{counter}</div>
+ * }
+ */
+
+const useSelector = /*#__PURE__*/createSelectorHook();
+/* harmony export (immutable) */ __webpack_exports__["c"] = useSelector;
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = useReduxContext;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Context__ = __webpack_require__(2);
+
+
+
+/**
+ * A hook to access the value of the `ReactReduxContext`. This is a low-level
+ * hook that you should usually not need to call directly.
+ *
+ * @returns {any} the value of the `ReactReduxContext`
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useReduxContext } from 'react-redux'
+ *
+ * export const CounterComponent = () => {
+ *   const { store } = useReduxContext()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+function useReduxContext() {
+  const contextValue = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useContext"])(__WEBPACK_IMPORTED_MODULE_1__components_Context__["a" /* ReactReduxContext */]);
+
+  if (process.env.NODE_ENV !== 'production' && !contextValue) {
+    throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');
+  }
+
+  return contextValue;
+}
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 19 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const notInitialized = () => {
+  throw new Error('uSES not initialized!');
+};
+/* harmony export (immutable) */ __webpack_exports__["a"] = notInitialized;
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_is__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_is__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__connect_selectorFactory__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__connect_mapDispatchToProps__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__connect_mapStateToProps__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__connect_mergeProps__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_Subscription__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_useIsomorphicLayoutEffect__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_shallowEqual__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_warning__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_useSyncExternalStore__ = __webpack_require__(19);
+
+
+const _excluded = ["reactReduxForwardedRef"];
+
+/* eslint-disable valid-jsdoc, @typescript-eslint/no-unused-vars */
+
+
+
+
+
+
+
+
+
+
+
+
+
+let useSyncExternalStore = __WEBPACK_IMPORTED_MODULE_14__utils_useSyncExternalStore__["a" /* notInitialized */];
+const initializeConnect = fn => {
+  useSyncExternalStore = fn;
+};
+/* harmony export (immutable) */ __webpack_exports__["b"] = initializeConnect;
+ // Define some constant arrays just to avoid re-creating these
+
+const EMPTY_ARRAY = [null, 0];
+const NO_SUBSCRIPTION_ARRAY = [null, null]; // Attempts to stringify whatever not-really-a-component value we were given
+// for logging in an error message
+
+const stringifyComponent = Comp => {
+  try {
+    return JSON.stringify(Comp);
+  } catch (err) {
+    return String(Comp);
+  }
+};
+
+// This is "just" a `useLayoutEffect`, but with two modifications:
+// - we need to fall back to `useEffect` in SSR to avoid annoying warnings
+// - we extract this to a separate function to avoid closing over values
+//   and causing memory leaks
+function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
+  Object(__WEBPACK_IMPORTED_MODULE_10__utils_useIsomorphicLayoutEffect__["a" /* useIsomorphicLayoutEffect */])(() => effectFunc(...effectArgs), dependencies);
+} // Effect callback, extracted: assign the latest props values to refs for later usage
+
+
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, // actualChildProps: unknown,
+childPropsFromStoreUpdate, notifyNestedSubs) {
+  // We want to capture the wrapper props and child props we used for later comparisons
+  lastWrapperProps.current = wrapperProps;
+  renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
+
+  if (childPropsFromStoreUpdate.current) {
+    childPropsFromStoreUpdate.current = null;
+    notifyNestedSubs();
+  }
+} // Effect callback, extracted: subscribe to the Redux store or nearest connected ancestor,
+// check for updates after dispatched actions, and trigger re-renders.
+
+
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, // forceComponentUpdateDispatch: React.Dispatch<any>,
+additionalSubscribeListener) {
+  // If we're not subscribed to the store, nothing to do here
+  if (!shouldHandleStateChanges) return () => {}; // Capture values for checking if and when this component unmounts
+
+  let didUnsubscribe = false;
+  let lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
+
+  const checkForUpdates = () => {
+    if (didUnsubscribe || !isMounted.current) {
+      // Don't run stale listeners.
+      // Redux doesn't guarantee unsubscriptions happen until next dispatch.
+      return;
+    } // TODO We're currently calling getState ourselves here, rather than letting `uSES` do it
+
+
+    const latestStoreState = store.getState();
+    let newChildProps, error;
+
+    try {
+      // Actually run the selector with the most recent store state and wrapper props
+      // to determine what the child props should be
+      newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
+    } catch (e) {
+      error = e;
+      lastThrownError = e;
+    }
+
+    if (!error) {
+      lastThrownError = null;
+    } // If the child props haven't changed, nothing to do here - cascade the subscription update
+
+
+    if (newChildProps === lastChildProps.current) {
+      if (!renderIsScheduled.current) {
+        notifyNestedSubs();
+      }
+    } else {
+      // Save references to the new child props.  Note that we track the "child props from store update"
+      // as a ref instead of a useState/useReducer because we need a way to determine if that value has
+      // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
+      // forcing another re-render, which we don't want.
+      lastChildProps.current = newChildProps;
+      childPropsFromStoreUpdate.current = newChildProps;
+      renderIsScheduled.current = true; // TODO This is hacky and not how `uSES` is meant to be used
+      // Trigger the React `useSyncExternalStore` subscriber
+
+      additionalSubscribeListener();
+    }
+  }; // Actually subscribe to the nearest connected ancestor (or store)
+
+
+  subscription.onStateChange = checkForUpdates;
+  subscription.trySubscribe(); // Pull data from the store after first render in case the store has
+  // changed since we began.
+
+  checkForUpdates();
+
+  const unsubscribeWrapper = () => {
+    didUnsubscribe = true;
+    subscription.tryUnsubscribe();
+    subscription.onStateChange = null;
+
+    if (lastThrownError) {
+      // It's possible that we caught an error due to a bad mapState function, but the
+      // parent re-rendered without this component and we're about to unmount.
+      // This shouldn't happen as long as we do top-down subscriptions correctly, but
+      // if we ever do those wrong, this throw will surface the error in our tests.
+      // In that case, throw the error from here so it doesn't get lost.
+      throw lastThrownError;
+    }
+  };
+
+  return unsubscribeWrapper;
+} // Reducer initial state creation for our update reducer
+
+
+const initStateUpdates = () => EMPTY_ARRAY;
+
+function strictEqual(a, b) {
+  return a === b;
+}
+/**
+ * Infers the type of props that a connector will inject into a component.
+ */
+
+
+let hasWarnedAboutDeprecatedPureOption = false;
+/**
+ * Connects a React component to a Redux store.
+ *
+ * - Without arguments, just wraps the component, without changing the behavior / props
+ *
+ * - If 2 params are passed (3rd param, mergeProps, is skipped), default behavior
+ * is to override ownProps (as stated in the docs), so what remains is everything that's
+ * not a state or dispatch prop
+ *
+ * - When 3rd param is passed, we don't know if ownProps propagate and whether they
+ * should be valid component props, because it depends on mergeProps implementation.
+ * As such, it is the user's responsibility to extend ownProps interface from state or
+ * dispatch props or both when applicable
+ *
+ * @param mapStateToProps A function that extracts values from state
+ * @param mapDispatchToProps Setup for dispatching actions
+ * @param mergeProps Optional callback to merge state and dispatch props together
+ * @param options Options for configuring the connection
+ *
+ */
+
+function connect(mapStateToProps, mapDispatchToProps, mergeProps, {
+  // The `pure` option has been removed, so TS doesn't like us destructuring this to check its existence.
+  // @ts-ignore
+  pure,
+  areStatesEqual = strictEqual,
+  areOwnPropsEqual = __WEBPACK_IMPORTED_MODULE_11__utils_shallowEqual__["a" /* default */],
+  areStatePropsEqual = __WEBPACK_IMPORTED_MODULE_11__utils_shallowEqual__["a" /* default */],
+  areMergedPropsEqual = __WEBPACK_IMPORTED_MODULE_11__utils_shallowEqual__["a" /* default */],
+  // use React's forwardRef to expose a ref of the wrapped component
+  forwardRef = false,
+  // the context consumer to use
+  context = __WEBPACK_IMPORTED_MODULE_13__Context__["a" /* ReactReduxContext */]
+} = {}) {
+  if (process.env.NODE_ENV !== 'production') {
+    if (pure !== undefined && !hasWarnedAboutDeprecatedPureOption) {
+      hasWarnedAboutDeprecatedPureOption = true;
+      Object(__WEBPACK_IMPORTED_MODULE_12__utils_warning__["a" /* default */])('The `pure` option has been removed. `connect` is now always a "pure/memoized" component');
+    }
+  }
+
+  const Context = context;
+  const initMapStateToProps = Object(__WEBPACK_IMPORTED_MODULE_7__connect_mapStateToProps__["a" /* mapStateToPropsFactory */])(mapStateToProps);
+  const initMapDispatchToProps = Object(__WEBPACK_IMPORTED_MODULE_6__connect_mapDispatchToProps__["a" /* mapDispatchToPropsFactory */])(mapDispatchToProps);
+  const initMergeProps = Object(__WEBPACK_IMPORTED_MODULE_8__connect_mergeProps__["a" /* mergePropsFactory */])(mergeProps);
+  const shouldHandleStateChanges = Boolean(mapStateToProps);
+
+  const wrapWithConnect = WrappedComponent => {
+    if (process.env.NODE_ENV !== 'production' && !Object(__WEBPACK_IMPORTED_MODULE_4_react_is__["isValidElementType"])(WrappedComponent)) {
+      throw new Error(`You must pass a component to the function returned by connect. Instead received ${stringifyComponent(WrappedComponent)}`);
+    }
+
+    const wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    const displayName = `Connect(${wrappedComponentName})`;
+    const selectorFactoryOptions = {
+      shouldHandleStateChanges,
+      displayName,
+      wrappedComponentName,
+      WrappedComponent,
+      // @ts-ignore
+      initMapStateToProps,
+      // @ts-ignore
+      initMapDispatchToProps,
+      initMergeProps,
+      areStatesEqual,
+      areStatePropsEqual,
+      areOwnPropsEqual,
+      areMergedPropsEqual
+    };
+
+    function ConnectFunction(props) {
+      const [propsContext, reactReduxForwardedRef, wrapperProps] = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        // Distinguish between actual "data" props that were passed to the wrapper component,
+        // and values needed to control behavior (forwarded refs, alternate context instances).
+        // To maintain the wrapperProps object reference, memoize this destructuring.
+        const {
+          reactReduxForwardedRef
+        } = props,
+              wrapperProps = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__["a" /* default */])(props, _excluded);
+
+        return [props.context, reactReduxForwardedRef, wrapperProps];
+      }, [props]);
+      const ContextToUse = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
+        // Memoize the check that determines which context instance we should use.
+        return propsContext && propsContext.Consumer && // @ts-ignore
+        Object(__WEBPACK_IMPORTED_MODULE_4_react_is__["isContextConsumer"])( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+      }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
+
+      const contextValue = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useContext"])(ContextToUse); // The store _must_ exist as either a prop or in context.
+      // We'll check to see if it _looks_ like a Redux store first.
+      // This allows us to pass through a `store` prop that is just a plain value.
+
+      const didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+      const didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+
+      if (process.env.NODE_ENV !== 'production' && !didStoreComeFromProps && !didStoreComeFromContext) {
+        throw new Error(`Could not find "store" in the context of ` + `"${displayName}". Either wrap the root component in a <Provider>, ` + `or pass a custom React context provider to <Provider> and the corresponding ` + `React context consumer to ${displayName} in connect options.`);
+      } // Based on the previous check, one of these must be true
+
+
+      const store = didStoreComeFromProps ? props.store : contextValue.store;
+      const getServerState = didStoreComeFromContext ? contextValue.getServerState : store.getState;
+      const childPropsSelector = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        // The child props selector needs the store reference as an input.
+        // Re-create this selector whenever the store changes.
+        return Object(__WEBPACK_IMPORTED_MODULE_5__connect_selectorFactory__["a" /* default */])(store.dispatch, selectorFactoryOptions);
+      }, [store]);
+      const [subscription, notifyNestedSubs] = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
+        // connected to the store via props shouldn't use subscription from context, or vice versa.
+
+        const subscription = Object(__WEBPACK_IMPORTED_MODULE_9__utils_Subscription__["a" /* createSubscription */])(store, didStoreComeFromProps ? undefined : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+        // the middle of the notification loop, where `subscription` will then be null. This can
+        // probably be avoided if Subscription's listeners logic is changed to not call listeners
+        // that have been unsubscribed in the  middle of the notification loop.
+
+        const notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
+        return [subscription, notifyNestedSubs];
+      }, [store, didStoreComeFromProps, contextValue]); // Determine what {store, subscription} value should be put into nested context, if necessary,
+      // and memoize that value to avoid unnecessary context updates.
+
+      const overriddenContextValue = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        if (didStoreComeFromProps) {
+          // This component is directly subscribed to a store from props.
+          // We don't want descendants reading from this store - pass down whatever
+          // the existing context value is from the nearest connected ancestor.
+          return contextValue;
+        } // Otherwise, put this component's subscription instance into context, so that
+        // connected descendants won't update until after this component is done
+
+
+        return Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__["a" /* default */])({}, contextValue, {
+          subscription
+        });
+      }, [didStoreComeFromProps, contextValue, subscription]); // Set up refs to coordinate values between the subscription effect and the render logic
+
+      const lastChildProps = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])();
+      const lastWrapperProps = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])(wrapperProps);
+      const childPropsFromStoreUpdate = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])();
+      const renderIsScheduled = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])(false);
+      const isProcessingDispatch = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])(false);
+      const isMounted = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])(false);
+      const latestSubscriptionCallbackError = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useRef"])();
+      Object(__WEBPACK_IMPORTED_MODULE_10__utils_useIsomorphicLayoutEffect__["a" /* useIsomorphicLayoutEffect */])(() => {
+        isMounted.current = true;
+        return () => {
+          isMounted.current = false;
+        };
+      }, []);
+      const actualChildPropsSelector = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        const selector = () => {
+          // Tricky logic here:
+          // - This render may have been triggered by a Redux store update that produced new child props
+          // - However, we may have gotten new wrapper props after that
+          // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
+          // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
+          // So, we'll use the child props from store update only if the wrapper props are the same as last time.
+          if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
+            return childPropsFromStoreUpdate.current;
+          } // TODO We're reading the store directly in render() here. Bad idea?
+          // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
+          // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
+          // to determine what the child props should be.
+
+
+          return childPropsSelector(store.getState(), wrapperProps);
+        };
+
+        return selector;
+      }, [store, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
+      // about useLayoutEffect in SSR, so we try to detect environment and fall back to
+      // just useEffect instead to avoid the warning, since neither will run anyway.
+
+      const subscribeForReact = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        const subscribe = reactListener => {
+          if (!subscription) {
+            return () => {};
+          }
+
+          return subscribeUpdates(shouldHandleStateChanges, store, subscription, // @ts-ignore
+          childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, reactListener);
+        };
+
+        return subscribe;
+      }, [subscription]);
+      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, childPropsFromStoreUpdate, notifyNestedSubs]);
+      let actualChildProps;
+
+      try {
+        actualChildProps = useSyncExternalStore( // TODO We're passing through a big wrapper that does a bunch of extra side effects besides subscribing
+        subscribeForReact, // TODO This is incredibly hacky. We've already processed the store update and calculated new child props,
+        // TODO and we're just passing that through so it triggers a re-render for us rather than relying on `uSES`.
+        actualChildPropsSelector, getServerState ? () => childPropsSelector(getServerState(), wrapperProps) : actualChildPropsSelector);
+      } catch (err) {
+        if (latestSubscriptionCallbackError.current) {
+          ;
+          err.message += `\nThe error may be correlated with this previous error:\n${latestSubscriptionCallbackError.current.stack}\n\n`;
+        }
+
+        throw err;
+      }
+
+      Object(__WEBPACK_IMPORTED_MODULE_10__utils_useIsomorphicLayoutEffect__["a" /* useIsomorphicLayoutEffect */])(() => {
+        latestSubscriptionCallbackError.current = undefined;
+        childPropsFromStoreUpdate.current = undefined;
+        lastChildProps.current = actualChildProps;
+      }); // Now that all that's done, we can finally try to actually render the child component.
+      // We memoize the elements for the rendered child component as an optimization.
+
+      const renderedWrappedComponent = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        return (
+          /*#__PURE__*/
+          // @ts-ignore
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(WrappedComponent, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__["a" /* default */])({}, actualChildProps, {
+            ref: reactReduxForwardedRef
+          }))
+        );
+      }, [reactReduxForwardedRef, WrappedComponent, actualChildProps]); // If React sees the exact same element reference as last time, it bails out of re-rendering
+      // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
+
+      const renderedChild = Object(__WEBPACK_IMPORTED_MODULE_3_react__["useMemo"])(() => {
+        if (shouldHandleStateChanges) {
+          // If this component is subscribed to store updates, we need to pass its own
+          // subscription instance down to our descendants. That means rendering the same
+          // Context instance, and putting a different value into the context.
+          return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(ContextToUse.Provider, {
+            value: overriddenContextValue
+          }, renderedWrappedComponent);
+        }
+
+        return renderedWrappedComponent;
+      }, [ContextToUse, renderedWrappedComponent, overriddenContextValue]);
+      return renderedChild;
+    }
+
+    const _Connect = __WEBPACK_IMPORTED_MODULE_3_react___default.a.memo(ConnectFunction);
+
+    // Add a hacky cast to get the right output type
+    const Connect = _Connect;
+    Connect.WrappedComponent = WrappedComponent;
+    Connect.displayName = ConnectFunction.displayName = displayName;
+
+    if (forwardRef) {
+      const _forwarded = __WEBPACK_IMPORTED_MODULE_3_react___default.a.forwardRef(function forwardConnectRef(props, ref) {
+        // @ts-ignore
+        return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Connect, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__["a" /* default */])({}, props, {
+          reactReduxForwardedRef: ref
+        }));
+      });
+
+      const forwarded = _forwarded;
+      forwarded.displayName = displayName;
+      forwarded.WrappedComponent = WrappedComponent;
+      return __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default()(forwarded, WrappedComponent);
+    }
+
+    return __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default()(Connect, WrappedComponent);
+  };
+
+  return wrapWithConnect;
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (connect);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = _objectWithoutPropertiesLoose;
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
+/* unused harmony export getDependsOnOwnProps */
+/* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(23);
+
+function wrapMapToPropsConstant( // * Note:
+//  It seems that the dispatch argument
+//  could be a dispatch function in some cases (ex: whenMapDispatchToPropsIsMissing)
+//  and a state object in some others (ex: whenMapStateToPropsIsMissing)
+// eslint-disable-next-line no-unused-vars
+getConstant) {
+  return function initConstantSelector(dispatch) {
+    const constant = getConstant(dispatch);
+
+    function constantSelector() {
+      return constant;
+    }
+
+    constantSelector.dependsOnOwnProps = false;
+    return constantSelector;
+  };
+} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+// TODO Can this get pulled out so that we can subscribe directly to the store if we don't need ownProps?
+
+function getDependsOnOwnProps(mapToProps) {
+  return mapToProps.dependsOnOwnProps ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+
+function wrapMapToPropsFunc(mapToProps, methodName) {
+  return function initProxySelector(dispatch, {
+    displayName
+  }) {
+    const proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch, undefined);
+    }; // allow detectFactoryAndVerify to get ownProps
+
+
+    proxy.dependsOnOwnProps = true;
+
+    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+      proxy.mapToProps = mapToProps;
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+      let props = proxy(stateOrDispatch, ownProps);
+
+      if (typeof props === 'function') {
+        proxy.mapToProps = props;
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+        props = proxy(stateOrDispatch, ownProps);
+      }
+
+      if (process.env.NODE_ENV !== 'production') Object(__WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__["a" /* default */])(props, displayName, methodName);
+      return props;
+    };
+
+    return proxy;
+  };
+}
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(9);
+
+
+function verifyPlainObject(value, displayName, methodName) {
+  if (!Object(__WEBPACK_IMPORTED_MODULE_0__isPlainObject__["a" /* default */])(value)) {
+    Object(__WEBPACK_IMPORTED_MODULE_1__warning__["a" /* default */])(`${methodName}() in ${displayName} must return a plain object. Instead received ${value}.`);
+  }
+}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = createSubscription;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__batch__ = __webpack_require__(16);
+ // encapsulates the subscription logic for connecting a component to the redux store, as
+// well as nesting subscriptions of descendant components, so that we can ensure the
+// ancestor components re-render before descendants
+
+function createListenerCollection() {
+  const batch = Object(__WEBPACK_IMPORTED_MODULE_0__batch__["a" /* getBatch */])();
+  let first = null;
+  let last = null;
+  return {
+    clear() {
+      first = null;
+      last = null;
+    },
+
+    notify() {
+      batch(() => {
+        let listener = first;
+
+        while (listener) {
+          listener.callback();
+          listener = listener.next;
+        }
+      });
+    },
+
+    get() {
+      let listeners = [];
+      let listener = first;
+
+      while (listener) {
+        listeners.push(listener);
+        listener = listener.next;
+      }
+
+      return listeners;
+    },
+
+    subscribe(callback) {
+      let isSubscribed = true;
+      let listener = last = {
+        callback,
+        next: null,
+        prev: last
+      };
+
+      if (listener.prev) {
+        listener.prev.next = listener;
+      } else {
+        first = listener;
+      }
+
+      return function unsubscribe() {
+        if (!isSubscribed || first === null) return;
+        isSubscribed = false;
+
+        if (listener.next) {
+          listener.next.prev = listener.prev;
+        } else {
+          last = listener.prev;
+        }
+
+        if (listener.prev) {
+          listener.prev.next = listener.next;
+        } else {
+          first = listener.next;
+        }
+      };
+    }
+
+  };
+}
+
+const nullListeners = {
+  notify() {},
+
+  get: () => []
+};
+function createSubscription(store, parentSub) {
+  let unsubscribe;
+  let listeners = nullListeners;
+
+  function addNestedSub(listener) {
+    trySubscribe();
+    return listeners.subscribe(listener);
+  }
+
+  function notifyNestedSubs() {
+    listeners.notify();
+  }
+
+  function handleChangeWrapper() {
+    if (subscription.onStateChange) {
+      subscription.onStateChange();
+    }
+  }
+
+  function isSubscribed() {
+    return Boolean(unsubscribe);
+  }
+
+  function trySubscribe() {
+    if (!unsubscribe) {
+      unsubscribe = parentSub ? parentSub.addNestedSub(handleChangeWrapper) : store.subscribe(handleChangeWrapper);
+      listeners = createListenerCollection();
+    }
+  }
+
+  function tryUnsubscribe() {
+    if (unsubscribe) {
+      unsubscribe();
+      unsubscribe = undefined;
+      listeners.clear();
+      listeners = nullListeners;
+    }
+  }
+
+  const subscription = {
+    addNestedSub,
+    notifyNestedSubs,
+    handleChangeWrapper,
+    isSubscribed,
+    trySubscribe,
+    tryUnsubscribe,
+    getListeners: () => listeners
+  };
+  return subscription;
+}
+
+/***/ }),
+/* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+ // React currently throws a warning when using useLayoutEffect on the server.
+// To get around it, we can conditionally useEffect on the server (no-op) and
+// useLayoutEffect in the browser. We need useLayoutEffect to ensure the store
+// subscription callback always has the selector from the latest render commit
+// available, otherwise a store update may happen between render and the effect,
+// which may cause missed updates; we also must ensure the store subscription
+// is created synchronously, otherwise a store update may occur before the
+// subscription is created and an inconsistent state may be observed
+// Matches logic in React's `shared/ExecutionEnvironment` file
+
+const canUseDOM = !!(typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined');
+/* unused harmony export canUseDOM */
+
+const useIsomorphicLayoutEffect = canUseDOM ? __WEBPACK_IMPORTED_MODULE_0_react__["useLayoutEffect"] : __WEBPACK_IMPORTED_MODULE_0_react__["useEffect"];
+/* harmony export (immutable) */ __webpack_exports__["a"] = useIsomorphicLayoutEffect;
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = shallowEqual;
+function is(x, y) {
+  if (x === y) {
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) return true;
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  const keysA = Object.keys(objA);
+  const keysB = Object.keys(objB);
+  if (keysA.length !== keysB.length) return false;
+
+  for (let i = 0; i < keysA.length; i++) {
+    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = createStoreHook;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__useReduxContext__ = __webpack_require__(18);
+
+
+
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+
+function createStoreHook(context = __WEBPACK_IMPORTED_MODULE_1__components_Context__["a" /* ReactReduxContext */]) {
+  const useReduxContext = // @ts-ignore
+  context === __WEBPACK_IMPORTED_MODULE_1__components_Context__["a" /* ReactReduxContext */] ? __WEBPACK_IMPORTED_MODULE_2__useReduxContext__["a" /* useReduxContext */] : () => Object(__WEBPACK_IMPORTED_MODULE_0_react__["useContext"])(context);
+  return function useStore() {
+    const {
+      store
+    } = useReduxContext(); // @ts-ignore
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+const useStore = /*#__PURE__*/createStoreHook();
+/* harmony export (immutable) */ __webpack_exports__["b"] = useStore;
+
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(28);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(3);
+
+var _InfoAboutProduct = __webpack_require__(71);
+
+var _InfoAboutProduct2 = _interopRequireDefault(_InfoAboutProduct);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// react-router v6 предоставляет возможности доступа к параметрам из УРЛа только через хук useParams,
+// т.е. только для функциональных компонентов
+
+var Page_Item = function Page_Item(props) {
+
+  var params = (0, _reactRouterDom.useParams)();
+
+  // раз написано <Route path="/client/:clid" element={<Page_Client/>} />
+  // значит Page_Client получит то что в УРЛе после /client/ от хука useParams под именем clid в виде строки
+
+  var clientId = parseInt(params.prodcode);
+
+  /* let clientData=appData.clientsArr.find( c => c.id==clientId ); */
+
+  var _useState = (0, _react.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentData = _useState2[0],
+      setData = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      error = _useState4[0],
+      setError = _useState4[1];
+
+  /* getData().then(data=>{setData(data)},
+  error=>{setError(error)}); */
+
+  return _react2.default.createElement(_InfoAboutProduct2.default
+  /* info={clientData} */
+  , null);
+};
+
+exports.default = Page_Item;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (process.env.NODE_ENV !== 'production') {
+  var ReactIs = __webpack_require__(8);
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(72)(ReactIs.isElement, throwOnDirectAccess);
 } else {
-  module.exports = __webpack_require__(29);
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(74)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 9 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 
 /***/ }),
-/* 10 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2645,17 +3876,17 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(13);
+var _reactDom = __webpack_require__(12);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouterDom = __webpack_require__(3);
 
-var _PagesRouter = __webpack_require__(22);
+var _PagesRouter = __webpack_require__(41);
 
 var _PagesRouter2 = _interopRequireDefault(_PagesRouter);
 
-var _PagesLinks = __webpack_require__(42);
+var _PagesLinks = __webpack_require__(87);
 
 var _PagesLinks2 = _interopRequireDefault(_PagesLinks);
 
@@ -2673,7 +3904,7 @@ _reactDom2.default.render(_react2.default.createElement(
 ), document.getElementById('container'));
 
 /***/ }),
-/* 11 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2685,7 +3916,7 @@ _reactDom2.default.render(_react2.default.createElement(
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var l=__webpack_require__(2),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
+var l=__webpack_require__(4),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
 if("function"===typeof Symbol&&Symbol.for){var w=Symbol.for;n=w("react.element");p=w("react.portal");exports.Fragment=w("react.fragment");exports.StrictMode=w("react.strict_mode");exports.Profiler=w("react.profiler");q=w("react.provider");r=w("react.context");t=w("react.forward_ref");exports.Suspense=w("react.suspense");u=w("react.memo");v=w("react.lazy")}var x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){if(null===a||"object"!==typeof a)return null;a=x&&a[x]||a["@@iterator"];return"function"===typeof a?a:null}function z(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 var A={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},B={};function C(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}C.prototype.isReactComponent={};C.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(z(85));this.updater.enqueueSetState(this,a,b,"setState")};C.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
@@ -2703,7 +3934,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 12 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2722,7 +3953,7 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(2);
+var _assign = __webpack_require__(4);
 
 // TODO: this is special because it gets imported during build.
 var ReactVersion = '17.0.2';
@@ -5044,53 +6275,7 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(14);
-} else {
-  module.exports = __webpack_require__(17);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 14 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5105,7 +6290,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),m=__webpack_require__(2),r=__webpack_require__(6);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
+var aa=__webpack_require__(1),m=__webpack_require__(4),r=__webpack_require__(13);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
 function ea(a,b){ca[a]=b;for(a=0;a<b.length;a++)ba.add(b[a])}
 var fa=!("undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement),ha=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,ia=Object.prototype.hasOwnProperty,
 ja={},ka={};function la(a){if(ia.call(ka,a))return!0;if(ia.call(ja,a))return!1;if(ha.test(a))return ka[a]=!0;ja[a]=!0;return!1}function ma(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
@@ -5394,7 +6579,7 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!rk(c))throw Er
 
 
 /***/ }),
-/* 15 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5421,7 +6606,7 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 
 
 /***/ }),
-/* 16 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6075,7 +7260,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6095,9 +7280,9 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var React = __webpack_require__(1);
-var _assign = __webpack_require__(2);
-var Scheduler = __webpack_require__(6);
-var tracing = __webpack_require__(18);
+var _assign = __webpack_require__(4);
+var Scheduler = __webpack_require__(13);
+var tracing = __webpack_require__(38);
 
 var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 
@@ -32345,22 +33530,22 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(39);
 } else {
-  module.exports = __webpack_require__(20);
+  module.exports = __webpack_require__(40);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32376,7 +33561,7 @@ var b=0;exports.__interactionsRef=null;exports.__subscriberRef=null;exports.unst
 
 
 /***/ }),
-/* 20 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32731,31 +33916,7 @@ exports.unstable_wrap = unstable_wrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = _extends;
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-/* 22 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32773,27 +33934,27 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(3);
 
-var _Page_Main = __webpack_require__(23);
+var _Page_Main = __webpack_require__(42);
 
 var _Page_Main2 = _interopRequireDefault(_Page_Main);
 
-var _Page_Catalog = __webpack_require__(25);
+var _Page_Catalog = __webpack_require__(44);
 
 var _Page_Catalog2 = _interopRequireDefault(_Page_Catalog);
 
-var _Page_About = __webpack_require__(35);
+var _Page_About = __webpack_require__(82);
 
 var _Page_About2 = _interopRequireDefault(_Page_About);
 
-var _Page_Contacts = __webpack_require__(37);
+var _Page_Contacts = __webpack_require__(84);
 
 var _Page_Contacts2 = _interopRequireDefault(_Page_Contacts);
 
-var _Page_Item = __webpack_require__(39);
+var _Page_Item = __webpack_require__(28);
 
 var _Page_Item2 = _interopRequireDefault(_Page_Item);
 
-var _Page_Basket = __webpack_require__(41);
+var _Page_Basket = __webpack_require__(86);
 
 var _Page_Basket2 = _interopRequireDefault(_Page_Basket);
 
@@ -32826,7 +33987,7 @@ var PagesRouter = function (_React$Component) {
           null,
           _react2.default.createElement(_reactRouterDom.Route, { path: '/', element: _react2.default.createElement(_Page_Main2.default, null) }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog', element: _react2.default.createElement(_Page_Catalog2.default, null) }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog/:clid', element: _react2.default.createElement(_Page_Item2.default, null) }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog/:prodcode', element: _react2.default.createElement(_Page_Item2.default, null) }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/about_shop', element: _react2.default.createElement(_Page_About2.default, null) }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/contacts', element: _react2.default.createElement(_Page_Contacts2.default, null) }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/basket', element: _react2.default.createElement(_Page_Basket2.default, null) })
@@ -32841,7 +34002,7 @@ var PagesRouter = function (_React$Component) {
 exports.default = PagesRouter;
 
 /***/ }),
-/* 23 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32859,7 +34020,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(3);
 
-__webpack_require__(24);
+__webpack_require__(43);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32998,13 +34159,13 @@ var Page_Main = function (_React$PureComponent) {
 exports.default = Page_Main;
 
 /***/ }),
-/* 24 */
+/* 43 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 25 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33020,11 +34181,23 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Product = __webpack_require__(26);
+var _reactRedux = __webpack_require__(15);
+
+var _redux = __webpack_require__(68);
+
+var _Page_Item = __webpack_require__(28);
+
+var _Page_Item2 = _interopRequireDefault(_Page_Item);
+
+var _Product = __webpack_require__(76);
 
 var _Product2 = _interopRequireDefault(_Product);
 
-__webpack_require__(34);
+__webpack_require__(78);
+
+var _infoReducer = __webpack_require__(79);
+
+var _infoReducer2 = _interopRequireDefault(_infoReducer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33034,78 +34207,62 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var combinedReducer = (0, _redux.combineReducers)({
+  // редьюсер counterReducer отвечает за раздел state под именем counter
+  infoProduct: _infoReducer2.default
+  // + другие редьюсеры
+});
+var store = (0, _redux.createStore)(combinedReducer);
+
 var Page_Catalog = function (_React$PureComponent) {
   _inherits(Page_Catalog, _React$PureComponent);
 
   function Page_Catalog() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
     _classCallCheck(this, Page_Catalog);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Page_Catalog.__proto__ || Object.getPrototypeOf(Page_Catalog)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      error: null,
-      isLoaded: false,
-      products: []
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    return _possibleConstructorReturn(this, (Page_Catalog.__proto__ || Object.getPrototypeOf(Page_Catalog)).apply(this, arguments));
   }
 
   _createClass(Page_Catalog, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      fetch('http://d.zaix.ru/uIYI.txt').then(function (response) {
-        return response.json();
-      }).then(function (text) {
-        _this2.setState({ isLoaded: true, products: text });
-      }, function (error) {
-        _this2.setState({ isLoaded: true, error: error });
-      });
-    }
-  }, {
     key: 'render',
+
+
+    /* showInfo=(code, workM)=>{
+     this.setState({isSelected:code,workModel:workM})
+    }; */
+
     value: function render() {
-      var _state = this.state,
-          error = _state.error,
-          isLoaded = _state.isLoaded,
-          products = _state.products;
 
+      /* const {error, isLoaded, products} = this.state;
+       var productItem=products.map(el=>
+        <Product key={el.code}
+         code={el.code}
+         nameProduct={el.nameProduct}
+         price={el.price}
+         urlProduct={el.urlProduct}
+         selectedProduct={this.showInfo}
+         workModel={this.state.workModel}
+         />); */
 
-      var productItem = products.map(function (el) {
-        return _react2.default.createElement(_Product2.default, { key: el.code,
-          code: el.code,
-          nameProduct: el.nameProduct,
-          price: el.price,
-          urlProduct: el.urlProduct
-        });
-      });
-
-      if (error) {
-        return _react2.default.createElement(
+      /*  if(error){
+         return <div>Ошибка: {error.message}</div>;
+       }
+       else if(!isLoaded){
+         return (<div className='loading'>Подождите, идет загрузка данных...</div>);
+       }
+       else if(this.state.workModel===1){
+         return (<div className='contForProduct'>{productItem}</div>)
+       } */
+      return _react2.default.createElement(
+        _reactRedux.Provider,
+        { store: store },
+        _react2.default.createElement(
           'div',
           null,
-          '\u041E\u0448\u0438\u0431\u043A\u0430: ',
-          error.message
-        );
-      } else if (!isLoaded) {
-        return _react2.default.createElement(
-          'div',
-          { className: 'loading' },
-          '\u041F\u043E\u0434\u043E\u0436\u0434\u0438\u0442\u0435, \u0438\u0434\u0435\u0442 \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u0434\u0430\u043D\u043D\u044B\u0445...'
-        );
-      } else {
-        return _react2.default.createElement(
-          'div',
-          { className: 'contForProduct' },
-          productItem
-        );
-      }
+          _react2.default.createElement(_Product2.default, null),
+          _react2.default.createElement(_Page_Item2.default, null)
+        )
+      );
     }
   }]);
 
@@ -33115,115 +34272,599 @@ var Page_Catalog = function (_React$PureComponent) {
 exports.default = Page_Catalog;
 
 /***/ }),
-/* 26 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/**
+ * @license React
+ * use-sync-external-store-shim.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var e=__webpack_require__(1);function h(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var k="function"===typeof Object.is?Object.is:h,l=e.useState,m=e.useEffect,n=e.useLayoutEffect,p=e.useDebugValue;function q(a,b){var d=b(),f=l({inst:{value:d,getSnapshot:b}}),c=f[0].inst,g=f[1];n(function(){c.value=d;c.getSnapshot=b;r(c)&&g({inst:c})},[a,d,b]);m(function(){r(c)&&g({inst:c});return a(function(){r(c)&&g({inst:c})})},[a]);p(d);return d}
+function r(a){var b=a.getSnapshot;a=a.value;try{var d=b();return!k(a,d)}catch(f){return!0}}function t(a,b){return b()}var u="undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement?t:q;exports.useSyncExternalStore=void 0!==e.useSyncExternalStore?e.useSyncExternalStore:u;
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(27);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-__webpack_require__(33);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Product = function (_React$PureComponent) {
-    _inherits(Product, _React$PureComponent);
-
-    function Product() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, Product);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Product.__proto__ || Object.getPrototypeOf(Product)).call.apply(_ref, [this].concat(args))), _this), _this.showInfo = function () {}, _this.buyProduct = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(Product, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'Product' },
-                _react2.default.createElement('img', { src: this.props.urlProduct, title: this.props.nameProduct, className: 'ImgProduct' }),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    this.props.nameProduct
-                ),
-                _react2.default.createElement(
-                    'p',
-                    { className: 'priceProduct' },
-                    this.props.price
-                ),
-                _react2.default.createElement('input', { type: 'button', defaultValue: 'Информация', className: 'buttonProduct', onClick: this.showInfo }),
-                _react2.default.createElement('input', { type: 'button', defaultValue: 'Купить', className: 'buttonProduct', onClick: this.buyProduct })
-            );
-        }
-    }]);
-
-    return Product;
-}(_react2.default.PureComponent);
-
-Product.propTypes = {
-    code: _propTypes2.default.number,
-    nameProduct: _propTypes2.default.string,
-    price: _propTypes2.default.string,
-    urlProduct: _propTypes2.default.string
-};
-exports.default = Product;
 
 /***/ }),
-/* 27 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * @license React
+ * use-sync-external-store-shim.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-if (process.env.NODE_ENV !== 'production') {
-  var ReactIs = __webpack_require__(8);
 
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(30)(ReactIs.isElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(32)();
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+
+          'use strict';
+
+/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
+}
+          var React = __webpack_require__(1);
+
+var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+function error(format) {
+  {
+    {
+      for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        args[_key2 - 1] = arguments[_key2];
+      }
+
+      printWarning('error', format, args);
+    }
+  }
+}
+
+function printWarning(level, format, args) {
+  // When changing this logic, you might want to also
+  // update consoleWithStackDev.www.js as well.
+  {
+    var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+    var stack = ReactDebugCurrentFrame.getStackAddendum();
+
+    if (stack !== '') {
+      format += '%s';
+      args = args.concat([stack]);
+    } // eslint-disable-next-line react-internal/safe-string-coercion
+
+
+    var argsWithFormat = args.map(function (item) {
+      return String(item);
+    }); // Careful: RN currently depends on this prefix
+
+    argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+    // breaks IE9: https://github.com/facebook/react/issues/13610
+    // eslint-disable-next-line react-internal/no-production-logging
+
+    Function.prototype.apply.call(console[level], console, argsWithFormat);
+  }
+}
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var objectIs = typeof Object.is === 'function' ? Object.is : is;
+
+// dispatch for CommonJS interop named imports.
+
+var useState = React.useState,
+    useEffect = React.useEffect,
+    useLayoutEffect = React.useLayoutEffect,
+    useDebugValue = React.useDebugValue;
+var didWarnOld18Alpha = false;
+var didWarnUncachedGetSnapshot = false; // Disclaimer: This shim breaks many of the rules of React, and only works
+// because of a very particular set of implementation details and assumptions
+// -- change any one of them and it will break. The most important assumption
+// is that updates are always synchronous, because concurrent rendering is
+// only available in versions of React that also have a built-in
+// useSyncExternalStore API. And we only use this shim when the built-in API
+// does not exist.
+//
+// Do not assume that the clever hacks used by this hook also work in general.
+// The point of this shim is to replace the need for hacks by other libraries.
+
+function useSyncExternalStore(subscribe, getSnapshot, // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+// React do not expose a way to check if we're hydrating. So users of the shim
+// will need to track that themselves and return the correct value
+// from `getSnapshot`.
+getServerSnapshot) {
+  {
+    if (!didWarnOld18Alpha) {
+      if (React.startTransition !== undefined) {
+        didWarnOld18Alpha = true;
+
+        error('You are using an outdated, pre-release alpha of React 18 that ' + 'does not support useSyncExternalStore. The ' + 'use-sync-external-store shim will not work correctly. Upgrade ' + 'to a newer pre-release.');
+      }
+    }
+  } // Read the current snapshot from the store on every render. Again, this
+  // breaks the rules of React, and only works here because of specific
+  // implementation details, most importantly that updates are
+  // always synchronous.
+
+
+  var value = getSnapshot();
+
+  {
+    if (!didWarnUncachedGetSnapshot) {
+      var cachedValue = getSnapshot();
+
+      if (!objectIs(value, cachedValue)) {
+        error('The result of getSnapshot should be cached to avoid an infinite loop');
+
+        didWarnUncachedGetSnapshot = true;
+      }
+    }
+  } // Because updates are synchronous, we don't queue them. Instead we force a
+  // re-render whenever the subscribed state changes by updating an some
+  // arbitrary useState hook. Then, during render, we call getSnapshot to read
+  // the current value.
+  //
+  // Because we don't actually use the state returned by the useState hook, we
+  // can save a bit of memory by storing other stuff in that slot.
+  //
+  // To implement the early bailout, we need to track some things on a mutable
+  // object. Usually, we would put that in a useRef hook, but we can stash it in
+  // our useState hook instead.
+  //
+  // To force a re-render, we call forceUpdate({inst}). That works because the
+  // new object always fails an equality check.
+
+
+  var _useState = useState({
+    inst: {
+      value: value,
+      getSnapshot: getSnapshot
+    }
+  }),
+      inst = _useState[0].inst,
+      forceUpdate = _useState[1]; // Track the latest getSnapshot function with a ref. This needs to be updated
+  // in the layout phase so we can access it during the tearing check that
+  // happens on subscribe.
+
+
+  useLayoutEffect(function () {
+    inst.value = value;
+    inst.getSnapshot = getSnapshot; // Whenever getSnapshot or subscribe changes, we need to check in the
+    // commit phase if there was an interleaved mutation. In concurrent mode
+    // this can happen all the time, but even in synchronous mode, an earlier
+    // effect may have mutated the store.
+
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+  }, [subscribe, value, getSnapshot]);
+  useEffect(function () {
+    // Check for changes right before subscribing. Subsequent changes will be
+    // detected in the subscription handler.
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+
+    var handleStoreChange = function () {
+      // TODO: Because there is no cross-renderer API for batching updates, it's
+      // up to the consumer of this library to wrap their subscription event
+      // with unstable_batchedUpdates. Should we try to detect when this isn't
+      // the case and print a warning in development?
+      // The store changed. Check if the snapshot changed since the last time we
+      // read from the store.
+      if (checkIfSnapshotChanged(inst)) {
+        // Force a re-render.
+        forceUpdate({
+          inst: inst
+        });
+      }
+    }; // Subscribe to the store and return a clean-up function.
+
+
+    return subscribe(handleStoreChange);
+  }, [subscribe]);
+  useDebugValue(value);
+  return value;
+}
+
+function checkIfSnapshotChanged(inst) {
+  var latestGetSnapshot = inst.getSnapshot;
+  var prevValue = inst.value;
+
+  try {
+    var nextValue = latestGetSnapshot();
+    return !objectIs(prevValue, nextValue);
+  } catch (error) {
+    return true;
+  }
+}
+
+function useSyncExternalStore$1(subscribe, getSnapshot, getServerSnapshot) {
+  // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+  // React do not expose a way to check if we're hydrating. So users of the shim
+  // will need to track that themselves and return the correct value
+  // from `getSnapshot`.
+  return getSnapshot();
+}
+
+var canUseDOM = !!(typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined');
+
+var isServerEnvironment = !canUseDOM;
+
+var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore;
+var useSyncExternalStore$2 = React.useSyncExternalStore !== undefined ? React.useSyncExternalStore : shim;
+
+exports.useSyncExternalStore = useSyncExternalStore$2;
+          /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+}
+        
+  })();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(48);
+} else {
+  module.exports = __webpack_require__(49);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @license React
+ * use-sync-external-store-shim/with-selector.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var h=__webpack_require__(1),n=__webpack_require__(7);function p(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var q="function"===typeof Object.is?Object.is:p,r=n.useSyncExternalStore,t=h.useRef,u=h.useEffect,v=h.useMemo,w=h.useDebugValue;
+exports.useSyncExternalStoreWithSelector=function(a,b,e,l,g){var c=t(null);if(null===c.current){var f={hasValue:!1,value:null};c.current=f}else f=c.current;c=v(function(){function a(a){if(!c){c=!0;d=a;a=l(a);if(void 0!==g&&f.hasValue){var b=f.value;if(g(b,a))return k=b}return k=a}b=k;if(q(d,a))return b;var e=l(a);if(void 0!==g&&g(b,e))return b;d=a;return k=e}var c=!1,d,k,m=void 0===e?null:e;return[function(){return a(b())},null===m?void 0:function(){return a(m())}]},[b,e,l,g]);var d=r(a,c[0],c[1]);
+u(function(){f.hasValue=!0;f.value=d},[d]);w(d);return d};
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * @license React
+ * use-sync-external-store-shim/with-selector.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+
+          'use strict';
+
+/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
+}
+          var React = __webpack_require__(1);
+var shim = __webpack_require__(7);
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var objectIs = typeof Object.is === 'function' ? Object.is : is;
+
+var useSyncExternalStore = shim.useSyncExternalStore;
+
+// for CommonJS interop.
+
+var useRef = React.useRef,
+    useEffect = React.useEffect,
+    useMemo = React.useMemo,
+    useDebugValue = React.useDebugValue; // Same as useSyncExternalStore, but supports selector and isEqual arguments.
+
+function useSyncExternalStoreWithSelector(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
+  // Use this to track the rendered snapshot.
+  var instRef = useRef(null);
+  var inst;
+
+  if (instRef.current === null) {
+    inst = {
+      hasValue: false,
+      value: null
+    };
+    instRef.current = inst;
+  } else {
+    inst = instRef.current;
+  }
+
+  var _useMemo = useMemo(function () {
+    // Track the memoized state using closure variables that are local to this
+    // memoized instance of a getSnapshot function. Intentionally not using a
+    // useRef hook, because that state would be shared across all concurrent
+    // copies of the hook/component.
+    var hasMemo = false;
+    var memoizedSnapshot;
+    var memoizedSelection;
+
+    var memoizedSelector = function (nextSnapshot) {
+      if (!hasMemo) {
+        // The first time the hook is called, there is no memoized result.
+        hasMemo = true;
+        memoizedSnapshot = nextSnapshot;
+
+        var _nextSelection = selector(nextSnapshot);
+
+        if (isEqual !== undefined) {
+          // Even if the selector has changed, the currently rendered selection
+          // may be equal to the new selection. We should attempt to reuse the
+          // current value if possible, to preserve downstream memoizations.
+          if (inst.hasValue) {
+            var currentSelection = inst.value;
+
+            if (isEqual(currentSelection, _nextSelection)) {
+              memoizedSelection = currentSelection;
+              return currentSelection;
+            }
+          }
+        }
+
+        memoizedSelection = _nextSelection;
+        return _nextSelection;
+      } // We may be able to reuse the previous invocation's result.
+
+
+      // We may be able to reuse the previous invocation's result.
+      var prevSnapshot = memoizedSnapshot;
+      var prevSelection = memoizedSelection;
+
+      if (objectIs(prevSnapshot, nextSnapshot)) {
+        // The snapshot is the same as last time. Reuse the previous selection.
+        return prevSelection;
+      } // The snapshot has changed, so we need to compute a new selection.
+
+
+      // The snapshot has changed, so we need to compute a new selection.
+      var nextSelection = selector(nextSnapshot); // If a custom isEqual function is provided, use that to check if the data
+      // has changed. If it hasn't, return the previous selection. That signals
+      // to React that the selections are conceptually equal, and we can bail
+      // out of rendering.
+
+      // If a custom isEqual function is provided, use that to check if the data
+      // has changed. If it hasn't, return the previous selection. That signals
+      // to React that the selections are conceptually equal, and we can bail
+      // out of rendering.
+      if (isEqual !== undefined && isEqual(prevSelection, nextSelection)) {
+        return prevSelection;
+      }
+
+      memoizedSnapshot = nextSnapshot;
+      memoizedSelection = nextSelection;
+      return nextSelection;
+    }; // Assigning this to a constant so that Flow knows it can't change.
+
+
+    // Assigning this to a constant so that Flow knows it can't change.
+    var maybeGetServerSnapshot = getServerSnapshot === undefined ? null : getServerSnapshot;
+
+    var getSnapshotWithSelector = function () {
+      return memoizedSelector(getSnapshot());
+    };
+
+    var getServerSnapshotWithSelector = maybeGetServerSnapshot === null ? undefined : function () {
+      return memoizedSelector(maybeGetServerSnapshot());
+    };
+    return [getSnapshotWithSelector, getServerSnapshotWithSelector];
+  }, [getSnapshot, getServerSnapshot, selector, isEqual]),
+      getSelection = _useMemo[0],
+      getServerSelection = _useMemo[1];
+
+  var value = useSyncExternalStore(subscribe, getSelection, getServerSelection);
+  useEffect(function () {
+    inst.hasValue = true;
+    inst.value = value;
+  }, [value]);
+  useDebugValue(value);
+  return value;
+}
+
+exports.useSyncExternalStoreWithSelector = useSyncExternalStoreWithSelector;
+          /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+}
+        
+  })();
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 50 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
+/* harmony reexport (binding) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_0_react_dom__, "unstable_batchedUpdates")) __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_dom__["unstable_batchedUpdates"]; });
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var reactIs = __webpack_require__(8);
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+var REACT_STATICS = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true
+};
+var KNOWN_STATICS = {
+  name: true,
+  length: true,
+  prototype: true,
+  caller: true,
+  callee: true,
+  arguments: true,
+  arity: true
+};
+var FORWARD_REF_STATICS = {
+  '$$typeof': true,
+  render: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true
+};
+var MEMO_STATICS = {
+  '$$typeof': true,
+  compare: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true,
+  type: true
+};
+var TYPE_STATICS = {};
+TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
+TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
+
+function getStatics(component) {
+  // React v16.11 and below
+  if (reactIs.isMemo(component)) {
+    return MEMO_STATICS;
+  } // React v16.12 and above
+
+
+  return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
+}
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+  if (typeof sourceComponent !== 'string') {
+    // don't hoist over string (html) components
+    if (objectPrototype) {
+      var inheritedComponent = getPrototypeOf(sourceComponent);
+
+      if (inheritedComponent && inheritedComponent !== objectPrototype) {
+        hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+      }
+    }
+
+    var keys = getOwnPropertyNames(sourceComponent);
+
+    if (getOwnPropertySymbols) {
+      keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+    }
+
+    var targetStatics = getStatics(targetComponent);
+    var sourceStatics = getStatics(sourceComponent);
+
+    for (var i = 0; i < keys.length; ++i) {
+      var key = keys[i];
+
+      if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+        var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+
+        try {
+          // Avoid failures from read-only properties
+          defineProperty(targetComponent, key, descriptor);
+        } catch (e) {}
+      }
+    }
+  }
+
+  return targetComponent;
+}
+
+module.exports = hoistNonReactStatics;
+
+
+/***/ }),
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33245,7 +34886,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 29 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33434,7 +35075,1520 @@ exports.typeOf = typeOf;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 30 */
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(55);
+} else {
+  module.exports = __webpack_require__(56);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @license React
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var b=Symbol.for("react.element"),c=Symbol.for("react.portal"),d=Symbol.for("react.fragment"),e=Symbol.for("react.strict_mode"),f=Symbol.for("react.profiler"),g=Symbol.for("react.provider"),h=Symbol.for("react.context"),k=Symbol.for("react.server_context"),l=Symbol.for("react.forward_ref"),m=Symbol.for("react.suspense"),n=Symbol.for("react.suspense_list"),p=Symbol.for("react.memo"),q=Symbol.for("react.lazy"),t=Symbol.for("react.offscreen"),u;u=Symbol.for("react.module.reference");
+function v(a){if("object"===typeof a&&null!==a){var r=a.$$typeof;switch(r){case b:switch(a=a.type,a){case d:case f:case e:case m:case n:return a;default:switch(a=a&&a.$$typeof,a){case k:case h:case l:case q:case p:case g:return a;default:return r}}case c:return r}}}exports.ContextConsumer=h;exports.ContextProvider=g;exports.Element=b;exports.ForwardRef=l;exports.Fragment=d;exports.Lazy=q;exports.Memo=p;exports.Portal=c;exports.Profiler=f;exports.StrictMode=e;exports.Suspense=m;
+exports.SuspenseList=n;exports.isAsyncMode=function(){return!1};exports.isConcurrentMode=function(){return!1};exports.isContextConsumer=function(a){return v(a)===h};exports.isContextProvider=function(a){return v(a)===g};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===b};exports.isForwardRef=function(a){return v(a)===l};exports.isFragment=function(a){return v(a)===d};exports.isLazy=function(a){return v(a)===q};exports.isMemo=function(a){return v(a)===p};
+exports.isPortal=function(a){return v(a)===c};exports.isProfiler=function(a){return v(a)===f};exports.isStrictMode=function(a){return v(a)===e};exports.isSuspense=function(a){return v(a)===m};exports.isSuspenseList=function(a){return v(a)===n};
+exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===d||a===f||a===e||a===m||a===n||a===t||"object"===typeof a&&null!==a&&(a.$$typeof===q||a.$$typeof===p||a.$$typeof===g||a.$$typeof===h||a.$$typeof===l||a.$$typeof===u||void 0!==a.getModuleId)?!0:!1};exports.typeOf=v;
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * @license React
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+'use strict';
+
+// ATTENTION
+// When adding new symbols to this file,
+// Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+// The Symbol used to tag the ReactElement-like types.
+var REACT_ELEMENT_TYPE = Symbol.for('react.element');
+var REACT_PORTAL_TYPE = Symbol.for('react.portal');
+var REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
+var REACT_STRICT_MODE_TYPE = Symbol.for('react.strict_mode');
+var REACT_PROFILER_TYPE = Symbol.for('react.profiler');
+var REACT_PROVIDER_TYPE = Symbol.for('react.provider');
+var REACT_CONTEXT_TYPE = Symbol.for('react.context');
+var REACT_SERVER_CONTEXT_TYPE = Symbol.for('react.server_context');
+var REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
+var REACT_SUSPENSE_TYPE = Symbol.for('react.suspense');
+var REACT_SUSPENSE_LIST_TYPE = Symbol.for('react.suspense_list');
+var REACT_MEMO_TYPE = Symbol.for('react.memo');
+var REACT_LAZY_TYPE = Symbol.for('react.lazy');
+var REACT_OFFSCREEN_TYPE = Symbol.for('react.offscreen');
+
+// -----------------------------------------------------------------------------
+
+var enableScopeAPI = false; // Experimental Create Event Handle API.
+var enableCacheElement = false;
+var enableTransitionTracing = false; // No known bugs, but needs performance testing
+
+var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+// stuff. Intended to enable React core members to more easily debug scheduling
+// issues in DEV builds.
+
+var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+
+var REACT_MODULE_REFERENCE;
+
+{
+  REACT_MODULE_REFERENCE = Symbol.for('react.module.reference');
+}
+
+function isValidElementType(type) {
+  if (typeof type === 'string' || typeof type === 'function') {
+    return true;
+  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+
+  if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing  || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden  || type === REACT_OFFSCREEN_TYPE || enableScopeAPI  || enableCacheElement  || enableTransitionTracing ) {
+    return true;
+  }
+
+  if (typeof type === 'object' && type !== null) {
+    if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+    // types supported by any Flight configuration anywhere since
+    // we don't know which Flight build this will end up being used
+    // with.
+    type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+          case REACT_SUSPENSE_LIST_TYPE:
+            return type;
+
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_SERVER_CONTEXT_TYPE:
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+
+              default:
+                return $$typeof;
+            }
+
+        }
+
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+}
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var SuspenseList = REACT_SUSPENSE_LIST_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
+
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+    }
+  }
+
+  return false;
+}
+function isConcurrentMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
+      hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isConcurrentMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+    }
+  }
+
+  return false;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+function isSuspenseList(object) {
+  return typeOf(object) === REACT_SUSPENSE_LIST_TYPE;
+}
+
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.SuspenseList = SuspenseList;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+exports.isSuspenseList = isSuspenseList;
+exports.isValidElementType = isValidElementType;
+exports.typeOf = typeOf;
+  })();
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 57 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export pureFinalPropsSelectorFactory */
+/* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(58);
+
+const _excluded = ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"];
+
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, {
+  areStatesEqual,
+  areOwnPropsEqual,
+  areStatePropsEqual
+}) {
+  let hasRunAtLeastOnce = false;
+  let state;
+  let ownProps;
+  let stateProps;
+  let dispatchProps;
+  let mergedProps;
+
+  function handleFirstCall(firstState, firstOwnProps) {
+    state = firstState;
+    ownProps = firstOwnProps;
+    stateProps = mapStateToProps(state, ownProps);
+    dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    hasRunAtLeastOnce = true;
+    return mergedProps;
+  }
+
+  function handleNewPropsAndNewState() {
+    stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewProps() {
+    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewState() {
+    const nextStateProps = mapStateToProps(state, ownProps);
+    const statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+    stateProps = nextStateProps;
+    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleSubsequentCalls(nextState, nextOwnProps) {
+    const propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+    const stateChanged = !areStatesEqual(nextState, state);
+    state = nextState;
+    ownProps = nextOwnProps;
+    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+    if (propsChanged) return handleNewProps();
+    if (stateChanged) return handleNewState();
+    return mergedProps;
+  }
+
+  return function pureFinalPropsSelector(nextState, nextOwnProps) {
+    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+  };
+}
+// TODO: Add more comments
+// The selector returned by selectorFactory will memoize its results,
+// allowing connect's shouldComponentUpdate to return false if final
+// props have not changed.
+function finalPropsSelectorFactory(dispatch, _ref) {
+  let {
+    initMapStateToProps,
+    initMapDispatchToProps,
+    initMergeProps
+  } = _ref,
+      options = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__["a" /* default */])(_ref, _excluded);
+
+  const mapStateToProps = initMapStateToProps(dispatch, options);
+  const mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+  const mergeProps = initMergeProps(dispatch, options);
+
+  if (process.env.NODE_ENV !== 'production') {
+    Object(__WEBPACK_IMPORTED_MODULE_1__verifySubselectors__["a" /* default */])(mapStateToProps, mapDispatchToProps, mergeProps);
+  }
+
+  return pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(9);
+
+
+function verify(selector, methodName) {
+  if (!selector) {
+    throw new Error(`Unexpected value for ${methodName} in connect.`);
+  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
+    if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) {
+      Object(__WEBPACK_IMPORTED_MODULE_0__utils_warning__["a" /* default */])(`The selector for ${methodName} of connect did not specify a value for dependsOnOwnProps.`);
+    }
+  }
+}
+
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps) {
+  verify(mapStateToProps, 'mapStateToProps');
+  verify(mapDispatchToProps, 'mapDispatchToProps');
+  verify(mergeProps, 'mergeProps');
+}
+
+/***/ }),
+/* 59 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = mapDispatchToPropsFactory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_bindActionCreators__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__ = __webpack_require__(10);
+
+
+
+function mapDispatchToPropsFactory(mapDispatchToProps) {
+  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? Object(__WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__["a" /* wrapMapToPropsConstant */])(dispatch => // @ts-ignore
+  Object(__WEBPACK_IMPORTED_MODULE_0__utils_bindActionCreators__["a" /* default */])(mapDispatchToProps, dispatch)) : !mapDispatchToProps ? Object(__WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__["a" /* wrapMapToPropsConstant */])(dispatch => ({
+    dispatch
+  })) : typeof mapDispatchToProps === 'function' ? // @ts-ignore
+  Object(__WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__["b" /* wrapMapToPropsFunc */])(mapDispatchToProps, 'mapDispatchToProps') : Object(__WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__["a" /* createInvalidArgFactory */])(mapDispatchToProps, 'mapDispatchToProps');
+}
+
+/***/ }),
+/* 60 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = bindActionCreators;
+function bindActionCreators(actionCreators, dispatch) {
+  const boundActionCreators = {};
+
+  for (const key in actionCreators) {
+    const actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = (...args) => dispatch(actionCreator(...args));
+    }
+  }
+
+  return boundActionCreators;
+}
+
+/***/ }),
+/* 61 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = isPlainObject;
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  let proto = Object.getPrototypeOf(obj);
+  if (proto === null) return true;
+  let baseProto = proto;
+
+  while (Object.getPrototypeOf(baseProto) !== null) {
+    baseProto = Object.getPrototypeOf(baseProto);
+  }
+
+  return proto === baseProto;
+}
+
+/***/ }),
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = mapStateToPropsFactory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__invalidArgFactory__ = __webpack_require__(10);
+
+
+function mapStateToPropsFactory(mapStateToProps) {
+  return !mapStateToProps ? Object(__WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__["a" /* wrapMapToPropsConstant */])(() => ({})) : typeof mapStateToProps === 'function' ? // @ts-ignore
+  Object(__WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__["b" /* wrapMapToPropsFunc */])(mapStateToProps, 'mapStateToProps') : Object(__WEBPACK_IMPORTED_MODULE_1__invalidArgFactory__["a" /* createInvalidArgFactory */])(mapStateToProps, 'mapStateToProps');
+}
+
+/***/ }),
+/* 63 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export defaultMergeProps */
+/* unused harmony export wrapMergePropsFunc */
+/* harmony export (immutable) */ __webpack_exports__["a"] = mergePropsFactory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_verifyPlainObject__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__ = __webpack_require__(10);
+
+
+
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+  // @ts-ignore
+  return Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__["a" /* default */])({}, ownProps, stateProps, dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+  return function initMergePropsProxy(dispatch, {
+    displayName,
+    areMergedPropsEqual
+  }) {
+    let hasRunOnce = false;
+    let mergedProps;
+    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+      const nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+
+      if (hasRunOnce) {
+        if (!areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+      } else {
+        hasRunOnce = true;
+        mergedProps = nextMergedProps;
+        if (process.env.NODE_ENV !== 'production') Object(__WEBPACK_IMPORTED_MODULE_1__utils_verifyPlainObject__["a" /* default */])(mergedProps, displayName, 'mergeProps');
+      }
+
+      return mergedProps;
+    };
+  };
+}
+function mergePropsFactory(mergeProps) {
+  return !mergeProps ? () => defaultMergeProps : typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : Object(__WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__["a" /* createInvalidArgFactory */])(mergeProps, 'mergeProps');
+}
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 64 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connect__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_useDispatch__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_useStore__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_shallowEqual__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__types__ = __webpack_require__(67);
+/* unused harmony namespace reexport */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__components_Context__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connect__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_3__hooks_useDispatch__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__hooks_useDispatch__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__["c"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_5__hooks_useStore__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__hooks_useStore__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_6__utils_shallowEqual__["a"]; });
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_Subscription__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_useIsomorphicLayoutEffect__ = __webpack_require__(25);
+
+
+
+
+
+function Provider({
+  store,
+  context,
+  children,
+  serverState
+}) {
+  const contextValue = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useMemo"])(() => {
+    const subscription = Object(__WEBPACK_IMPORTED_MODULE_2__utils_Subscription__["a" /* createSubscription */])(store);
+    return {
+      store,
+      subscription,
+      getServerState: serverState ? () => serverState : undefined
+    };
+  }, [store, serverState]);
+  const previousState = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useMemo"])(() => store.getState(), [store]);
+  Object(__WEBPACK_IMPORTED_MODULE_3__utils_useIsomorphicLayoutEffect__["a" /* useIsomorphicLayoutEffect */])(() => {
+    const {
+      subscription
+    } = contextValue;
+    subscription.onStateChange = subscription.notifyNestedSubs;
+    subscription.trySubscribe();
+
+    if (previousState !== store.getState()) {
+      subscription.notifyNestedSubs();
+    }
+
+    return () => {
+      subscription.tryUnsubscribe();
+      subscription.onStateChange = undefined;
+    };
+  }, [contextValue, previousState]);
+  const Context = context || __WEBPACK_IMPORTED_MODULE_1__Context__["a" /* ReactReduxContext */]; // @ts-ignore 'AnyAction' is assignable to the constraint of type 'A', but 'A' could be instantiated with a different subtype
+
+  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Context.Provider, {
+    value: contextValue
+  }, children);
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Provider);
+
+/***/ }),
+/* 66 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = createDispatchHook;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__useStore__ = __webpack_require__(27);
+
+
+/**
+ * Hook factory, which creates a `useDispatch` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useDispatch` hook bound to the specified context.
+ */
+
+function createDispatchHook(context = __WEBPACK_IMPORTED_MODULE_0__components_Context__["a" /* ReactReduxContext */]) {
+  const useStore = // @ts-ignore
+  context === __WEBPACK_IMPORTED_MODULE_0__components_Context__["a" /* ReactReduxContext */] ? __WEBPACK_IMPORTED_MODULE_1__useStore__["b" /* useStore */] : Object(__WEBPACK_IMPORTED_MODULE_1__useStore__["a" /* createStoreHook */])(context);
+  return function useDispatch() {
+    const store = useStore(); // @ts-ignore
+
+    return store.dispatch;
+  };
+}
+/**
+ * A hook to access the redux `dispatch` function.
+ *
+ * @returns {any|function} redux store's `dispatch` function
+ *
+ * @example
+ *
+ * import React, { useCallback } from 'react'
+ * import { useDispatch } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const dispatch = useDispatch()
+ *   const increaseCounter = useCallback(() => dispatch({ type: 'increase-counter' }), [])
+ *   return (
+ *     <div>
+ *       <span>{value}</span>
+ *       <button onClick={increaseCounter}>Increase counter</button>
+ *     </div>
+ *   )
+ * }
+ */
+
+const useDispatch = /*#__PURE__*/createDispatchHook();
+/* harmony export (immutable) */ __webpack_exports__["b"] = useDispatch;
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return bindActionCreators; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return combineReducers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "legacy_createStore", function() { return legacy_createStore; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectSpread2__ = __webpack_require__(69);
+
+
+/**
+ * Adapted from React: https://github.com/facebook/react/blob/master/packages/shared/formatProdErrorMessage.js
+ *
+ * Do not require this module directly! Use normal throw error calls. These messages will be replaced with error codes
+ * during build.
+ * @param {number} code
+ */
+function formatProdErrorMessage(code) {
+  return "Minified Redux error #" + code + "; visit https://redux.js.org/Errors?code=" + code + " for the full message or " + 'use the non-minified dev environment for full errors. ';
+}
+
+// Inlined version of the `symbol-observable` polyfill
+var $$observable = (function () {
+  return typeof Symbol === 'function' && Symbol.observable || '@@observable';
+})();
+
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(7).split('').join('.');
+};
+
+var ActionTypes = {
+  INIT: "@@redux/INIT" + randomString(),
+  REPLACE: "@@redux/REPLACE" + randomString(),
+  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
+    return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
+  }
+};
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = obj;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(obj) === proto;
+}
+
+// Inlined / shortened version of `kindOf` from https://github.com/jonschlinkert/kind-of
+function miniKindOf(val) {
+  if (val === void 0) return 'undefined';
+  if (val === null) return 'null';
+  var type = typeof val;
+
+  switch (type) {
+    case 'boolean':
+    case 'string':
+    case 'number':
+    case 'symbol':
+    case 'function':
+      {
+        return type;
+      }
+  }
+
+  if (Array.isArray(val)) return 'array';
+  if (isDate(val)) return 'date';
+  if (isError(val)) return 'error';
+  var constructorName = ctorName(val);
+
+  switch (constructorName) {
+    case 'Symbol':
+    case 'Promise':
+    case 'WeakMap':
+    case 'WeakSet':
+    case 'Map':
+    case 'Set':
+      return constructorName;
+  } // other
+
+
+  return type.slice(8, -1).toLowerCase().replace(/\s/g, '');
+}
+
+function ctorName(val) {
+  return typeof val.constructor === 'function' ? val.constructor.name : null;
+}
+
+function isError(val) {
+  return val instanceof Error || typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number';
+}
+
+function isDate(val) {
+  if (val instanceof Date) return true;
+  return typeof val.toDateString === 'function' && typeof val.getDate === 'function' && typeof val.setDate === 'function';
+}
+
+function kindOf(val) {
+  var typeOfVal = typeof val;
+
+  if (process.env.NODE_ENV !== 'production') {
+    typeOfVal = miniKindOf(val);
+  }
+
+  return typeOfVal;
+}
+
+/**
+ * @deprecated
+ *
+ * **We recommend using the `configureStore` method
+ * of the `@reduxjs/toolkit` package**, which replaces `createStore`.
+ *
+ * Redux Toolkit is our recommended approach for writing Redux logic today,
+ * including store setup, reducers, data fetching, and more.
+ *
+ * **For more details, please read this Redux docs page:**
+ * **https://redux.js.org/introduction/why-rtk-is-redux-today**
+ *
+ * `configureStore` from Redux Toolkit is an improved version of `createStore` that
+ * simplifies setup and helps avoid common bugs.
+ *
+ * You should not be using the `redux` core package by itself today, except for learning purposes.
+ * The `createStore` method from the core `redux` package will not be removed, but we encourage
+ * all users to migrate to using Redux Toolkit for all Redux code.
+ *
+ * If you want to use `createStore` without this visual deprecation warning, use
+ * the `legacy_createStore` import instead:
+ *
+ * `import { legacy_createStore as createStore} from 'redux'`
+ *
+ */
+
+function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
+    throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(0) : 'It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function. See https://redux.js.org/tutorials/fundamentals/part-4-store#creating-a-store-with-enhancers for an example.');
+  }
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(1) : "Expected the enhancer to be a function. Instead, received: '" + kindOf(enhancer) + "'");
+    }
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(2) : "Expected the root reducer to be a function. Instead, received: '" + kindOf(reducer) + "'");
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+  /**
+   * This makes a shallow copy of currentListeners so we can use
+   * nextListeners as a temporary list while dispatching.
+   *
+   * This prevents any bugs around consumers calling
+   * subscribe/unsubscribe in the middle of a dispatch.
+   */
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
+    }
+  }
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+
+
+  function getState() {
+    if (isDispatching) {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(3) : 'You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
+    }
+
+    return currentState;
+  }
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+
+
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(4) : "Expected the listener to be a function. Instead, received: '" + kindOf(listener) + "'");
+    }
+
+    if (isDispatching) {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(5) : 'You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api/store#subscribelistener for more details.');
+    }
+
+    var isSubscribed = true;
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      if (isDispatching) {
+        throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(6) : 'You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api/store#subscribelistener for more details.');
+      }
+
+      isSubscribed = false;
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+      currentListeners = null;
+    };
+  }
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+
+
+  function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(7) : "Actions must be plain objects. Instead, the actual type was: '" + kindOf(action) + "'. You may need to add middleware to your store setup to handle dispatching other values, such as 'redux-thunk' to handle dispatching functions. See https://redux.js.org/tutorials/fundamentals/part-4-store#middleware and https://redux.js.org/tutorials/fundamentals/part-6-async-logic#using-the-redux-thunk-middleware for examples.");
+    }
+
+    if (typeof action.type === 'undefined') {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(8) : 'Actions may not have an undefined "type" property. You may have misspelled an action type string constant.');
+    }
+
+    if (isDispatching) {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(9) : 'Reducers may not dispatch actions.');
+    }
+
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
+      listener();
+    }
+
+    return action;
+  }
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+
+
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(10) : "Expected the nextReducer to be a function. Instead, received: '" + kindOf(nextReducer));
+    }
+
+    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
+    // Any reducers that existed in both the new and old rootReducer
+    // will receive the previous state. This effectively populates
+    // the new state tree with any relevant data from the old one.
+
+    dispatch({
+      type: ActionTypes.REPLACE
+    });
+  }
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+
+
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if (typeof observer !== 'object' || observer === null) {
+          throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(11) : "Expected the observer to be an object. Instead, received: '" + kindOf(observer) + "'");
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return {
+          unsubscribe: unsubscribe
+        };
+      }
+    }, _ref[$$observable] = function () {
+      return this;
+    }, _ref;
+  } // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+
+
+  dispatch({
+    type: ActionTypes.INIT
+  });
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[$$observable] = observable, _ref2;
+}
+/**
+ * Creates a Redux store that holds the state tree.
+ *
+ * **We recommend using `configureStore` from the
+ * `@reduxjs/toolkit` package**, which replaces `createStore`:
+ * **https://redux.js.org/introduction/why-rtk-is-redux-today**
+ *
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+
+var legacy_createStore = createStore;
+
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+  } catch (e) {} // eslint-disable-line no-empty
+
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!isPlainObject(inputState)) {
+    return "The " + argumentName + " has unexpected type of \"" + kindOf(inputState) + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+  if (action && action.type === ActionTypes.REPLACE) return;
+
+  if (unexpectedKeys.length > 0) {
+    return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
+  }
+}
+
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, {
+      type: ActionTypes.INIT
+    });
+
+    if (typeof initialState === 'undefined') {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(12) : "The slice reducer for key \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
+    }
+
+    if (typeof reducer(undefined, {
+      type: ActionTypes.PROBE_UNKNOWN_ACTION()
+    }) === 'undefined') {
+      throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(13) : "The slice reducer for key \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle '" + ActionTypes.INIT + "' or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
+    }
+  });
+}
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+
+
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if (process.env.NODE_ENV !== 'production') {
+      if (typeof reducers[key] === 'undefined') {
+        warning("No reducer provided for key \"" + key + "\"");
+      }
+    }
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+
+  var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
+  // keys multiple times.
+
+  var unexpectedKeyCache;
+
+  if (process.env.NODE_ENV !== 'production') {
+    unexpectedKeyCache = {};
+  }
+
+  var shapeAssertionError;
+
+  try {
+    assertReducerShape(finalReducers);
+  } catch (e) {
+    shapeAssertionError = e;
+  }
+
+  return function combination(state, action) {
+    if (state === void 0) {
+      state = {};
+    }
+
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+
+      if (warningMessage) {
+        warning(warningMessage);
+      }
+    }
+
+    var hasChanged = false;
+    var nextState = {};
+
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+
+      if (typeof nextStateForKey === 'undefined') {
+        var actionType = action && action.type;
+        throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(14) : "When called with an action of type " + (actionType ? "\"" + String(actionType) + "\"" : '(unknown type)') + ", the slice reducer for key \"" + _key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.");
+      }
+
+      nextState[_key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+
+    hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
+    return hasChanged ? nextState : state;
+  };
+}
+
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(this, arguments));
+  };
+}
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass an action creator as the first argument,
+ * and get a dispatch wrapped function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+
+
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
+  }
+
+  if (typeof actionCreators !== 'object' || actionCreators === null) {
+    throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(16) : "bindActionCreators expected an object or a function, but instead received: '" + kindOf(actionCreators) + "'. " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
+  }
+
+  var boundActionCreators = {};
+
+  for (var key in actionCreators) {
+    var actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+
+  return boundActionCreators;
+}
+
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+function compose() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(void 0, arguments));
+    };
+  });
+}
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function () {
+      var store = createStore.apply(void 0, arguments);
+
+      var _dispatch = function dispatch() {
+        throw new Error(process.env.NODE_ENV === "production" ? formatProdErrorMessage(15) : 'Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
+      };
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch() {
+          return _dispatch.apply(void 0, arguments);
+        }
+      };
+      var chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = compose.apply(void 0, chain)(store.dispatch);
+      return Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectSpread2__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectSpread2__["a" /* default */])({}, store), {}, {
+        dispatch: _dispatch
+      });
+    };
+  };
+}
+
+/*
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== 'production', warn the user.
+ */
+
+function isCrushed() {}
+
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
+}
+
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = _objectSpread2;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__defineProperty_js__ = __webpack_require__(70);
+
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    enumerableOnly && (symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    })), keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = null != arguments[i] ? arguments[i] : {};
+    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
+      Object(__WEBPACK_IMPORTED_MODULE_0__defineProperty_js__["a" /* default */])(target, key, source[key]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
+      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+    });
+  }
+
+  return target;
+}
+
+/***/ }),
+/* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = _defineProperty;
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(29);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+__webpack_require__(75);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var InfoAboutProduct = function (_React$PureComponent) {
+    _inherits(InfoAboutProduct, _React$PureComponent);
+
+    function InfoAboutProduct() {
+        _classCallCheck(this, InfoAboutProduct);
+
+        return _possibleConstructorReturn(this, (InfoAboutProduct.__proto__ || Object.getPrototypeOf(InfoAboutProduct)).apply(this, arguments));
+    }
+
+    _createClass(InfoAboutProduct, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                'InfoAboutProduct'
+            );
+        }
+    }]);
+
+    return InfoAboutProduct;
+}(_react2.default.PureComponent);
+
+InfoAboutProduct.propTypes = {
+    info: _propTypes2.default.shape({
+        code: _propTypes2.default.number.isRequired,
+        description: _propTypes2.default.string.isRequired,
+        nameProduct: _propTypes2.default.string.isRequired,
+        price: _propTypes2.default.string.isRequired,
+        purpose: _propTypes2.default.string.isRequired,
+        typeScin: _propTypes2.default.string.isRequired,
+        urlProduct: _propTypes2.default.string.isRequired,
+        volume: _propTypes2.default.string.isRequired
+    })
+};
+exports.default = InfoAboutProduct;
+
+/***/ }),
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33448,11 +36602,11 @@ exports.typeOf = typeOf;
 
 
 var ReactIs = __webpack_require__(8);
-var assign = __webpack_require__(2);
+var assign = __webpack_require__(4);
 
-var ReactPropTypesSecret = __webpack_require__(5);
-var has = __webpack_require__(9);
-var checkPropTypes = __webpack_require__(31);
+var ReactPropTypesSecret = __webpack_require__(11);
+var has = __webpack_require__(30);
+var checkPropTypes = __webpack_require__(73);
 
 var printWarning = function() {};
 
@@ -34052,7 +37206,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34068,9 +37222,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(5);
+  var ReactPropTypesSecret = __webpack_require__(11);
   var loggedTypeFailures = {};
-  var has = __webpack_require__(9);
+  var has = __webpack_require__(30);
 
   printWarning = function(text) {
     var message = 'Warning: ' + text;
@@ -34163,7 +37317,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 32 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34176,7 +37330,7 @@ module.exports = checkPropTypes;
 
 
 
-var ReactPropTypesSecret = __webpack_require__(5);
+var ReactPropTypesSecret = __webpack_require__(11);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -34235,19 +37389,226 @@ module.exports = function() {
 
 
 /***/ }),
-/* 33 */
+/* 75 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 34 */
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(29);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRouterDom = __webpack_require__(3);
+
+var _reactRedux = __webpack_require__(15);
+
+__webpack_require__(77);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var intProduct = function (_React$PureComponent) {
+  _inherits(intProduct, _React$PureComponent);
+
+  function intProduct() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, intProduct);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = intProduct.__proto__ || Object.getPrototypeOf(intProduct)).call.apply(_ref, [this].concat(args))), _this), _this.showInfo = function () {
+      _this.props.selectedProduct(_this.props.code, 2);
+    }, _this.buyProduct = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(intProduct, [{
+    key: 'render',
+    value: function render() {
+      console.log();
+      return _react2.default.createElement(
+        'div',
+        { className: 'Product' },
+        _react2.default.createElement('img', { src: this.props.urlProduct, title: this.props.nameProduct, className: 'ImgProduct' }),
+        _react2.default.createElement(
+          'p',
+          null,
+          this.props.nameProduct
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'priceProduct' },
+          this.props.price
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'buttonProduct', onClick: this.showInfo },
+          _react2.default.createElement(
+            _reactRouterDom.NavLink,
+            { to: "/catalog/" + this.props.code },
+            '\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F'
+          )
+        ),
+        _react2.default.createElement('input', { type: 'button', defaultValue: 'Купить', className: 'buttonProduct', onClick: this.buyProduct })
+      );
+    }
+  }]);
+
+  return intProduct;
+}(_react2.default.PureComponent);
+
+intProduct.propTypes = {
+  /* info:PropTypes.arrayOf(
+    PropTypes.shape({
+    code: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    nameProduct: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    purpose: PropTypes.string.isRequired,
+    typeScin: PropTypes.string.isRequired,
+    urlProduct:PropTypes.string.isRequired,
+    volume:PropTypes.string.isRequired,
+  })),
+  workModel:PropTypes.number, */
+};
+;
+
+var mapStateToProps = function mapStateToProps(state) {
+  console.log(state.infoProduct);
+  // этому компоненту ничего не нужно из хранилища Redux
+  return {
+    info: state.infoProduct
+  };
+};
+
+// но этому компоненту нужен сам this.props.dispatch, и чтобы
+// он появился, следует присоединить (connect) компонент к хранилищу Redux
+var Product = (0, _reactRedux.connect)(mapStateToProps)(intProduct);
+
+exports.default = Product;
+
+/***/ }),
+/* 77 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 35 */
+/* 78 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _getData = __webpack_require__(80);
+
+var pr = __webpack_require__(81);
+var initState = {
+  info: pr
+  /* error:null,
+  workModel:1, */
+};
+/*  getData().then(data=>{initState.info=data},
+   error=>{initState.error=error}); */
+// в редьюсере state - это не весь state Redux, а только тот раздел state,
+// за который отвечает данный редьюсер
+console.log(pr);
+function infoReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initState;
+  var action = arguments[1];
+
+
+  switch (action.type) {
+
+    case "INC":
+      {
+        // хотелось бы просто увеличить state.cnt
+        // но редьюсер ВСЕГДА должен возвращаеть новый state а не изменять старый!
+        console.log('state до обработки редьюсером:', state);
+        var newState = _extends({}, state);
+        newState.cnt++;
+
+        return newState;
+      }
+
+    case "DEC":
+      {
+        console.log('state до обработки редьюсером:', state);
+        var _newState = _extends({}, state);
+        _newState.cnt--;
+
+        return _newState;
+      }
+
+    default:
+      return state;
+  }
+}
+
+exports.default = infoReducer;
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var getData = exports.getData = function getData() {
+  return fetch("http://d.zaix.ru/uIYI.txt").then(function (response) {
+    return response.json();
+  });
+};
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+module.exports = [{"type":"солнцезащита","nameProduct":"Увлажняющий крем SPF 50","code":1,"description":"Солнцезащитный крем для лица с экстрактом зеленого чая сохраняет кожу мягкой и увлажненной, обладает антибактериальными свойствами. SPF 50 не только защищает от УФ-лучей, но и предотвращает появление пигментных пятен, и предотвращает фотостарение кожи.","price":"35,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809426957651_1_jwkxzzil8ywtj6gd.jpg","typeScin":"для всех типов кожи","volume":"70 мл","purpose":"защита от солнца"},{"type":"тоник","nameProduct":"Тоник для сухой кожи","code":2,"description":"Увлажняющий тоник Tonique Confort деликатно освобождает от загрязнений, наполняет мягкостью и эффективно ухаживает за сухой кожей. Для кого? Деликатное средство очищения сухой кожи. Действие: Эффективно, но бережно очищает сухую кожу. Результат: Безупречно чистая, свежая, бархатистая кожа, увлажненная и ухоженная.","price":"91,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/f/4f6f7ee4c6b1855e496efa3c25e46307.jpg","typeScin":"для сухой кожи","volume":"200 мл","purpose":"увлажнение и питание"},{"type":"крем","nameProduct":"Крем увлажняющий от покраснений","code":3,"description":"Успокаивает кожу за 30 секунд. Успокаивает покраснение, чувство стянутости, покалывания и ощущение жара. Восстанавливает кожный барьер через 48 часов, увлажняет. Для реактивной, сверхчувствительной и склонной к аллергии кожи. Для нормальной и комбинированной кожи. Подходит детям с 2х и взрослым. Не содержит консервантов. Без запаха. Формула протестирована на склонной к аллергии коже. Состав на 98% из ингредиентов натурального происхождения. ","price":"14,46 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/2/3282770138801_1_c63covbvz14aafdl.jpg","typeScin":"для чувствительной кожи","volume":"40 мл","purpose":"против несовершенств"},{"type":"крем","nameProduct":"Крем с азелаиновой кислотой","code":4,"description":"Крем с азелаиновой кислотой идеален для коррекции недостатков проблемной кожи. Выравнивает поверхность кожи и обладает осветляющим эффектом. Нормализует процессы регенерации клеток. Помогает минимизировать следы постакне, пигментные пятна и покраснения. Азелаиновая кислота (5%) – мощное средство для борьбы с акне. Снимает воспаления и регулирует выработку кожного сала.","price":"23,13 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008495663_1_htjnndztjqnqruzs.jpg","typeScin":"для проблемной кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Восстанавливающий шампунь","code":5,"description":"Благодаря входящим в состав натуральным ингредиентам, заботится о волосах, укрепляет и питает их. Придает волосам ухоженный, здоровый вид. Продукт содержит более 98% ингредиентов растительного происхождения.","price":"21,94 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4620046171777_1_0ttkh4wt9jiexmql.jpg","typeScin":"для сухих и поврежденных волос","volume":"600 мл","purpose":"увлажнение волос"},{"type":"шампунь","nameProduct":"Шампунь с натуральными ингредиентами","code":6,"description":"Органический шампунь, максимально натуральный, содержащий экологически чистые и сертифицированные экстракты и эфирные масла, имеет нейтральный pH баланс 5,5. В составе шампуня неагрессивная натуральная моющая основа, которая мягко очищает от повседневных загрязнений и секреции сальных желез, не повреждая ни волосы, ни кожу.","price":"20,88 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809500811008_1_3nhahcs78ly1wjq8.jpg","typeScin":"для всех типов волос","volume":"150 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка очищающая","code":7,"description":"Состав мягко растворяет загрязнители, снимает слой пыли и себума без механического повреждения клеток кожи. В составе сыворотки для лица присутствует древесный уголь, который комплексно воздействует на кожу, придает ей сияние, устраняет потемнения, способствует отшелушиванию кожных чешуек и сужению пор.","price":" 186,29 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/c/1/c171bd7b9bcf5b1326ee84ce627399c0.jpg","typeScin":"проблемная и нормальная","volume":"30 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка регенерирующая","code":8,"description":" Благодаря календуле и алоэ вера в составе регенерирующей сыворотки для лица Обновление кожных клеток средство успокаивает воспаления и борется с раздражением кожи, снижая ее чувствительность.","price":"26,97 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603726088442_1_rtanwl7rnblvw8u3.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против признаков старения"},{"type":"солнцезащита","nameProduct":"Масло спрей SPF 30","code":9,"description":"Питание масла с ощущением легкой, обволакивающей дымки. Шелковистая, нелипкая текстура. Быстрое впитывание. Водостойкая формула","price":"112,65 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/2/3282770114669_1_oj8h20bf70znbhox.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"солнцезащита","nameProduct":"Флюид SPF 50","code":10,"description":"Содержит гиалуроновую кислоту, экстракт маточного молочка, и увлажняющие компоненты. Подходит для ежедневного ухода круглый год, может использоваться как база под макияж. Флюид для лица длительного действия с высоким уровнем защиты лица и тела SPF+ PA++++. Водостойкая формула, устойчива к воде и поту. Эффективно защищает кожу от UVB лучей, которые являются причиной появления веснушек и пигментных пятен, а также от UVA лучей которые вызывают ослабление кожных покровов и приводят к появлению морщин. ","price":"50,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/9/4901301363183_1_j26c1e1puqxv6f0q.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"солнцезащита","nameProduct":"Флюид с витамином Е SPF 50","code":11,"description":"Подходит для чувствительной кожи. Без парабенов. Флюид интенсивно увлажняет кожу и обеспечивает защиту широкого спектра от коротких и длинных уф-лучей (UVA/UVB), а также от агрессивных факторов окружающей среды. Разработан специально для защиты кожи лица от фотостарения (преждевременного появления пигментных пятен, морщинок) и солнечных ожогов. Быстро впитывается, обеспечивая незаметное покрытие.","price":"208,08 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/6/3605971613449_1_pf3amdkipaepaw7k.jpg","typeScin":"для чувствительной кожи","volume":"60 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем антивозрастной восстанавливающий","code":12,"description":"Активные ингредиенты дневного крема оказывают комплексное антивозрастное действие, а пребиотик зеленых морских водорослей укрепляет защитный барьер кожи. Крем также увлажняет кожу и усиливает её естественную защиту. В составе – пептиды, полисахариды, аденозин, гиалуроновая кислота, витамин B3 и алоэ вера. ","price":"96,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/1/3139436552573_1_bebyeirmaclibl47.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против признаков старения"},{"type":"тоник","nameProduct":"Тоник успокаивающий","code":13,"description":"Успокаивающий тоник эффективно удаляет макияж, успокаивает и защищает кожу. Средство обладает оптимальной переносимостью и имеет физиологический уровень pH. Тоник создан на основе Термальной воды и подходит для чувствительной кожи лица и глаз. Не содержит мыла, спирта, красителей и парабенов. Некомедогенно.","price":"58,17 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337872410321_1_9tc9qycrbdalhjmw.jpg","typeScin":"для чувствительной кожи","volume":"200 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка витаминная","code":14,"description":"Сыворотка создана, чтобы напитать кожу витаминами, восстановить гидро-липидный барьер и оздоровить ее внешний вид. Особенно актуально для уставшей, тусклой и нуждающейся в свечении кожи, а также для жителей городов, с плохой экологической ситуацией. Сыворотка имеет аромат свежего апельсина, благодаря гидролату и органическому эфирному маслу апельсина.","price":"71,52 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603744660316_1_rowb1vo0aox8bubg.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"солнцезащита","nameProduct":"Крем для лица SPF 30","code":15,"description":"Образует на поверхности кожи покрытие, защитные свойства которого возрастают при усилении жары или при взаимодействии с водой или потом. Крем обеспечивает непрерывную защиту от ультрафиолетовых лучей спектра А и В и сухости. Содержит фактор защиты от солнца SPF 30. В состав крема входят ингредиенты, которые ухаживают за кожей и предотвращают появление морщин и неровного тона в результате фотостарения. ","price":"115,23 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/768614156741_1_k95ldu8mtmre2nze.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"пенка","nameProduct":"Пенка с ниацинамидом","code":16,"description":"Пенка с ниацинамидом, цинком и салициловой кислотой предназначена для глубокого, но щадящего очищения, не пересушивает кожу. Эффективно удаляет макияж, остатки кожного сала и внешние загрязнения. Салициловая кислота стабилизирует работу сальных желёз, сужает поры, борется с несовершенствами кожи, выравнивает микрорельеф. Ниацинамид стимулирует обменные процессы, способствует более глубокому проникновению активных веществ, улучшает эластичность кожи, эффективно выравнивает. ","price":"61,19 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603757312820_1_u5yzhir7taawjtpg.jpg","typeScin":"для комбинированной кожи","volume":"150 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с экстрактом алоэ вера","code":17,"description":"Пенка мягко удаляет загрязнения, излишки себума и ороговевшие клетки, очищает поры, не забивая их. Экстракт алоэ оказывает антибактериальное и антисептическое действия, предотвращает появление воспалений, успокаивает кожу и возвращает ей здоровый вид.","price":"87,54 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/9/9/99730300046_1_g1zjenur769zc0tp.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"очищение"},{"type":"крем","nameProduct":"Крем для сияния кожи","code":18,"description":"Крем обеспечивает глубокое и длительное увлажнение для сухой и нормальной, а также комбинированной и чувствительной кожи. Средство питает её и возвращает естественное сияние. В состав средства входят кристаллы рубина, которые улучшают цвет лица и помогают разгладить морщины.","price":"52,12 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5990688142503_1_ucsnbh7dgchkx6jv.jpg","typeScin":"для сухой кожи","volume":"30 мл","purpose":"увлажнение и питание"},{"type":"маска","nameProduct":"Маска восстанавливающая","code":19,"description":"Легкая в использовании, ночная маска интенсивного восстановления, устраняет покраснения и восстанавливает поврежденную кожу, пока вы спите. В основе Центелла Азиатская или Тигровая Трава, широко известная своими заживляющими свойствами.","price":"145,32 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809642711631_1_kjmjzz7g58qh5ufo.jpg","typeScin":"для всех типов кожи","volume":"110 мл","purpose":"осветление и восстановление"},{"type":"пенка","nameProduct":"Пенка для глубокого очищения PH 5,5","code":20,"description":"Идеально сбалансированное средство для очищения с нейтральным уровнем pH 5.5 подходит для самой чувствительной кожи, нежно, но при этом тщательно очищая её. Гель при соприкосновении с водой преобразуется в легкую пенку.","price":"17,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535804907_1_t9asnwkbjdppdaok.jpg","typeScin":"для чувствительной кожи","volume":"30 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник корректирующий","code":21,"description":"Активный корректирующий тоник эффективно очищает и освежает кожу. Деликатно и постепенно отшелушивает ороговевшие клетки, заметно уменьшает блеск кожи и сужает поры, осветляет пигментацию. Выравнивает цвет и обновляет, не раздражает кожу. Увлажняет уже на этапе очищения, подготавливая к нанесению сыворотки или крема. Уменьшает покраснения, придаёт сияние. Не сушит кожу, восстанавливает pH баланс 5,5.","price":"127,48 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169018245_1_b7xv5nm2k9iad749.jpg","typeScin":"для комбинированной кожи","volume":"200 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник оживляющий","code":22,"description":"Может применяться как самостоятельный живительно-очищающий комплекс или на завершающем этапе освобождения эпидермиса от внешних и естественных загрязнений в комплекте с молочком из соответствующей линии. Композиция Refining Toner очень богата природными компонентами: розовый экстракт москета, вытяжка гамамелиса, насыщенного танинами, лимонный сок, эфирные масла и т.д. Такой состав способствует глубокому и тщательному, но одновременно нежному очищению, успокаиванию и тонизированию кожных покровов, укреплению сосудов и сужению пор, восстановлению структуры и эластичности, улучшению рельефа и гидролипидного баланса.","price":"43,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/0/4001638095709_1_sagopbovzmdafcyw.jpg","typeScin":"для всех типов кожи","volume":"100 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь с кератином","code":23,"description":"Мягко очищает и реконструирует поврежденные волосы, пополняя естественные запасы кератина в волосе. Эфирные масла Арганы и Жожоба проникают в глубь волоса и обеспечивают максимальный блеск, предотвращают ломкость и сечение.","price":"53,99 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/6/3/633911728857_1_9k7tg8p2rvlcvfso.jpg","typeScin":"для сухих и поврежденных волос","volume":"355 мл","purpose":"увлажнение волос"},{"type":"маска","nameProduct":"Маска ночная осветляющая","code":24,"description":"Маска ночная осветляющая подарит вашей коже благородный аристократический оттенок и решит ряд проблем, которые возникают на кожном покрове. Экстракт лаванды превосходно борется с пигментацией и оказывает великолепное осветляющее воздействие на вашу кожу. Особенно хорошо и эффективно работает в ночные часы, когда ваша кожа отдыхает и совершенно расслаблена. ","price":"25,45 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/h/t/http192.168.0.11mizonimages8809390120358_1.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"осветление и восстановление"},{"type":"сыворотка","nameProduct":"Сыворотка с витамином С","code":25,"description":"Отлично освежает, отбеливает веснушки и выравнивает цвет лица. Является антиоксидантом и защищает клетки от различных патологий и заболеваний. Повышает защитные свойства кожи и укрепляет сосуды, регулирует водный баланс и защищает от УФ лучей. Витамин С помогает выглядеть всегда выспавшейся и свежей, благодаря своим свойствам сильного восстановления.","price":"25,43 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603757312318_1_53rjeoshdkgqc250.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"осветление и восстановление"},{"type":"маска","nameProduct":"Маска ночная","code":26,"description":"Немного красного вина перед сном сделают тебя прекрасной, если это ночная винная маска! Обновляет кожу на клеточном уровне, возвращает ей упругость и эластичность. Ускоряет процесс регенерации и подтягивает контур лица. Имеет антивозрастной эффект, убирает мелкие морщинки. Легкая и нежная текстура желе быстро впитывается, оставляя на коже тонкую пленку. Действительно эффективная маска для тех, кто хочет быстрого эффекта!","price":"45,15 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8806334338572_1_c2qx7ldcm4irsokf.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка для жирной кожи","code":27,"description":"Высокоактивные компоненты уходового продукта Geranium Foam, полученные из яблок и кокоса, оказывают интенсивное увлажняющее, тонизирующее и антиоксидантное действие. Экстракты артишока, земляничных листьев и органические эмоленты в составе пенки для умывания для жирной кожи.","price":"23,49 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/d/7d8c17a46abc7845a17ea7101df00488.jpg","typeScin":"для жирной кожи","volume":"150 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с муцином улитки","code":28,"description":"Универсальная мягкая пенка для умывания мягко очищает кожу лица, удаляя загрязнения и остатки макияжа. Комплекс с муцином улитки, экстрактом зеленого чая и солодки обладает антиоксидантным действием, укрепляет стенки сосудов, препятствует появлению купероза. Оказывает лёгкое осветляющее действие на кожу. Пенка бережно очищает и смягчает кожу, выравнивает цвет лица, оказывает успокаивающее и восстанавливающее действие.","price":"123,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494840_1_wfqcm727jjpasp2w.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник осветляющий","code":29,"description":"Тоник освежает кожу, обладает осветляющими свойствами и способствует выравниванию тона кожи. Гликолевая кислота - идеально выравнивает тон кожи, борется с пигментацией, разглаживает, предотвращает преждевременное старение и стимулирует выработку коллагена. Витамин С - один из сильнейших антиоксидантов. ","price":"83,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169046842_1.png_9jmo9gj3kapgxxbs.jpg","typeScin":"для всех типов кожи","volume":"200 мл","purpose":"осветление и восстановление"},{"type":"солнцезащита","nameProduct":"Крем солнцезащитный SPF 30","code":30,"description":"Светостойкие фильтры последнего поколения в сочетании с природными светоотражающими свойствами экстрактов мускатного шалфея, рябины и боярышника образуют мощный блок, обеспечивающий высокий уровень защиты кожи от полного спектра UVA/UVB лучей, ослабляя их воздействие и защищая кожу от фотостарения. Крем создает тончайшее матовое покрытие, которое удерживает влагу в коже даже во время длительного пребывания на солнце.","price":"38,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4607012142313_1_vqcg2aucikb1wzmk.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"маска","nameProduct":"Маска глиняная","code":31,"description":"Эта маска мечты похожа на мороженое: мягкая и легкосмываемая. Каолиновая глина очищает и выводит токсины из пор, в то время как фруктоолигосахариды питают кожу, сохраняя ее баланс и здоровье. Фруктоза и Гиалуронат натрия помогают удерживать влагу, поэтому кожа остается такой же упругой и нежной, как сама маска.","price":"30,54 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/7640399230676_1_mpabsw3c0prvcnlb.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка очищающая","code":32,"description":"Насыщенная пенка с необычной тягучей текстурой глубоко очищает, оставляя кожу безупречно чистой. Поддерживает идеальный pH баланс, не пересушивая и защищая внешний барьер кожи. Гиалуроновая кислота увлажняет, а экстракты персика, цитруса, центеллы и др.растений смягчают и питают кожу.","price":"32,18 BYN","urlProduct":"https://goldapple.by/web_scripts/webp/catalog/product/cache/fb5d06f7acfb2f26f85333624ccbfb5e/8/8/8803348040514_1_qd03nof58urgrrh2.jpg?quality=95","typeScin":"для всех типов","volume":"150 мл","purpose":"очищение"},{"type":"шампунь","nameProduct":"Шампунь оттеночный","code":33,"description":"Питательный оттеночный шампунь для придания и поддержания цвета волосам оттенков блонд. Содержащийся в составе экстракт Облепихи увлажняет осветлённые, обесцвеченные волосы и кожу головы; питает и защищает сухие и повреждённые волосы. Сбалансированный комплекс цветовых пигментов придаёт пепельный оттенок волосам.","price":"20,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/d/1/d1390dd4-da42-4972-a432-94e673e30fda_slkawxhxn3bavnt4.jpg","typeScin":"для окрашенных волос","volume":"250 мл","purpose":"тонирование"},{"type":"крем","nameProduct":"Очищающий крем","code":34,"description":"Деликатно, но тщательно, очищает от любых загрязнений, остатков макияжа и лишнего себума, нейтрализует покраснения и раздражения, заметно уменьшает расширенные поры. Благодаря невесомой кремовой консистенции этого очищающего крема для лица, он легко наносится и мгновенно впитывается. Восстанавливает гидролипидный баланс, оживляет и укрепляет кожу.","price":"16,16 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/a/a/aaf29491980a156c5ff55f12aa8ed921_1.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка кислотная","code":35,"description":"Концентрированная сыворотка мягко отшелушивает, снижает выработку сальных желез, сужает поры, уменьшает постакне. Кислоты AHA + PHA – обладают увлажняющими свойствами, а также отшелушивают омертвевшие клетки эпидермиса. Кислоты AHA + PHA – обладают увлажняющими свойствами, а также отшелушивают омертвевшие клетки эпидермиса. Ниацинамид - сильный антиоксидант, помогает замедлить образование морщин, регулирует чрезмерную секрецию кожного сала, препятствует появлению воспалений.","price":"41,39 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169046866_1.png_z0ftyhsyut3cazp6.jpg","typeScin":"для проблемной кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"солнцезащита","nameProduct":"Увлажняющий лосьон SPF 25","code":36,"description":"Увлажняющий лосьон для лица SPF 25 обеспечивает эффективную защиту широкого спектра действия от UVA и UVB солнечных лучей и интенсивно увлажняет кожу в течение 24 часов.Гиалуроновая кислота и технология MVE позволяют поддерживать естественный уровень увлажнения кожи в течение долгого времени.","price":"55,60 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337875597487_1_l0wm3lmdirsh0j9z.jpg","typeScin":"для нормальной кожи","volume":"52 мл","purpose":"защита от солнца"},{"type":"шампунь","nameProduct":"Шампунь для сухих и поврежденных волос","code":37,"description":"Бережно очищает и помогает восстановить естественный уровень влаги в волосах, предотвращает обезвоживание. Придаёт волосам мягкость и блеск.","price":"23,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4630079566730_1_c9jucsulizccbcat.jpg","typeScin":"для сухих и поврежденных волос","volume":"250 мл","purpose":"увлажнение волос"},{"type":"крем","nameProduct":"Увлажняющий крем-сорбет","code":38,"description":" Крем устраняет ощущение стянутости кожи и восстанавливает ее природные ресурсы. С каждым днем ощущение комфорта на коже только усиливается. Тонкие цитрусовые нотки в ее аромате переплетаются с освежающим букетом из цветов мандарина, листьев лимонного дерева, огуречной воды и свежей мяты.","price":"36,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/5/3522930003335_1_y8mbrsbuavy081xw.jpg","typeScin":"для чувствительной кожи","volume":"40 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь для светлых волос","code":39,"description":"Пигменты, входящие в состав шампуня, придают свежесть и сияние оттенкам блонд, нейтрализуют нежелательный желтый оттенок на осветленных и окрашенных в светлые тона волосах. Полезные масла (касторовое, репейное), мягкие ПАВы, получаемые из плодов кокоса, и эффективные кондиционирующие добавки обеспечивают необходимое увлажнение, питание и защиту волосам.","price":"50,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4640130792039_1_m2n4uqdaw8qb95kv.jpg","typeScin":"для окрашенных волос","volume":"1000 мл","purpose":"тонирование"},{"type":"маска","nameProduct":"Маска с красной глиной","code":40,"description":" Красная пеларгическая глина поглощает токсины и выделения сальных желез, наполняя клетки микроэлементами. Масло шиповника стимулирует внутриклеточный обмен, способствуя регенерации дермы и увлажнению. Букет натуральных масел манго лаванды и лимона в составе маски для лица матирующей с красной глиной питают и защищают кожу, а экстракты элеутерококка и гречихи улучшают кровообращение и снимают воспаление.","price":"17,50 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/9/a/9a37a12244990fbf53ff614050a78baf.jpg","typeScin":"для комбинированной кожи","volume":"50 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка с ретинолом","code":41,"description":"Эта вечерняя сыворотка с ретинолом и ниацинамидом подойдет для для тех, кто начинает пользоваться ретиноидами. Ретинол - один из самых действенных препаратов для борьбы со старением, также помогает при гиперпигментации и борьбе с акне. Ниацинамид улучшает барьерные свойства кожи и усиливает синтез церамидов.","price":" 21,61 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4631148521452_1_6q3x7jitcsksw4pz.jpg","typeScin":"для проблемной кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь с UV-фильтром","code":42,"description":"Мягко очищает, освежает и увлажняет кожу головы. Протеины шёлка кондиционируют волосы, придают им гладкость. Соки апельсина  и грейпфрута богатые витаминами оказывают антиоксидантное действие  и увлажняют волосы и кожу головы.","price":"23,13 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4606453069913_1_d7yk4kkcgqnzbv80.jpg","typeScin":"для всех типов волос","volume":"250 мл","purpose":"очищение"},{"type":"крем","nameProduct":"Крем увлажняющий","code":43,"description":"Содержит экстракт маточного молочка, который делает кожу увлажнённой и продлевает этот эффект, предотвращая потерю влаги.Витамины и аминокислоты, полученные из экстракта облепихи и сока березы, питают кожу и снимают стресс, вызванный воздействием негативных факторов окружающей среды.","price":"70,17 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809340383550_1_qbpp1lyfgvp17oj5.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"тоник","nameProduct":"Тоник с витаминами","code":44,"description":"Витаминизирующий тонер вместо воды содержит 88% ферментированный фильтрат дрожжевого гриба Галактомисис. В сочетании с витамином С и ниацинамидом тонер возвращает коже ровный и здоровый цвет, делает ее гладкой и эластичной. Комплекс из 15 растений не только восстанавливает кислотно-щелочной баланс после применения очищающих средств, но и обеспечивает питательными веществами безжизненную и уставшую кожу, замедляя ее старение.","price":"69,71 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809511764638_1_wjqfwzes9kxdeqzl.jpg","typeScin":"для всех типов кожи","volume":"250 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка для глубокого очищения","code":45,"description":"Средство содержит органические и натуральные ингредиенты для бережного ухода: ментол помогает эффективно очистить кожу и поры, экстракт листьев хурмы выравнивает текстуру кожи. Пенка подходит для ежедневного ухода и не вызывает раздражения или сухости. После умывания кожа остаётся увлажнённой, свежей и мягкой.","price":"40,31 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809353930345_1_u3flufbpfqd3id2g.jpg","typeScin":"для комбинированной кожи","volume":"180 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с экстрактом чайного дерева","code":46,"description":"Мягкое очищающее средство на основе Чайного Дерева для борьбы с акне. Уход за кожей с низким уровнем pH.","price":"113,21 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809642712874_1_wj6avorbymy6idwa.jpg","typeScin":"для проблемной кожи","volume":"150 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка подтягивающая","code":47,"description":"Профессиональная высокоактивная концентрированная сплэш-сыворотка для ревитализирующего 3D-лифтингового ухода за кожей лица и шеи на основе низкомолекулярной гиалуроновой кислоты, витаминов и полисахаридов экзотических растений. Применяется для пролонгации эффекта, достигнутого в результате инъекционных процедур биоревитализации, пилингов, а также для регулярного ежедневного ухода за кожей лица. ","price":"43,25 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494710_1_ylttlkro98c9mxmh.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против признаков старения"},{"type":"тоник","nameProduct":"Тоник с фруктовыми кислотами","code":48,"description":"Тоник для интенсивного ухода за кожей склонной к жирности, появлению акне, а также сухости и гиперкератозу. Снижает рН-кожи, способствуя замедлению развития бактерий, провоцирующих акне. Отшелушивает ороговевшие клетки эпидермиса, способствуя усилению регенерации. Стимулирует выработку собственного коллагена и эластина кожи, повышает упругость, уменьшая проявления морщин. Обладает лёгким осветляющим действием.","price":"10,14 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008493249_1_oa8j9ze8zaekimdb.jpg","typeScin":"для комбинированной кожи","volume":"250 мл","purpose":"против несовершенств"},{"type":"крем","nameProduct":"Легкий успокаивающий крем-гель","code":49,"description":"Мгновенное увлажнение, устраняет раздражение. Легкий увлажняющий крем для жирной, склонной к акне кожи Легкий гель-крем активно успокаивает чувствительную и проблемную кожу, а также увлажняет и защищает кожу с помощью комплекса Multi Tiger grass. Приятный травяной аромат снимает стресс кожи, а его легкая текстура обволакивает кожу.","price":"54,15 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535807953_1_nioduvilzyqujq93.jpg","typeScin":"для чувствительной кожи","volume":"80 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь глубокой очистки","code":50,"description":"Шампунь глубокой очистки High Amplify эффективно удаляет жир, кожные отложения и остатки стайлинговых продуктов у корней, мешающих объёму. Использовать шампунь не чаще 1 раза в неделю.","price":"80,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/4/3474636890712_1_dmkmzvs0tg9xyv0d.jpg","typeScin":"для всех типов волос","volume":"400 мл","purpose":"очищение"},{"type":"маска","nameProduct":"Маска SOS","code":51,"description":"Ветер, холод, жара, серьезная косметическая процедура в салоне – частые причины повышенной чувствительности и сухости кожи. Чтобы помочь уставшей коже и вернуть ей нормальные настройки, достаточно добавить в свою бьюти-рутину средства ухода с успокаивающими и восстанавливающими компонентами.","price":"65,01 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/7640399230799_1_fzrb7unipk49yoc5.jpg","typeScin":"для сухой кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка с гиалуроновой кислотой","code":52,"description":"Пенка деликатно удаляет грязь и отмершие клетки с поверхности кожи. Содержит 2 вида гиалуроновой кислоты: гиалуронат натрия и супергиалуроновую кислоту. Не содержит отдушек, искусственных красителей, минеральных масел и спирта. Нежная и плотная пенка в одно нажатие. Кожа становится необыкновенно чистая, гладкая и нежная.","price":"124,66 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/9/4987241145614_1_pxwa8fzbimo11mz0.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник регенерирующий","code":53,"description":"Регенерирующий тоник для лица с молочной кислотой оказывает противовоспалительное действие, выравнивает тон и микрорельеф, повышает уровень увлажнённости кожи. В основе тоника водный экстракт лаванды, который успокаивает кожу и снимает воспаление. Экстракт ламинарии увлажняет, регенерирует, регулирует активность сальных желез. Экстракт фиалки улучшает кислородное питание кожи, сужает поры. Экстракт донника оказывает успокаивающее и антиоксидантное действие.","price":"55,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603781379042_1_ashpntdsjzmxqhfg.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"против несовершенств"},{"type":"сыворотка","nameProduct":"Сыворотка против постакне","code":54,"description":"Активная формула средства, впервые1 содержащая комплекс из Трех Кислот борется с несовершенствами, дополняя ваш привычный ритуал ухода. Ультра Концентрированная Сыворотка Effaclar cодержит интенсивный комплекс из Салицилловой, Гликолевой и Липо-Гидрокси-Кислоты, дополяющих действие друг друга для оптимальной эффективности в борьбе против несовершенств, черных точек и следов постакне. День за днем сыворотка ощутимо обновляет кожу, заметно улучшая микрорельеф кожи и тон лица, а также предотвращая повторного появления следов постакне.","price":"150,44 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337875722827_1_kdtpa7kv37gfzpw0.jpg","typeScin":"для проблемной кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь ревитализирующий","code":55,"description":"Ревитализирующий Шампунь-Ванна для бережного очищения кожи головы и волос. Содержит Гиалуроновую кислоту, Молекулу Абиссин и Витамин Е, которые борются с основными признаками старения. Обеспечивает длительное увлажнение кожи головы, укрепляет волосы, насыщая их влагой, возвращает упругость и придает роскошный блеск. Средство обладает узнаваемым тонким ароматом Chronologiste с нотами чайный розы, древесины светлых пород и мускуса. Дарит ощущение комфорта.","price":"160,80 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/4/3474636728268_1_ulet8oh1owjcszb0.jpg","typeScin":"для сухих и поврежденных волос","volume":"250 мл","purpose":"увлажнение волос"},{"type":"маска","nameProduct":"Маска с AHA кислотами","code":56,"description":"Маска для лица с АНА кислотами помогает очистить и увлажнить кожу, повысить ее тонус. АНА кислоты в маске для лица деликатно отшелушивают ороговевшие клетки, стимулируют их обновление. Миндальное масло питает ткани влагой, восстанавливает повреждения, способствует разглаживанию рельефа и выравниванию морщин.","price":"8,49 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4627090994239_1_qignhecyw6xayryz.jpg","typeScin":"для всех типов кожи","volume":"110 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Мист солнцезащитный","code":57,"description":"Солнцезащитный спрей для лица и тела мгновенно впитывается и остается незаметным на коже без ощущения липкой пленки. Идеальное средство для активного отдыха и спорта на открытом воздухе. Технология WetForce обеспечивает более эффективную защиту при контакте с водой и потом, покрывая кожу защитной вуалью. Чем больше Вы потеете, тем лучше работает защита! Кроме того, новая технология Invisible Feel с быстросохнущими маслами создает гладкое шелковистое покрытие, которое не ощущается на коже. ","price":"120 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/a/6/a683d589633b4d5a54e068729286e611.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем для проблемной кожи","code":58,"description":"Чайное дерево широко известно как отличное средство для улучшения состояния жирной и проблемной кожи. Крем с экстрактом чайного дерева поможет уменьшить выработку себума и избавиться от жирного блеска, подсушит имеющиеся проблемные участки и предотвратит появление новых. Легкая текстура быстро впитывается, не перегружая кожу и придавая ей здоровую естественную матовость. ","price":"62,47 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809623291985_1_hk7a3fsd4tqolaf1.jpg","typeScin":"для жирной кожи","volume":"50 мл","purpose":"матирование"},{"type":"маска","nameProduct":"Маска для проблемной кожи","code":59,"description":"Профессиональная маска для интенсивного ухода за проблемной кожей лица. Изготовлена на основе биоактивного хлорофилл-каротинового комплекса. Оказывает интенсивное противовоспалительное, бактерицидное и себорегулирующее действие, способствует устранению акне, комедонов, постакне и шелушения, снимает покраснение и отек, сужает поры. Идеальное для жирной кожи сочетание салициловой и яблочной кислот снижает проявление себореи.","price":"26,08 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494468_1_rqihcu0zvuikbr22.jpg","typeScin":"для проблемной кожи","volume":"150 мл","purpose":"против несовершенств"},{"type":"тоник","nameProduct":"Тоник увлажняющий","code":60,"description":"Максимально эффективен при регулярном использовании. Активный состав увлажняющего тоника проникает глубоко в ткани и клетки, производя очищение и питание. ","price":"15,94 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/f/8f82007e49436211b391ec6139aac608.jpg","typeScin":"для комбинированной кожи","volume":"200 мл","purpose":"увлажнение и питание"},{"type":"сыворотка","nameProduct":"Сыворотка коллагеновая","code":61,"description":"Collagen 5% + Peptides 7% Lifting Complex - биоактивный серум-концентрат направлен на каскадное укрепление внутреннего коллаген-эластинового каркаса кожи лица, повышение упругости кожи, разглаживание ее микрорельефа и борьбу с преждевременным птозом. Основой средства являются коллаген и трио синергичных друг другу пептидных комплексов.","price":"27,85 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4627163316036_1_nfshvs2goo9mo4re.jpg","typeScin":"для всех типов кожи","volume":"15 мл","purpose":"против признаков старения"},{"type":"маска","nameProduct":"Маска увлажняющая","code":62,"description":"Позаботиться о коже и насытить её влагой помогают органические ингредиенты: миндальное масло, содержащее витамин E, экстракт кунжута, глицерин, который поддерживает баланс влаги в коже, алоэ вера и экстракт огурца, оказывающие противовоспалительное действие и успокаивающие кожу.","price":"20,32 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/2/0/2030150400038_1_xiwjbmwhvx1bq91m.jpg","typeScin":"для всех типов кожи","volume":"15 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь для красоты волос","code":63,"description":"Шампунь для абсолютной красоты OI деликатно очищает волосы и придает необычайную мягкость, блеск и объем.Содержит масло аннато (другое название — масло рукку) из растения, произрастающего в лесах Амазонии, а также активный ингредиент, полученный из розового масла, который придает волосам исключительный блеск, благодаря высокому коэффициенту преломления.","price":"58,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/0/8004608247630_1_00yn8zx3ur5qdekn.jpg","typeScin":"для всех типов волос","volume":"280 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Восстанавливающий крем SPF 50","code":64,"description":"Травяные экстракты снимают воспаления, препятствуют образованию сухости и шелушений, успокаивают ткани. Солнцезащитный крем препятствует преждевременному увяданию кожи, благодаря богатому антиоксидантами авокадо.","price":"35,90 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8803348040903_1_xjmcg5t94awy0w1d.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"пенка","nameProduct":"Пенка с AHA кислотами","code":65,"description":"Предназначена для глубокого и при этом очень бережного очищения сухой и чувствительной кожи. Она легко и абсолютно безопасно удаляет ороговевший слой эпидермиса, не повреждая живые клетки. Пенка хорошо удаляет макияж и глубоко очищает кожу, проникая в поры, очищая их и сужая, смягчает кожу и улучшает ее текстуру, а также осветляет пигментацию.","price":"13,16 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/f/b/fb0b0e6a05563c68a339e043a38a96c9.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Масло помадного дерева SPF 6","code":66,"description":"Это легендарное масло для загара содержит кокосовое масло и отборные растительные масла с ценным экстрактом аннато, который воплощает в себе насыщенное карибское лето. Араваки традиционно используют темно-красные семена помадного дерева с их высоким содержанием провитамина А в качестве солнцезащитного средства, которое стимулирует образование меланина и собственные защитные механизмы кожи. ","price":"210,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/7/3700648806770_1_zpypclfuhablszfo.jpg","typeScin":"для всех типов кожи","volume":"200 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем ночной антивозрастной","code":67,"description":"Пока вы спите, омолаживающий ночной крем продолжает активно трудиться, совершенствуя вашу кожу лица! В питательную формулу, разработанную лучшими израильскими учеными, входят самые эффективные в уходе косметические компоненты: ускоряющий регенерацию тканей витамин Е; формирующий структуру кожи коллаген; Д-пантенол – провитамин В5 – который увлажняет самые глубинные слои.","price":"26,55 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/2/7290015816434_1_dhdzm4dm8facb6rf.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"маска","nameProduct":"Маска альгинатный коктейль","code":68,"description":"В состав средства входит глутатион, мощный антиоксидант, обеспечивающий ровный тон кожи, и природный растительный комплекс, способствующий свежему цвету лица за счет экстрактов облепихи и грейфрута. Сочетание ингредиентов маски подарит вам сияющую ухоженную кожу. Назначение: возвращает сияние и свежий цвет лица усталой, тусклой коже МАСКА «АЛЬГИНАТНЫЙ КОКТЕЙЛЬ» СИЯНИЕ & ДЕТОКС обладает высокой эффективностью альгинатных масок и при этом очень проста в использовании.","price":"43,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535802071_1_uld0ejezmwhefkw9.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"тоник","nameProduct":"Тоник увлажняющий","code":69,"description":"Созданный на основе натуральных ингредиентов, увлажняет кожу, помогая сделать её мягкой и чистой. Благодаря комплексу экстрактов с корейского острова Чеджу средство оказывает охлаждающее действие и понижает температуру кожи на 2 градуса, чтобы сократить выработку себума, улучшить вид кожи и успокоить её. В состав также входит экстракт лаванды, который стимулирует регенерацию кожи. ","price":"72,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809513390125_1_z4tsnqk1gvfvxcje.jpg","typeScin":"для сухой кожи","volume":"150 мл","purpose":"увлажнение и питание"},{"type":"сыворотка","nameProduct":"Сыворотка для сияния кожи","code":70,"description":"Средство содержит богатое витамином C масло лимона, которое помогает удалить омертвевшие клетки и сделать кожу чистой и сияющей. Экстракт бурых водорослей повышает эластичность кожи и оказывает антивозрастное действие, а экстракт софоры японской улучшает состояние кожи благодаря противовоспалительным свойствам. Для увлажнения кожи и ощущения свежести в состав входит гиалуронат натрия.","price":"36,64 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809079250536_1_vzsaf8rrz3drgzna.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против признаков старения"}]
+
+/***/ }),
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34263,7 +37624,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(36);
+__webpack_require__(83);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34599,13 +37960,13 @@ exports.default = function (props) {
 };
 
 /***/ }),
-/* 36 */
+/* 83 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 37 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34621,7 +37982,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(38);
+__webpack_require__(85);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34765,98 +38126,13 @@ var Page_Contacts = function (_React$PureComponent) {
 exports.default = Page_Contacts;
 
 /***/ }),
-/* 38 */
+/* 85 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(3);
-
-var _InfoAboutProduct = __webpack_require__(40);
-
-var _InfoAboutProduct2 = _interopRequireDefault(_InfoAboutProduct);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// react-router v6 предоставляет возможности доступа к параметрам из УРЛа только в виде хуков, т.е. для функциональных компонентов
-// эта HOF делает возможным использование этого react-router и с классовыми компонентами
-var withRouter = function withRouter(Component) {
-  return function (props) {
-    var params = (0, _reactRouterDom.useParams)();
-    return _react2.default.createElement(Component, _extends({}, props, { params: params }));
-  };
-};
-
-var Page_Item = function (_React$PureComponent) {
-  _inherits(Page_Item, _React$PureComponent);
-
-  function Page_Item() {
-    _classCallCheck(this, Page_Item);
-
-    return _possibleConstructorReturn(this, (Page_Item.__proto__ || Object.getPrototypeOf(Page_Item)).apply(this, arguments));
-  }
-
-  _createClass(Page_Item, [{
-    key: 'render',
-    value: function render() {
-
-      //console.log(this.props);
-
-      // раз написано <Route path="/client/:clid" element={<Page_Client/>} />
-      // значит withRouter(Page_Client) получит то что в УРЛе после /client/ под именем props.params.clid в виде строки
-
-      /* let clientId=parseInt(this.props.params.clid);
-       let clientData=appData.clientsArr.find( c => c.id==clientId );
-       return (
-        <div> тут инфо о продукте
-        <InfoAbotProduct
-          info={clientData}
-        />
-        </div>
-      ); */
-
-    }
-  }]);
-
-  return Page_Item;
-}(_react2.default.PureComponent);
-
-exports.default = withRouter(Page_Item);
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/***/ }),
-/* 41 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34908,7 +38184,7 @@ var Page_Basket = function (_React$PureComponent) {
 exports.default = Page_Basket;
 
 /***/ }),
-/* 42 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34926,7 +38202,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(3);
 
-__webpack_require__(43);
+__webpack_require__(88);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35002,7 +38278,7 @@ var PagesLinks = function (_React$Component) {
 exports.default = PagesLinks;
 
 /***/ }),
-/* 43 */
+/* 88 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

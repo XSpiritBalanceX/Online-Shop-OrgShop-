@@ -1,36 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {setInfoProduct} from '../redux/explanForReducer';
 
 import './Product.css';
 
-class Product extends React.PureComponent {
+class intProduct extends React.PureComponent {
+  //эти пропсы получены из Page_Catalog
     static propTypes={
-      code:PropTypes.number,
-      nameProduct:PropTypes.string,
-      price:PropTypes.string,
-      urlProduct:PropTypes.string,
-      selectedProduct:PropTypes.func,
+        code: PropTypes.number.isRequired,
+        nameProduct: PropTypes.string.isRequired,
+        price: PropTypes.string.isRequired,
+        urlProduct:PropTypes.string.isRequired,
     }
 
-    showInfo=()=>{
-      this.props.selectedProduct(this.props.code);
-    };
+    
 
     buyProduct=()=>{
-
+      this.props.dispatch( { type:"buyProduct" } );
     };
 
   render(){
+    
     return(<div className='Product'>
         <img src={this.props.urlProduct} title={this.props.nameProduct} className='ImgProduct'/>
         <p>{this.props.nameProduct}</p>
         <p className='priceProduct'>{this.props.price}</p>
         <button className='buttonProduct'><NavLink to={"/catalog/"+this.props.code} >Информация</NavLink ></button>
         <input type={'button'} defaultValue={'Купить'} className='buttonProduct' onClick={this.buyProduct}/>
-    </div>)
+    </div>) 
     
   }
-}
+};
+
+const mapStateToProps = function (state) {
+  // этому компоненту ничего не нужно из хранилища Redux
+  return { }; 
+};
+
+const Product = connect(mapStateToProps)(intProduct);
 
 export default Product;
