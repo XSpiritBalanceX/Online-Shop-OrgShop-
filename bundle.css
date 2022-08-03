@@ -70,15 +70,6 @@
     .firstFon{width: 50%; margin-right: 5%; }
     .contForImg{font-size: 15px;}
     .leftInfo{width: 90%;}
-}.contForInfo{
-  display: flex;
-  flex-direction: row;
-}
-.imgProd{
-
-}
-.info{
-
 }.Product{
   width: 20em;
   height: auto;
@@ -344,7 +335,62 @@
   .floating{ margin: 3% 7% 3% 0; } 
 }
 
-.divPageLinks{position: absolute; right: 8%; top: 20px;}
+.contanerForInfo{
+  display: flex;
+  flex-direction: row;
+  margin: 0 7% 5% 7%;
+}
+.imgProd{
+  width: 50%;
+   margin-right: 3%;
+   border-radius: 20px;
+   height: 25em;
+}
+.infoProd{
+ text-align: left;
+}
+.dopInfo{
+  font-size: 13px;
+}
+.priceProd{
+  font-size: 15px;
+  color: rgb(183, 155, 16);
+  font-style: italic;
+}
+.buttonBuy{
+  background-color: rgba(247, 247, 136, 0.7);
+  border: solid rgb(247, 247, 136) 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.buttonBuy:hover{
+  cursor: pointer;  
+  background-color: rgb(250, 250, 96);
+}
+
+@media all and (max-width: 60em){
+  .imgProd{
+    margin-top: 10%;
+    height: 17em;
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 40em){
+  .contanerForInfo{
+    flex-direction: column;
+    margin: 0 7% 5% 7%;
+  }
+  .imgProd{
+    width: 90%;
+     margin-right: 3%;
+     border-radius: 20px;
+  }
+  .infoProd{
+   width: 90%;
+   text-align: left;
+  }
+}.divPageLinks{position: absolute; right: 8%; top: 20px;}
 .divPageLinks a:not(:last-child){margin-right: 40px;}
 .PageLink {
     color: black;

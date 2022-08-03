@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 import './PagesLinks.css';
 
 class PagesLinks extends React.Component {
-          
+
+    
   render() {
 
     return (
@@ -24,5 +24,6 @@ class PagesLinks extends React.Component {
   }
 
 }
-    
+
+
 export default PagesLinks;

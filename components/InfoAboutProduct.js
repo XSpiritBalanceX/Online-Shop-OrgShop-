@@ -7,6 +7,7 @@ import './InfoAboutProduct.css';
 
 
 class intInfoAboutProduct extends React.PureComponent {
+    //пропсы из Page_Item
     static propTypes={
         info:PropTypes.shape({
             code: PropTypes.number.isRequired,
@@ -18,11 +19,11 @@ class intInfoAboutProduct extends React.PureComponent {
             urlProduct:PropTypes.string.isRequired,
             volume:PropTypes.string.isRequired,
           }),
-      }
+    }
 
-      buyThisProduct=()=>{
-        this.props.dispatch( addForBascet(this.props.info.code) );
-      }
+    buyThisProduct=()=>{
+      this.props.dispatch( addForBascet(this.props.info.code) );
+    }
           
   render() {
    return (<div className='contanerForInfo'>
@@ -40,7 +41,6 @@ class intInfoAboutProduct extends React.PureComponent {
 
 }
 const mapStateToProps = function (state) {
-    // этому компоненту ничего не нужно из хранилища Redux
     return { }; 
   };
   

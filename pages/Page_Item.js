@@ -17,7 +17,6 @@ const intPage_Item = props => {
 }
     
 const mapStateToProps = function (state) {
-  // этому компоненту ничего не нужно из хранилища Redux
   return { 
     infoAboutProduct: state.infoProduct.info,
   }; 

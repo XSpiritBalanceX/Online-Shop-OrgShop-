@@ -273,25 +273,6 @@ if (process.env.NODE_ENV === 'production') {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-const ReactReduxContext = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext(null);
-/* harmony export (immutable) */ __webpack_exports__["a"] = ReactReduxContext;
-
-
-if (process.env.NODE_ENV !== 'production') {
-  ReactReduxContext.displayName = 'ReactRedux';
-}
-
-/* unused harmony default export */ var _unused_webpack_default_export = (ReactReduxContext);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return BrowserRouter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return HashRouter; });
@@ -303,8 +284,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useSearchParams", function() { return useSearchParams; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(17);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_2_react_router__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Navigate", function() { return __WEBPACK_IMPORTED_MODULE_2_react_router__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationType", function() { return __WEBPACK_IMPORTED_MODULE_2_react_router__["c"]; });
@@ -708,7 +689,69 @@ function createSearchParams(init) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_batch__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_connect__ = __webpack_require__(22);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "batch", function() { return __WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports__ = __webpack_require__(61);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ReactReduxContext", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useDispatch", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["h"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createDispatchHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useSelector", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["i"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createSelectorHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["j"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["f"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "shallowEqual", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["g"]; });
+// The primary entry point assumes we're working with standard ReactDOM/RN, but
+// older versions that do not include `useSyncExternalStore` (React 16.9 - 17.x).
+// Because of that, the useSyncExternalStore compat shim is needed.
+
+
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__["b" /* initializeUseSelector */])(__WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__["useSyncExternalStoreWithSelector"]);
+Object(__WEBPACK_IMPORTED_MODULE_5__components_connect__["b" /* initializeConnect */])(__WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__["useSyncExternalStore"]); // Enable batched updates in our subscriptions for use
+// with standard React renderers (ReactDOM, React Native)
+
+Object(__WEBPACK_IMPORTED_MODULE_3__utils_batch__["b" /* setBatch */])(__WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__["a" /* unstable_batchedUpdates */]);
+
+
+
+/***/ }),
 /* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+const ReactReduxContext = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext(null);
+/* harmony export (immutable) */ __webpack_exports__["a"] = ReactReduxContext;
+
+
+if (process.env.NODE_ENV !== 'production') {
+  ReactReduxContext.displayName = 'ReactRedux';
+}
+
+/* unused harmony default export */ var _unused_webpack_default_export = (ReactReduxContext);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -805,7 +848,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -815,7 +858,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return createMemoryHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createPath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return parsePath; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(7);
 
 
 /**
@@ -1617,7 +1660,7 @@ function parsePath(path) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1641,21 +1684,6 @@ function _extends() {
 }
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(45);
-} else {
-  module.exports = __webpack_require__(46);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1663,15 +1691,30 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(52);
+  module.exports = __webpack_require__(42);
 } else {
-  module.exports = __webpack_require__(53);
+  module.exports = __webpack_require__(43);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(49);
+} else {
+  module.exports = __webpack_require__(50);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1702,7 +1745,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1714,7 +1757,33 @@ function createInvalidArgFactory(arg, name) {
 }
 
 /***/ }),
-/* 11 */
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (process.env.NODE_ENV !== 'production') {
+  var ReactIs = __webpack_require__(9);
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(71)(ReactIs.isElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(73)();
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1733,7 +1802,30 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 12 */
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var add_for_backet = 'add_for_backet';
+
+//добавляем товар в корзину
+var addForBascet = function addForBascet(code) {
+    return {
+        type: add_for_backet,
+        isSelected: code
+    };
+};
+
+exports.addForBascet = addForBascet;
+exports.add_for_backet = add_for_backet;
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1779,7 +1871,7 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1794,7 +1886,7 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1824,7 +1916,7 @@ if (process.env.NODE_ENV === 'production') {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return useParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return useResolvedPath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return useRoutes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history__ = __webpack_require__(6);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0_history__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_0_history__["e"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_0_history__["f"]; });
@@ -2775,50 +2867,7 @@ function renderMatches(matches) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_batch__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_connect__ = __webpack_require__(20);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "batch", function() { return __WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports__ = __webpack_require__(64);
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ReactReduxContext", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useDispatch", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["h"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createDispatchHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useSelector", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["i"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createSelectorHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["e"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["j"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["f"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "shallowEqual", function() { return __WEBPACK_IMPORTED_MODULE_6__exports__["g"]; });
-// The primary entry point assumes we're working with standard ReactDOM/RN, but
-// older versions that do not include `useSyncExternalStore` (React 16.9 - 17.x).
-// Because of that, the useSyncExternalStore compat shim is needed.
-
-
-
-
-
-
-Object(__WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__["b" /* initializeUseSelector */])(__WEBPACK_IMPORTED_MODULE_1_use_sync_external_store_shim_with_selector__["useSyncExternalStoreWithSelector"]);
-Object(__WEBPACK_IMPORTED_MODULE_5__components_connect__["b" /* initializeConnect */])(__WEBPACK_IMPORTED_MODULE_0_use_sync_external_store_shim__["useSyncExternalStore"]); // Enable batched updates in our subscriptions for use
-// with standard React renderers (ReactDOM, React Native)
-
-Object(__WEBPACK_IMPORTED_MODULE_3__utils_batch__["b" /* setBatch */])(__WEBPACK_IMPORTED_MODULE_2__utils_reactBatchedUpdates__["a" /* unstable_batchedUpdates */]);
-
-
-
-/***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2838,16 +2887,16 @@ const getBatch = () => batch;
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = createSelectorHook;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__useReduxContext__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Context__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_useSyncExternalStore__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__useReduxContext__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Context__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_useSyncExternalStore__ = __webpack_require__(21);
 
 
 
@@ -2925,14 +2974,14 @@ const useSelector = /*#__PURE__*/createSelectorHook();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = useReduxContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Context__ = __webpack_require__(4);
 
 
 
@@ -2964,7 +3013,7 @@ function useReduxContext() {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2975,28 +3024,28 @@ const notInitialized = () => {
 
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(51);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_is__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_is__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_is__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__connect_selectorFactory__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__connect_mapDispatchToProps__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__connect_mapStateToProps__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__connect_mergeProps__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_Subscription__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_useIsomorphicLayoutEffect__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_shallowEqual__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_warning__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Context__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_useSyncExternalStore__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__connect_selectorFactory__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__connect_mapDispatchToProps__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__connect_mapStateToProps__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__connect_mergeProps__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_Subscription__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_useIsomorphicLayoutEffect__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_shallowEqual__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_warning__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Context__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_useSyncExternalStore__ = __webpack_require__(21);
 
 
 const _excluded = ["reactReduxForwardedRef"];
@@ -3412,7 +3461,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps, {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3433,14 +3482,14 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(25);
 
 function wrapMapToPropsConstant( // * Note:
 //  It seems that the dispatch argument
@@ -3514,13 +3563,13 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(10);
 
 
 function verifyPlainObject(value, displayName, methodName) {
@@ -3530,12 +3579,12 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = createSubscription;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__batch__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__batch__ = __webpack_require__(18);
  // encapsulates the subscription logic for connecting a component to the redux store, as
 // well as nesting subscriptions of descendant components, so that we can ensure the
 // ancestor components re-render before descendants
@@ -3665,7 +3714,7 @@ function createSubscription(store, parentSub) {
 }
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3689,7 +3738,7 @@ const useIsomorphicLayoutEffect = canUseDOM ? __WEBPACK_IMPORTED_MODULE_0_react_
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3723,15 +3772,15 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = createStoreHook;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Context__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__useReduxContext__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Context__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__useReduxContext__ = __webpack_require__(20);
 
 
 
@@ -3774,91 +3823,6 @@ const useStore = /*#__PURE__*/createStoreHook();
 
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(3);
-
-var _InfoAboutProduct = __webpack_require__(71);
-
-var _InfoAboutProduct2 = _interopRequireDefault(_InfoAboutProduct);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// react-router v6 предоставляет возможности доступа к параметрам из УРЛа только через хук useParams,
-// т.е. только для функциональных компонентов
-
-var Page_Item = function Page_Item(props) {
-
-  var params = (0, _reactRouterDom.useParams)();
-
-  // раз написано <Route path="/client/:clid" element={<Page_Client/>} />
-  // значит Page_Client получит то что в УРЛе после /client/ от хука useParams под именем clid в виде строки
-
-  var clientId = parseInt(params.prodcode);
-
-  /* let clientData=appData.clientsArr.find( c => c.id==clientId ); */
-
-  var _useState = (0, _react.useState)(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      currentData = _useState2[0],
-      setData = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      error = _useState4[0],
-      setError = _useState4[1];
-
-  /* getData().then(data=>{setData(data)},
-  error=>{setError(error)}); */
-
-  return _react2.default.createElement(_InfoAboutProduct2.default
-  /* info={clientData} */
-  , null);
-};
-
-exports.default = Page_Item;
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (process.env.NODE_ENV !== 'production') {
-  var ReactIs = __webpack_require__(8);
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(72)(ReactIs.isElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(74)();
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 30 */
 /***/ (function(module, exports) {
 
@@ -3876,17 +3840,17 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(12);
+var _reactDom = __webpack_require__(15);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(3);
+var _reactRouterDom = __webpack_require__(2);
 
 var _PagesRouter = __webpack_require__(41);
 
 var _PagesRouter2 = _interopRequireDefault(_PagesRouter);
 
-var _PagesLinks = __webpack_require__(87);
+var _PagesLinks = __webpack_require__(91);
 
 var _PagesLinks2 = _interopRequireDefault(_PagesLinks);
 
@@ -3916,7 +3880,7 @@ _reactDom2.default.render(_react2.default.createElement(
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var l=__webpack_require__(4),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
+var l=__webpack_require__(5),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
 if("function"===typeof Symbol&&Symbol.for){var w=Symbol.for;n=w("react.element");p=w("react.portal");exports.Fragment=w("react.fragment");exports.StrictMode=w("react.strict_mode");exports.Profiler=w("react.profiler");q=w("react.provider");r=w("react.context");t=w("react.forward_ref");exports.Suspense=w("react.suspense");u=w("react.memo");v=w("react.lazy")}var x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){if(null===a||"object"!==typeof a)return null;a=x&&a[x]||a["@@iterator"];return"function"===typeof a?a:null}function z(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 var A={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},B={};function C(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}C.prototype.isReactComponent={};C.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(z(85));this.updater.enqueueSetState(this,a,b,"setState")};C.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
@@ -3953,7 +3917,7 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 // TODO: this is special because it gets imported during build.
 var ReactVersion = '17.0.2';
@@ -6290,7 +6254,7 @@ exports.version = ReactVersion;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),m=__webpack_require__(4),r=__webpack_require__(13);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
+var aa=__webpack_require__(1),m=__webpack_require__(5),r=__webpack_require__(16);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
 function ea(a,b){ca[a]=b;for(a=0;a<b.length;a++)ba.add(b[a])}
 var fa=!("undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement),ha=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,ia=Object.prototype.hasOwnProperty,
 ja={},ka={};function la(a){if(ia.call(ka,a))return!0;if(ia.call(ja,a))return!1;if(ha.test(a))return ka[a]=!0;ja[a]=!0;return!1}function ma(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
@@ -7280,8 +7244,8 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var React = __webpack_require__(1);
-var _assign = __webpack_require__(4);
-var Scheduler = __webpack_require__(13);
+var _assign = __webpack_require__(5);
+var Scheduler = __webpack_require__(16);
 var tracing = __webpack_require__(38);
 
 var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -33932,270 +33896,37 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(3);
+var _reactRouterDom = __webpack_require__(2);
 
-var _Page_Main = __webpack_require__(42);
+var _reactRedux = __webpack_require__(3);
+
+var _redux = __webpack_require__(65);
+
+var _Page_Main = __webpack_require__(68);
 
 var _Page_Main2 = _interopRequireDefault(_Page_Main);
 
-var _Page_Catalog = __webpack_require__(44);
+var _Page_Catalog = __webpack_require__(70);
 
 var _Page_Catalog2 = _interopRequireDefault(_Page_Catalog);
 
-var _Page_About = __webpack_require__(82);
+var _Page_About = __webpack_require__(77);
 
 var _Page_About2 = _interopRequireDefault(_Page_About);
 
-var _Page_Contacts = __webpack_require__(84);
+var _Page_Contacts = __webpack_require__(79);
 
 var _Page_Contacts2 = _interopRequireDefault(_Page_Contacts);
 
-var _Page_Item = __webpack_require__(28);
+var _Page_Item = __webpack_require__(81);
 
 var _Page_Item2 = _interopRequireDefault(_Page_Item);
 
-var _Page_Basket = __webpack_require__(86);
+var _Page_Basket = __webpack_require__(84);
 
 var _Page_Basket2 = _interopRequireDefault(_Page_Basket);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PagesRouter = function (_React$Component) {
-  _inherits(PagesRouter, _React$Component);
-
-  function PagesRouter() {
-    _classCallCheck(this, PagesRouter);
-
-    return _possibleConstructorReturn(this, (PagesRouter.__proto__ || Object.getPrototypeOf(PagesRouter)).apply(this, arguments));
-  }
-
-  _createClass(PagesRouter, [{
-    key: 'render',
-    value: function render() {
-
-      return _react2.default.createElement(
-        'div',
-        { style: { position: 'absolute', top: "15%" } },
-        _react2.default.createElement(
-          _reactRouterDom.Routes,
-          null,
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/', element: _react2.default.createElement(_Page_Main2.default, null) }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog', element: _react2.default.createElement(_Page_Catalog2.default, null) }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog/:prodcode', element: _react2.default.createElement(_Page_Item2.default, null) }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/about_shop', element: _react2.default.createElement(_Page_About2.default, null) }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/contacts', element: _react2.default.createElement(_Page_Contacts2.default, null) }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/basket', element: _react2.default.createElement(_Page_Basket2.default, null) })
-        )
-      );
-    }
-  }]);
-
-  return PagesRouter;
-}(_react2.default.Component);
-
-exports.default = PagesRouter;
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(3);
-
-__webpack_require__(43);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Page_Main = function (_React$PureComponent) {
-  _inherits(Page_Main, _React$PureComponent);
-
-  function Page_Main() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Page_Main);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Page_Main.__proto__ || Object.getPrototypeOf(Page_Main)).call.apply(_ref, [this].concat(args))), _this), _this.goToDirrect = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  /* getTest=()=>{
-   fetch('https://my-json-server.typicode.com/XSpiritBalanceX/myjsonser/posts')
-   .then(response => response.json())
-   .then(json => console.log(json))
-   .catch( error => { alert('ошибка!\n'+error); } );
-  }  */
-
-  _createClass(Page_Main, [{
-    key: 'render',
-    value: function render() {
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'contanerMain' },
-        _react2.default.createElement(
-          'div',
-          { className: 'leftInfo' },
-          _react2.default.createElement(
-            'h1',
-            null,
-            '\u041A\u043E\u0441\u043C\u0435\u0442\u0438\u043A\u0430 \u0441 \u043B\u044E\u0431\u043E\u0432\u044C\u044E \u043A \u0442\u0432\u043E\u0435\u0439 \u043A\u043E\u0436\u0435'
-          ),
-          _react2.default.createElement(
-            'p',
-            { style: { marginTop: '30px' } },
-            ' \u041C\u044B \u0437\u0430\u0431\u043E\u0442\u0438\u043C\u0441\u044F \u043E \u043A\u0440\u0430\u0441\u043E\u0442\u0435 \u0438 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u043B\u044E\u0431\u043E\u0433\u043E \u0442\u0438\u043F\u0430 \u043A\u043E\u0436\u0438. \u0417\u0434\u0435\u0441\u044C \u0442\u044B \u043D\u0430\u0439\u0434\u0435\u0448\u044C \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0440\u0433\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0443\u044E \u0443\u0445\u043E\u0434\u043E\u0432\u0443\u044E \u043A\u043E\u0441\u043C\u0435\u0442\u0438\u043A\u0443, \u0431\u0435\u0437 \u043E\u043F\u0430\u0441\u043D\u044B\u0445 \u0432\u0435\u0449\u0435\u0441\u0442\u0432 \u0432 \u0441\u0432\u043E\u0435\u043C \u0441\u043E\u0441\u0442\u0430\u0432\u0435, \u0430 \u0442\u0430\u043A\u0436\u0435 \u043F\u0440\u0435\u043C\u0438\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u0435\u043A\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0443\u044E \u043A\u043E\u0441\u043C\u0435\u0442\u0438\u043A\u0443.'
-          ),
-          _react2.default.createElement(
-            'button',
-            { className: 'buttonNewProduct', style: { marginTop: '30px' } },
-            _react2.default.createElement(
-              _reactRouterDom.NavLink,
-              { to: '/catalog' },
-              '\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043D\u043E\u0432\u0438\u043D\u043A\u0438'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'rightInfo' },
-          _react2.default.createElement(
-            'div',
-            { className: 'contForImg firstFon', 'data-title': '\u0414\u043B\u044F \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u043A\u043B\u0438\u043A\u043D\u0438\u0442\u0435 \u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u043A\u0443' },
-            _react2.default.createElement('img', { src: './images/fon1.png', style: { height: '370px' }, className: 'imgFon' }),
-            _react2.default.createElement(
-              'p',
-              null,
-              '\u0417\u0430\u0449\u0438\u0442\u0430 \u043E\u0442 \u0441\u043E\u043B\u043D\u0446\u0430'
-            ),
-            _react2.default.createElement(
-              'button',
-              { className: 'buttFon' },
-              _react2.default.createElement(
-                _reactRouterDom.NavLink,
-                { to: '/catalog' },
-                _react2.default.createElement('img', { src: './images/arrow.svg', className: 'arrowForImage', style: { right: '-3px' } })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'maskAndSerym' },
-            _react2.default.createElement(
-              'div',
-              { className: 'contForImg', 'data-title': '\u0414\u043B\u044F \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u043A\u043B\u0438\u043A\u043D\u0438\u0442\u0435 \u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u043A\u0443' },
-              _react2.default.createElement('img', { src: './images/fon2.png', style: { height: '100px' }, className: 'imgFon' }),
-              _react2.default.createElement(
-                'p',
-                null,
-                '\u041C\u0430\u0441\u043A\u0438'
-              ),
-              _react2.default.createElement(
-                'button',
-                { className: 'buttFon' },
-                _react2.default.createElement(
-                  _reactRouterDom.NavLink,
-                  { to: '/catalog' },
-                  _react2.default.createElement('img', { src: './images/arrow.svg', className: 'arrowForImage' })
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'contForImg', 'data-title': '\u0414\u043B\u044F \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u043A\u043B\u0438\u043A\u043D\u0438\u0442\u0435 \u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u043A\u0443' },
-              _react2.default.createElement('img', { src: './images/fon3.png', style: { height: '195px' }, className: 'imgFon' }),
-              _react2.default.createElement(
-                'p',
-                null,
-                '\u0421\u044B\u0432\u043E\u0440\u043E\u0442\u043A\u0438'
-              ),
-              _react2.default.createElement(
-                'button',
-                { className: 'buttFon' },
-                _react2.default.createElement(
-                  _reactRouterDom.NavLink,
-                  { to: '/catalog' },
-                  _react2.default.createElement('img', { src: './images/arrow.svg', className: 'arrowForImage' })
-                )
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Page_Main;
-}(_react2.default.PureComponent);
-
-exports.default = Page_Main;
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(15);
-
-var _redux = __webpack_require__(68);
-
-var _Page_Item = __webpack_require__(28);
-
-var _Page_Item2 = _interopRequireDefault(_Page_Item);
-
-var _Product = __webpack_require__(76);
-
-var _Product2 = _interopRequireDefault(_Product);
-
-__webpack_require__(78);
-
-var _infoReducer = __webpack_require__(79);
+var _infoReducer = __webpack_require__(88);
 
 var _infoReducer2 = _interopRequireDefault(_infoReducer);
 
@@ -34214,65 +33945,47 @@ var combinedReducer = (0, _redux.combineReducers)({
 });
 var store = (0, _redux.createStore)(combinedReducer);
 
-var Page_Catalog = function (_React$PureComponent) {
-  _inherits(Page_Catalog, _React$PureComponent);
+var PagesRouter = function (_React$Component) {
+  _inherits(PagesRouter, _React$Component);
 
-  function Page_Catalog() {
-    _classCallCheck(this, Page_Catalog);
+  function PagesRouter() {
+    _classCallCheck(this, PagesRouter);
 
-    return _possibleConstructorReturn(this, (Page_Catalog.__proto__ || Object.getPrototypeOf(Page_Catalog)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (PagesRouter.__proto__ || Object.getPrototypeOf(PagesRouter)).apply(this, arguments));
   }
 
-  _createClass(Page_Catalog, [{
+  _createClass(PagesRouter, [{
     key: 'render',
-
-
-    /* showInfo=(code, workM)=>{
-     this.setState({isSelected:code,workModel:workM})
-    }; */
-
     value: function render() {
 
-      /* const {error, isLoaded, products} = this.state;
-       var productItem=products.map(el=>
-        <Product key={el.code}
-         code={el.code}
-         nameProduct={el.nameProduct}
-         price={el.price}
-         urlProduct={el.urlProduct}
-         selectedProduct={this.showInfo}
-         workModel={this.state.workModel}
-         />); */
-
-      /*  if(error){
-         return <div>Ошибка: {error.message}</div>;
-       }
-       else if(!isLoaded){
-         return (<div className='loading'>Подождите, идет загрузка данных...</div>);
-       }
-       else if(this.state.workModel===1){
-         return (<div className='contForProduct'>{productItem}</div>)
-       } */
       return _react2.default.createElement(
-        _reactRedux.Provider,
-        { store: store },
+        'div',
+        { style: { position: 'absolute', top: "15%" } },
         _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_Product2.default, null),
-          _react2.default.createElement(_Page_Item2.default, null)
+          _reactRedux.Provider,
+          { store: store },
+          _react2.default.createElement(
+            _reactRouterDom.Routes,
+            null,
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/', element: _react2.default.createElement(_Page_Main2.default, null) }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog', element: _react2.default.createElement(_Page_Catalog2.default, null) }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/catalog/:prodcode', element: _react2.default.createElement(_Page_Item2.default, null) }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/about_shop', element: _react2.default.createElement(_Page_About2.default, null) }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/contacts', element: _react2.default.createElement(_Page_Contacts2.default, null) }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/basket', element: _react2.default.createElement(_Page_Basket2.default, null) })
+          )
         )
       );
     }
   }]);
 
-  return Page_Catalog;
-}(_react2.default.PureComponent);
+  return PagesRouter;
+}(_react2.default.Component);
 
-exports.default = Page_Catalog;
+exports.default = PagesRouter;
 
 /***/ }),
-/* 45 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34290,7 +34003,7 @@ function r(a){var b=a.getSnapshot;a=a.value;try{var d=b();return!k(a,d)}catch(f)
 
 
 /***/ }),
-/* 46 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34537,22 +34250,22 @@ if (
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 47 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(48);
+  module.exports = __webpack_require__(45);
 } else {
-  module.exports = __webpack_require__(49);
+  module.exports = __webpack_require__(46);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 48 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34565,13 +34278,13 @@ if (process.env.NODE_ENV === 'production') {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var h=__webpack_require__(1),n=__webpack_require__(7);function p(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var q="function"===typeof Object.is?Object.is:p,r=n.useSyncExternalStore,t=h.useRef,u=h.useEffect,v=h.useMemo,w=h.useDebugValue;
+var h=__webpack_require__(1),n=__webpack_require__(8);function p(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var q="function"===typeof Object.is?Object.is:p,r=n.useSyncExternalStore,t=h.useRef,u=h.useEffect,v=h.useMemo,w=h.useDebugValue;
 exports.useSyncExternalStoreWithSelector=function(a,b,e,l,g){var c=t(null);if(null===c.current){var f={hasValue:!1,value:null};c.current=f}else f=c.current;c=v(function(){function a(a){if(!c){c=!0;d=a;a=l(a);if(void 0!==g&&f.hasValue){var b=f.value;if(g(b,a))return k=b}return k=a}b=k;if(q(d,a))return b;var e=l(a);if(void 0!==g&&g(b,e))return b;d=a;return k=e}var c=!1,d,k,m=void 0===e?null:e;return[function(){return a(b())},null===m?void 0:function(){return a(m())}]},[b,e,l,g]);var d=r(a,c[0],c[1]);
 u(function(){f.hasValue=!0;f.value=d},[d]);w(d);return d};
 
 
 /***/ }),
-/* 49 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34601,7 +34314,7 @@ if (
   __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
 }
           var React = __webpack_require__(1);
-var shim = __webpack_require__(7);
+var shim = __webpack_require__(8);
 
 /**
  * inlined Object.is polyfill to avoid requiring consumers ship their own
@@ -34744,23 +34457,23 @@ if (
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 50 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
 /* harmony reexport (binding) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_0_react_dom__, "unstable_batchedUpdates")) __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_dom__["unstable_batchedUpdates"]; });
 
 
 /***/ }),
-/* 51 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var reactIs = __webpack_require__(8);
+var reactIs = __webpack_require__(9);
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -34864,7 +34577,7 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 52 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34886,7 +34599,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 53 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35075,22 +34788,22 @@ exports.typeOf = typeOf;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(55);
+  module.exports = __webpack_require__(52);
 } else {
-  module.exports = __webpack_require__(56);
+  module.exports = __webpack_require__(53);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 55 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35111,7 +34824,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 56 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35340,14 +35053,14 @@ exports.typeOf = typeOf;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 57 */
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(55);
 
 const _excluded = ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"];
 
@@ -35435,12 +35148,12 @@ function finalPropsSelectorFactory(dispatch, _ref) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 58 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(10);
 
 
 function verify(selector, methodName) {
@@ -35460,14 +35173,14 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps) {
 }
 
 /***/ }),
-/* 59 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = mapDispatchToPropsFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_bindActionCreators__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_bindActionCreators__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__ = __webpack_require__(11);
 
 
 
@@ -35480,7 +35193,7 @@ function mapDispatchToPropsFactory(mapDispatchToProps) {
 }
 
 /***/ }),
-/* 60 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35500,7 +35213,7 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 61 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35523,13 +35236,13 @@ function isPlainObject(obj) {
 }
 
 /***/ }),
-/* 62 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = mapStateToPropsFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__invalidArgFactory__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__invalidArgFactory__ = __webpack_require__(11);
 
 
 function mapStateToPropsFactory(mapStateToProps) {
@@ -35538,16 +35251,16 @@ function mapStateToPropsFactory(mapStateToProps) {
 }
 
 /***/ }),
-/* 63 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export defaultMergeProps */
 /* unused harmony export wrapMergePropsFunc */
 /* harmony export (immutable) */ __webpack_exports__["a"] = mergePropsFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_verifyPlainObject__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_verifyPlainObject__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invalidArgFactory__ = __webpack_require__(11);
 
 
 
@@ -35583,18 +35296,18 @@ function mergePropsFactory(mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 64 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connect__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Context__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_useDispatch__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_useStore__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_shallowEqual__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__types__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connect__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Context__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_useDispatch__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_useSelector__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_useStore__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_shallowEqual__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__types__ = __webpack_require__(64);
 /* unused harmony namespace reexport */
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__components_Context__["a"]; });
@@ -35617,15 +35330,15 @@ function mergePropsFactory(mergeProps) {
 
 
 /***/ }),
-/* 65 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Context__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_Subscription__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_useIsomorphicLayoutEffect__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Context__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_Subscription__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_useIsomorphicLayoutEffect__ = __webpack_require__(27);
 
 
 
@@ -35672,13 +35385,13 @@ function Provider({
 /* harmony default export */ __webpack_exports__["a"] = (Provider);
 
 /***/ }),
-/* 66 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = createDispatchHook;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Context__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__useStore__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Context__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__useStore__ = __webpack_require__(29);
 
 
 /**
@@ -35724,14 +35437,14 @@ const useDispatch = /*#__PURE__*/createDispatchHook();
 
 
 /***/ }),
-/* 67 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 
 /***/ }),
-/* 68 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35743,7 +35456,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "legacy_createStore", function() { return legacy_createStore; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectSpread2__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectSpread2__ = __webpack_require__(66);
 
 
 /**
@@ -36464,12 +36177,12 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 69 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = _objectSpread2;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__defineProperty_js__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__defineProperty_js__ = __webpack_require__(67);
 
 
 function ownKeys(object, enumerableOnly) {
@@ -36499,7 +36212,7 @@ function _objectSpread2(target) {
 }
 
 /***/ }),
-/* 70 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36520,14 +36233,14 @@ function _defineProperty(obj, key, value) {
 }
 
 /***/ }),
-/* 71 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -36536,11 +36249,9 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(29);
+var _reactRouterDom = __webpack_require__(2);
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-__webpack_require__(75);
+__webpack_require__(69);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36550,45 +36261,234 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var InfoAboutProduct = function (_React$PureComponent) {
-    _inherits(InfoAboutProduct, _React$PureComponent);
+var Page_Main = function (_React$PureComponent) {
+  _inherits(Page_Main, _React$PureComponent);
 
-    function InfoAboutProduct() {
-        _classCallCheck(this, InfoAboutProduct);
+  function Page_Main() {
+    var _ref;
 
-        return _possibleConstructorReturn(this, (InfoAboutProduct.__proto__ || Object.getPrototypeOf(InfoAboutProduct)).apply(this, arguments));
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Page_Main);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
-    _createClass(InfoAboutProduct, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                'InfoAboutProduct'
-            );
-        }
-    }]);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Page_Main.__proto__ || Object.getPrototypeOf(Page_Main)).call.apply(_ref, [this].concat(args))), _this), _this.goToDirrect = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
+  }
 
-    return InfoAboutProduct;
+  /* getTest=()=>{
+   fetch('https://my-json-server.typicode.com/XSpiritBalanceX/myjsonser/posts')
+   .then(response => response.json())
+   .then(json => console.log(json))
+   .catch( error => { alert('ошибка!\n'+error); } );
+  }  */
+
+  _createClass(Page_Main, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'contanerMain' },
+        _react2.default.createElement(
+          'div',
+          { className: 'leftInfo' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            '\u041A\u043E\u0441\u043C\u0435\u0442\u0438\u043A\u0430 \u0441 \u043B\u044E\u0431\u043E\u0432\u044C\u044E \u043A \u0442\u0432\u043E\u0435\u0439 \u043A\u043E\u0436\u0435'
+          ),
+          _react2.default.createElement(
+            'p',
+            { style: { marginTop: '30px' } },
+            ' \u041C\u044B \u0437\u0430\u0431\u043E\u0442\u0438\u043C\u0441\u044F \u043E \u043A\u0440\u0430\u0441\u043E\u0442\u0435 \u0438 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u043B\u044E\u0431\u043E\u0433\u043E \u0442\u0438\u043F\u0430 \u043A\u043E\u0436\u0438. \u0417\u0434\u0435\u0441\u044C \u0442\u044B \u043D\u0430\u0439\u0434\u0435\u0448\u044C \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0440\u0433\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0443\u044E \u0443\u0445\u043E\u0434\u043E\u0432\u0443\u044E \u043A\u043E\u0441\u043C\u0435\u0442\u0438\u043A\u0443, \u0431\u0435\u0437 \u043E\u043F\u0430\u0441\u043D\u044B\u0445 \u0432\u0435\u0449\u0435\u0441\u0442\u0432 \u0432 \u0441\u0432\u043E\u0435\u043C \u0441\u043E\u0441\u0442\u0430\u0432\u0435, \u0430 \u0442\u0430\u043A\u0436\u0435 \u043F\u0440\u0435\u043C\u0438\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u0435\u043A\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0443\u044E \u043A\u043E\u0441\u043C\u0435\u0442\u0438\u043A\u0443.'
+          ),
+          _react2.default.createElement(
+            'button',
+            { className: 'buttonNewProduct', style: { marginTop: '30px' } },
+            _react2.default.createElement(
+              _reactRouterDom.NavLink,
+              { to: '/catalog' },
+              '\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043D\u043E\u0432\u0438\u043D\u043A\u0438'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'rightInfo' },
+          _react2.default.createElement(
+            'div',
+            { className: 'contForImg firstFon', 'data-title': '\u0414\u043B\u044F \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u043A\u043B\u0438\u043A\u043D\u0438\u0442\u0435 \u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u043A\u0443' },
+            _react2.default.createElement('img', { src: './images/fon1.png', style: { height: '370px' }, className: 'imgFon' }),
+            _react2.default.createElement(
+              'p',
+              null,
+              '\u0417\u0430\u0449\u0438\u0442\u0430 \u043E\u0442 \u0441\u043E\u043B\u043D\u0446\u0430'
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'buttFon' },
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/catalog' },
+                _react2.default.createElement('img', { src: './images/arrow.svg', className: 'arrowForImage', style: { right: '-3px' } })
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'maskAndSerym' },
+            _react2.default.createElement(
+              'div',
+              { className: 'contForImg', 'data-title': '\u0414\u043B\u044F \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u043A\u043B\u0438\u043A\u043D\u0438\u0442\u0435 \u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u043A\u0443' },
+              _react2.default.createElement('img', { src: './images/fon2.png', style: { height: '100px' }, className: 'imgFon' }),
+              _react2.default.createElement(
+                'p',
+                null,
+                '\u041C\u0430\u0441\u043A\u0438'
+              ),
+              _react2.default.createElement(
+                'button',
+                { className: 'buttFon' },
+                _react2.default.createElement(
+                  _reactRouterDom.NavLink,
+                  { to: '/catalog' },
+                  _react2.default.createElement('img', { src: './images/arrow.svg', className: 'arrowForImage' })
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'contForImg', 'data-title': '\u0414\u043B\u044F \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u043A\u043B\u0438\u043A\u043D\u0438\u0442\u0435 \u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u043A\u0443' },
+              _react2.default.createElement('img', { src: './images/fon3.png', style: { height: '195px' }, className: 'imgFon' }),
+              _react2.default.createElement(
+                'p',
+                null,
+                '\u0421\u044B\u0432\u043E\u0440\u043E\u0442\u043A\u0438'
+              ),
+              _react2.default.createElement(
+                'button',
+                { className: 'buttFon' },
+                _react2.default.createElement(
+                  _reactRouterDom.NavLink,
+                  { to: '/catalog' },
+                  _react2.default.createElement('img', { src: './images/arrow.svg', className: 'arrowForImage' })
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Page_Main;
 }(_react2.default.PureComponent);
 
-InfoAboutProduct.propTypes = {
-    info: _propTypes2.default.shape({
-        code: _propTypes2.default.number.isRequired,
-        description: _propTypes2.default.string.isRequired,
-        nameProduct: _propTypes2.default.string.isRequired,
-        price: _propTypes2.default.string.isRequired,
-        purpose: _propTypes2.default.string.isRequired,
-        typeScin: _propTypes2.default.string.isRequired,
-        urlProduct: _propTypes2.default.string.isRequired,
-        volume: _propTypes2.default.string.isRequired
-    })
-};
-exports.default = InfoAboutProduct;
+exports.default = Page_Main;
 
 /***/ }),
-/* 72 */
+/* 69 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _propTypes = __webpack_require__(12);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Product = __webpack_require__(74);
+
+var _Product2 = _interopRequireDefault(_Product);
+
+__webpack_require__(76);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var intPage_Catalog = function (_React$PureComponent) {
+  _inherits(intPage_Catalog, _React$PureComponent);
+
+  function intPage_Catalog() {
+    _classCallCheck(this, intPage_Catalog);
+
+    return _possibleConstructorReturn(this, (intPage_Catalog.__proto__ || Object.getPrototypeOf(intPage_Catalog)).apply(this, arguments));
+  }
+
+  _createClass(intPage_Catalog, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.props.infoAboutProduct.map(function (el) {
+          return _react2.default.createElement(_Product2.default, { key: el.code,
+            code: el.code,
+            nameProduct: el.nameProduct,
+            price: el.price,
+            urlProduct: el.urlProduct
+          });
+        })
+      );
+    }
+    //пропсы получаем из Redux
+
+  }]);
+
+  return intPage_Catalog;
+}(_react2.default.PureComponent);
+
+intPage_Catalog.propTypes = {
+  infoAboutProduct: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+    code: _propTypes2.default.number.isRequired,
+    description: _propTypes2.default.string.isRequired,
+    nameProduct: _propTypes2.default.string.isRequired,
+    price: _propTypes2.default.string.isRequired,
+    purpose: _propTypes2.default.string.isRequired,
+    typeScin: _propTypes2.default.string.isRequired,
+    urlProduct: _propTypes2.default.string.isRequired,
+    volume: _propTypes2.default.string.isRequired
+  }))
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    infoAboutProduct: state.infoProduct.info
+  };
+};
+
+var Page_Catalog = (0, _reactRedux.connect)(mapStateToProps)(intPage_Catalog);
+
+exports.default = Page_Catalog;
+
+/***/ }),
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36601,12 +36501,12 @@ exports.default = InfoAboutProduct;
 
 
 
-var ReactIs = __webpack_require__(8);
-var assign = __webpack_require__(4);
+var ReactIs = __webpack_require__(9);
+var assign = __webpack_require__(5);
 
-var ReactPropTypesSecret = __webpack_require__(11);
+var ReactPropTypesSecret = __webpack_require__(13);
 var has = __webpack_require__(30);
-var checkPropTypes = __webpack_require__(73);
+var checkPropTypes = __webpack_require__(72);
 
 var printWarning = function() {};
 
@@ -37206,7 +37106,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37222,7 +37122,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(11);
+  var ReactPropTypesSecret = __webpack_require__(13);
   var loggedTypeFailures = {};
   var has = __webpack_require__(30);
 
@@ -37317,7 +37217,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37330,7 +37230,7 @@ module.exports = checkPropTypes;
 
 
 
-var ReactPropTypesSecret = __webpack_require__(11);
+var ReactPropTypesSecret = __webpack_require__(13);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -37389,13 +37289,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 75 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 76 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37411,15 +37305,17 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(29);
+var _propTypes = __webpack_require__(12);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactRouterDom = __webpack_require__(3);
+var _reactRouterDom = __webpack_require__(2);
 
-var _reactRedux = __webpack_require__(15);
+var _reactRedux = __webpack_require__(3);
 
-__webpack_require__(77);
+var _explanForReducer = __webpack_require__(14);
+
+__webpack_require__(75);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37443,15 +37339,17 @@ var intProduct = function (_React$PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = intProduct.__proto__ || Object.getPrototypeOf(intProduct)).call.apply(_ref, [this].concat(args))), _this), _this.showInfo = function () {
-      _this.props.selectedProduct(_this.props.code, 2);
-    }, _this.buyProduct = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = intProduct.__proto__ || Object.getPrototypeOf(intProduct)).call.apply(_ref, [this].concat(args))), _this), _this.buyProduct = function () {
+      _this.props.dispatch((0, _explanForReducer.addForBascet)(_this.props.code));
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
+  //эти пропсы получены из Page_Catalog
+
 
   _createClass(intProduct, [{
     key: 'render',
     value: function render() {
-      console.log();
+
       return _react2.default.createElement(
         'div',
         { className: 'Product' },
@@ -37468,7 +37366,7 @@ var intProduct = function (_React$PureComponent) {
         ),
         _react2.default.createElement(
           'button',
-          { className: 'buttonProduct', onClick: this.showInfo },
+          { className: 'buttonProduct' },
           _react2.default.createElement(
             _reactRouterDom.NavLink,
             { to: "/catalog/" + this.props.code },
@@ -37484,131 +37382,35 @@ var intProduct = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 intProduct.propTypes = {
-  /* info:PropTypes.arrayOf(
-    PropTypes.shape({
-    code: PropTypes.number.isRequired,
-    description: PropTypes.string.isRequired,
-    nameProduct: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    purpose: PropTypes.string.isRequired,
-    typeScin: PropTypes.string.isRequired,
-    urlProduct:PropTypes.string.isRequired,
-    volume:PropTypes.string.isRequired,
-  })),
-  workModel:PropTypes.number, */
+  code: _propTypes2.default.number.isRequired,
+  nameProduct: _propTypes2.default.string.isRequired,
+  price: _propTypes2.default.string.isRequired,
+  urlProduct: _propTypes2.default.string.isRequired
 };
 ;
 
 var mapStateToProps = function mapStateToProps(state) {
-  console.log(state.infoProduct);
-  // этому компоненту ничего не нужно из хранилища Redux
-  return {
-    info: state.infoProduct
-  };
+  return {};
 };
 
-// но этому компоненту нужен сам this.props.dispatch, и чтобы
-// он появился, следует присоединить (connect) компонент к хранилищу Redux
 var Product = (0, _reactRedux.connect)(mapStateToProps)(intProduct);
 
 exports.default = Product;
 
 /***/ }),
+/* 75 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 77 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 78 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _getData = __webpack_require__(80);
-
-var pr = __webpack_require__(81);
-var initState = {
-  info: pr
-  /* error:null,
-  workModel:1, */
-};
-/*  getData().then(data=>{initState.info=data},
-   error=>{initState.error=error}); */
-// в редьюсере state - это не весь state Redux, а только тот раздел state,
-// за который отвечает данный редьюсер
-console.log(pr);
-function infoReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initState;
-  var action = arguments[1];
-
-
-  switch (action.type) {
-
-    case "INC":
-      {
-        // хотелось бы просто увеличить state.cnt
-        // но редьюсер ВСЕГДА должен возвращаеть новый state а не изменять старый!
-        console.log('state до обработки редьюсером:', state);
-        var newState = _extends({}, state);
-        newState.cnt++;
-
-        return newState;
-      }
-
-    case "DEC":
-      {
-        console.log('state до обработки редьюсером:', state);
-        var _newState = _extends({}, state);
-        _newState.cnt--;
-
-        return _newState;
-      }
-
-    default:
-      return state;
-  }
-}
-
-exports.default = infoReducer;
-
-/***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var getData = exports.getData = function getData() {
-  return fetch("http://d.zaix.ru/uIYI.txt").then(function (response) {
-    return response.json();
-  });
-};
-
-/***/ }),
-/* 81 */
-/***/ (function(module, exports) {
-
-module.exports = [{"type":"солнцезащита","nameProduct":"Увлажняющий крем SPF 50","code":1,"description":"Солнцезащитный крем для лица с экстрактом зеленого чая сохраняет кожу мягкой и увлажненной, обладает антибактериальными свойствами. SPF 50 не только защищает от УФ-лучей, но и предотвращает появление пигментных пятен, и предотвращает фотостарение кожи.","price":"35,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809426957651_1_jwkxzzil8ywtj6gd.jpg","typeScin":"для всех типов кожи","volume":"70 мл","purpose":"защита от солнца"},{"type":"тоник","nameProduct":"Тоник для сухой кожи","code":2,"description":"Увлажняющий тоник Tonique Confort деликатно освобождает от загрязнений, наполняет мягкостью и эффективно ухаживает за сухой кожей. Для кого? Деликатное средство очищения сухой кожи. Действие: Эффективно, но бережно очищает сухую кожу. Результат: Безупречно чистая, свежая, бархатистая кожа, увлажненная и ухоженная.","price":"91,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/f/4f6f7ee4c6b1855e496efa3c25e46307.jpg","typeScin":"для сухой кожи","volume":"200 мл","purpose":"увлажнение и питание"},{"type":"крем","nameProduct":"Крем увлажняющий от покраснений","code":3,"description":"Успокаивает кожу за 30 секунд. Успокаивает покраснение, чувство стянутости, покалывания и ощущение жара. Восстанавливает кожный барьер через 48 часов, увлажняет. Для реактивной, сверхчувствительной и склонной к аллергии кожи. Для нормальной и комбинированной кожи. Подходит детям с 2х и взрослым. Не содержит консервантов. Без запаха. Формула протестирована на склонной к аллергии коже. Состав на 98% из ингредиентов натурального происхождения. ","price":"14,46 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/2/3282770138801_1_c63covbvz14aafdl.jpg","typeScin":"для чувствительной кожи","volume":"40 мл","purpose":"против несовершенств"},{"type":"крем","nameProduct":"Крем с азелаиновой кислотой","code":4,"description":"Крем с азелаиновой кислотой идеален для коррекции недостатков проблемной кожи. Выравнивает поверхность кожи и обладает осветляющим эффектом. Нормализует процессы регенерации клеток. Помогает минимизировать следы постакне, пигментные пятна и покраснения. Азелаиновая кислота (5%) – мощное средство для борьбы с акне. Снимает воспаления и регулирует выработку кожного сала.","price":"23,13 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008495663_1_htjnndztjqnqruzs.jpg","typeScin":"для проблемной кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Восстанавливающий шампунь","code":5,"description":"Благодаря входящим в состав натуральным ингредиентам, заботится о волосах, укрепляет и питает их. Придает волосам ухоженный, здоровый вид. Продукт содержит более 98% ингредиентов растительного происхождения.","price":"21,94 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4620046171777_1_0ttkh4wt9jiexmql.jpg","typeScin":"для сухих и поврежденных волос","volume":"600 мл","purpose":"увлажнение волос"},{"type":"шампунь","nameProduct":"Шампунь с натуральными ингредиентами","code":6,"description":"Органический шампунь, максимально натуральный, содержащий экологически чистые и сертифицированные экстракты и эфирные масла, имеет нейтральный pH баланс 5,5. В составе шампуня неагрессивная натуральная моющая основа, которая мягко очищает от повседневных загрязнений и секреции сальных желез, не повреждая ни волосы, ни кожу.","price":"20,88 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809500811008_1_3nhahcs78ly1wjq8.jpg","typeScin":"для всех типов волос","volume":"150 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка очищающая","code":7,"description":"Состав мягко растворяет загрязнители, снимает слой пыли и себума без механического повреждения клеток кожи. В составе сыворотки для лица присутствует древесный уголь, который комплексно воздействует на кожу, придает ей сияние, устраняет потемнения, способствует отшелушиванию кожных чешуек и сужению пор.","price":" 186,29 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/c/1/c171bd7b9bcf5b1326ee84ce627399c0.jpg","typeScin":"проблемная и нормальная","volume":"30 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка регенерирующая","code":8,"description":" Благодаря календуле и алоэ вера в составе регенерирующей сыворотки для лица Обновление кожных клеток средство успокаивает воспаления и борется с раздражением кожи, снижая ее чувствительность.","price":"26,97 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603726088442_1_rtanwl7rnblvw8u3.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против признаков старения"},{"type":"солнцезащита","nameProduct":"Масло спрей SPF 30","code":9,"description":"Питание масла с ощущением легкой, обволакивающей дымки. Шелковистая, нелипкая текстура. Быстрое впитывание. Водостойкая формула","price":"112,65 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/2/3282770114669_1_oj8h20bf70znbhox.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"солнцезащита","nameProduct":"Флюид SPF 50","code":10,"description":"Содержит гиалуроновую кислоту, экстракт маточного молочка, и увлажняющие компоненты. Подходит для ежедневного ухода круглый год, может использоваться как база под макияж. Флюид для лица длительного действия с высоким уровнем защиты лица и тела SPF+ PA++++. Водостойкая формула, устойчива к воде и поту. Эффективно защищает кожу от UVB лучей, которые являются причиной появления веснушек и пигментных пятен, а также от UVA лучей которые вызывают ослабление кожных покровов и приводят к появлению морщин. ","price":"50,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/9/4901301363183_1_j26c1e1puqxv6f0q.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"солнцезащита","nameProduct":"Флюид с витамином Е SPF 50","code":11,"description":"Подходит для чувствительной кожи. Без парабенов. Флюид интенсивно увлажняет кожу и обеспечивает защиту широкого спектра от коротких и длинных уф-лучей (UVA/UVB), а также от агрессивных факторов окружающей среды. Разработан специально для защиты кожи лица от фотостарения (преждевременного появления пигментных пятен, морщинок) и солнечных ожогов. Быстро впитывается, обеспечивая незаметное покрытие.","price":"208,08 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/6/3605971613449_1_pf3amdkipaepaw7k.jpg","typeScin":"для чувствительной кожи","volume":"60 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем антивозрастной восстанавливающий","code":12,"description":"Активные ингредиенты дневного крема оказывают комплексное антивозрастное действие, а пребиотик зеленых морских водорослей укрепляет защитный барьер кожи. Крем также увлажняет кожу и усиливает её естественную защиту. В составе – пептиды, полисахариды, аденозин, гиалуроновая кислота, витамин B3 и алоэ вера. ","price":"96,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/1/3139436552573_1_bebyeirmaclibl47.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против признаков старения"},{"type":"тоник","nameProduct":"Тоник успокаивающий","code":13,"description":"Успокаивающий тоник эффективно удаляет макияж, успокаивает и защищает кожу. Средство обладает оптимальной переносимостью и имеет физиологический уровень pH. Тоник создан на основе Термальной воды и подходит для чувствительной кожи лица и глаз. Не содержит мыла, спирта, красителей и парабенов. Некомедогенно.","price":"58,17 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337872410321_1_9tc9qycrbdalhjmw.jpg","typeScin":"для чувствительной кожи","volume":"200 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка витаминная","code":14,"description":"Сыворотка создана, чтобы напитать кожу витаминами, восстановить гидро-липидный барьер и оздоровить ее внешний вид. Особенно актуально для уставшей, тусклой и нуждающейся в свечении кожи, а также для жителей городов, с плохой экологической ситуацией. Сыворотка имеет аромат свежего апельсина, благодаря гидролату и органическому эфирному маслу апельсина.","price":"71,52 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603744660316_1_rowb1vo0aox8bubg.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"солнцезащита","nameProduct":"Крем для лица SPF 30","code":15,"description":"Образует на поверхности кожи покрытие, защитные свойства которого возрастают при усилении жары или при взаимодействии с водой или потом. Крем обеспечивает непрерывную защиту от ультрафиолетовых лучей спектра А и В и сухости. Содержит фактор защиты от солнца SPF 30. В состав крема входят ингредиенты, которые ухаживают за кожей и предотвращают появление морщин и неровного тона в результате фотостарения. ","price":"115,23 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/768614156741_1_k95ldu8mtmre2nze.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"пенка","nameProduct":"Пенка с ниацинамидом","code":16,"description":"Пенка с ниацинамидом, цинком и салициловой кислотой предназначена для глубокого, но щадящего очищения, не пересушивает кожу. Эффективно удаляет макияж, остатки кожного сала и внешние загрязнения. Салициловая кислота стабилизирует работу сальных желёз, сужает поры, борется с несовершенствами кожи, выравнивает микрорельеф. Ниацинамид стимулирует обменные процессы, способствует более глубокому проникновению активных веществ, улучшает эластичность кожи, эффективно выравнивает. ","price":"61,19 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603757312820_1_u5yzhir7taawjtpg.jpg","typeScin":"для комбинированной кожи","volume":"150 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с экстрактом алоэ вера","code":17,"description":"Пенка мягко удаляет загрязнения, излишки себума и ороговевшие клетки, очищает поры, не забивая их. Экстракт алоэ оказывает антибактериальное и антисептическое действия, предотвращает появление воспалений, успокаивает кожу и возвращает ей здоровый вид.","price":"87,54 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/9/9/99730300046_1_g1zjenur769zc0tp.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"очищение"},{"type":"крем","nameProduct":"Крем для сияния кожи","code":18,"description":"Крем обеспечивает глубокое и длительное увлажнение для сухой и нормальной, а также комбинированной и чувствительной кожи. Средство питает её и возвращает естественное сияние. В состав средства входят кристаллы рубина, которые улучшают цвет лица и помогают разгладить морщины.","price":"52,12 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5990688142503_1_ucsnbh7dgchkx6jv.jpg","typeScin":"для сухой кожи","volume":"30 мл","purpose":"увлажнение и питание"},{"type":"маска","nameProduct":"Маска восстанавливающая","code":19,"description":"Легкая в использовании, ночная маска интенсивного восстановления, устраняет покраснения и восстанавливает поврежденную кожу, пока вы спите. В основе Центелла Азиатская или Тигровая Трава, широко известная своими заживляющими свойствами.","price":"145,32 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809642711631_1_kjmjzz7g58qh5ufo.jpg","typeScin":"для всех типов кожи","volume":"110 мл","purpose":"осветление и восстановление"},{"type":"пенка","nameProduct":"Пенка для глубокого очищения PH 5,5","code":20,"description":"Идеально сбалансированное средство для очищения с нейтральным уровнем pH 5.5 подходит для самой чувствительной кожи, нежно, но при этом тщательно очищая её. Гель при соприкосновении с водой преобразуется в легкую пенку.","price":"17,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535804907_1_t9asnwkbjdppdaok.jpg","typeScin":"для чувствительной кожи","volume":"30 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник корректирующий","code":21,"description":"Активный корректирующий тоник эффективно очищает и освежает кожу. Деликатно и постепенно отшелушивает ороговевшие клетки, заметно уменьшает блеск кожи и сужает поры, осветляет пигментацию. Выравнивает цвет и обновляет, не раздражает кожу. Увлажняет уже на этапе очищения, подготавливая к нанесению сыворотки или крема. Уменьшает покраснения, придаёт сияние. Не сушит кожу, восстанавливает pH баланс 5,5.","price":"127,48 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169018245_1_b7xv5nm2k9iad749.jpg","typeScin":"для комбинированной кожи","volume":"200 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник оживляющий","code":22,"description":"Может применяться как самостоятельный живительно-очищающий комплекс или на завершающем этапе освобождения эпидермиса от внешних и естественных загрязнений в комплекте с молочком из соответствующей линии. Композиция Refining Toner очень богата природными компонентами: розовый экстракт москета, вытяжка гамамелиса, насыщенного танинами, лимонный сок, эфирные масла и т.д. Такой состав способствует глубокому и тщательному, но одновременно нежному очищению, успокаиванию и тонизированию кожных покровов, укреплению сосудов и сужению пор, восстановлению структуры и эластичности, улучшению рельефа и гидролипидного баланса.","price":"43,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/0/4001638095709_1_sagopbovzmdafcyw.jpg","typeScin":"для всех типов кожи","volume":"100 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь с кератином","code":23,"description":"Мягко очищает и реконструирует поврежденные волосы, пополняя естественные запасы кератина в волосе. Эфирные масла Арганы и Жожоба проникают в глубь волоса и обеспечивают максимальный блеск, предотвращают ломкость и сечение.","price":"53,99 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/6/3/633911728857_1_9k7tg8p2rvlcvfso.jpg","typeScin":"для сухих и поврежденных волос","volume":"355 мл","purpose":"увлажнение волос"},{"type":"маска","nameProduct":"Маска ночная осветляющая","code":24,"description":"Маска ночная осветляющая подарит вашей коже благородный аристократический оттенок и решит ряд проблем, которые возникают на кожном покрове. Экстракт лаванды превосходно борется с пигментацией и оказывает великолепное осветляющее воздействие на вашу кожу. Особенно хорошо и эффективно работает в ночные часы, когда ваша кожа отдыхает и совершенно расслаблена. ","price":"25,45 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/h/t/http192.168.0.11mizonimages8809390120358_1.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"осветление и восстановление"},{"type":"сыворотка","nameProduct":"Сыворотка с витамином С","code":25,"description":"Отлично освежает, отбеливает веснушки и выравнивает цвет лица. Является антиоксидантом и защищает клетки от различных патологий и заболеваний. Повышает защитные свойства кожи и укрепляет сосуды, регулирует водный баланс и защищает от УФ лучей. Витамин С помогает выглядеть всегда выспавшейся и свежей, благодаря своим свойствам сильного восстановления.","price":"25,43 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603757312318_1_53rjeoshdkgqc250.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"осветление и восстановление"},{"type":"маска","nameProduct":"Маска ночная","code":26,"description":"Немного красного вина перед сном сделают тебя прекрасной, если это ночная винная маска! Обновляет кожу на клеточном уровне, возвращает ей упругость и эластичность. Ускоряет процесс регенерации и подтягивает контур лица. Имеет антивозрастной эффект, убирает мелкие морщинки. Легкая и нежная текстура желе быстро впитывается, оставляя на коже тонкую пленку. Действительно эффективная маска для тех, кто хочет быстрого эффекта!","price":"45,15 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8806334338572_1_c2qx7ldcm4irsokf.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка для жирной кожи","code":27,"description":"Высокоактивные компоненты уходового продукта Geranium Foam, полученные из яблок и кокоса, оказывают интенсивное увлажняющее, тонизирующее и антиоксидантное действие. Экстракты артишока, земляничных листьев и органические эмоленты в составе пенки для умывания для жирной кожи.","price":"23,49 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/d/7d8c17a46abc7845a17ea7101df00488.jpg","typeScin":"для жирной кожи","volume":"150 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с муцином улитки","code":28,"description":"Универсальная мягкая пенка для умывания мягко очищает кожу лица, удаляя загрязнения и остатки макияжа. Комплекс с муцином улитки, экстрактом зеленого чая и солодки обладает антиоксидантным действием, укрепляет стенки сосудов, препятствует появлению купероза. Оказывает лёгкое осветляющее действие на кожу. Пенка бережно очищает и смягчает кожу, выравнивает цвет лица, оказывает успокаивающее и восстанавливающее действие.","price":"123,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494840_1_wfqcm727jjpasp2w.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник осветляющий","code":29,"description":"Тоник освежает кожу, обладает осветляющими свойствами и способствует выравниванию тона кожи. Гликолевая кислота - идеально выравнивает тон кожи, борется с пигментацией, разглаживает, предотвращает преждевременное старение и стимулирует выработку коллагена. Витамин С - один из сильнейших антиоксидантов. ","price":"83,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169046842_1.png_9jmo9gj3kapgxxbs.jpg","typeScin":"для всех типов кожи","volume":"200 мл","purpose":"осветление и восстановление"},{"type":"солнцезащита","nameProduct":"Крем солнцезащитный SPF 30","code":30,"description":"Светостойкие фильтры последнего поколения в сочетании с природными светоотражающими свойствами экстрактов мускатного шалфея, рябины и боярышника образуют мощный блок, обеспечивающий высокий уровень защиты кожи от полного спектра UVA/UVB лучей, ослабляя их воздействие и защищая кожу от фотостарения. Крем создает тончайшее матовое покрытие, которое удерживает влагу в коже даже во время длительного пребывания на солнце.","price":"38,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4607012142313_1_vqcg2aucikb1wzmk.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"маска","nameProduct":"Маска глиняная","code":31,"description":"Эта маска мечты похожа на мороженое: мягкая и легкосмываемая. Каолиновая глина очищает и выводит токсины из пор, в то время как фруктоолигосахариды питают кожу, сохраняя ее баланс и здоровье. Фруктоза и Гиалуронат натрия помогают удерживать влагу, поэтому кожа остается такой же упругой и нежной, как сама маска.","price":"30,54 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/7640399230676_1_mpabsw3c0prvcnlb.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка очищающая","code":32,"description":"Насыщенная пенка с необычной тягучей текстурой глубоко очищает, оставляя кожу безупречно чистой. Поддерживает идеальный pH баланс, не пересушивая и защищая внешний барьер кожи. Гиалуроновая кислота увлажняет, а экстракты персика, цитруса, центеллы и др.растений смягчают и питают кожу.","price":"32,18 BYN","urlProduct":"https://goldapple.by/web_scripts/webp/catalog/product/cache/fb5d06f7acfb2f26f85333624ccbfb5e/8/8/8803348040514_1_qd03nof58urgrrh2.jpg?quality=95","typeScin":"для всех типов","volume":"150 мл","purpose":"очищение"},{"type":"шампунь","nameProduct":"Шампунь оттеночный","code":33,"description":"Питательный оттеночный шампунь для придания и поддержания цвета волосам оттенков блонд. Содержащийся в составе экстракт Облепихи увлажняет осветлённые, обесцвеченные волосы и кожу головы; питает и защищает сухие и повреждённые волосы. Сбалансированный комплекс цветовых пигментов придаёт пепельный оттенок волосам.","price":"20,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/d/1/d1390dd4-da42-4972-a432-94e673e30fda_slkawxhxn3bavnt4.jpg","typeScin":"для окрашенных волос","volume":"250 мл","purpose":"тонирование"},{"type":"крем","nameProduct":"Очищающий крем","code":34,"description":"Деликатно, но тщательно, очищает от любых загрязнений, остатков макияжа и лишнего себума, нейтрализует покраснения и раздражения, заметно уменьшает расширенные поры. Благодаря невесомой кремовой консистенции этого очищающего крема для лица, он легко наносится и мгновенно впитывается. Восстанавливает гидролипидный баланс, оживляет и укрепляет кожу.","price":"16,16 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/a/a/aaf29491980a156c5ff55f12aa8ed921_1.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка кислотная","code":35,"description":"Концентрированная сыворотка мягко отшелушивает, снижает выработку сальных желез, сужает поры, уменьшает постакне. Кислоты AHA + PHA – обладают увлажняющими свойствами, а также отшелушивают омертвевшие клетки эпидермиса. Кислоты AHA + PHA – обладают увлажняющими свойствами, а также отшелушивают омертвевшие клетки эпидермиса. Ниацинамид - сильный антиоксидант, помогает замедлить образование морщин, регулирует чрезмерную секрецию кожного сала, препятствует появлению воспалений.","price":"41,39 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169046866_1.png_z0ftyhsyut3cazp6.jpg","typeScin":"для проблемной кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"солнцезащита","nameProduct":"Увлажняющий лосьон SPF 25","code":36,"description":"Увлажняющий лосьон для лица SPF 25 обеспечивает эффективную защиту широкого спектра действия от UVA и UVB солнечных лучей и интенсивно увлажняет кожу в течение 24 часов.Гиалуроновая кислота и технология MVE позволяют поддерживать естественный уровень увлажнения кожи в течение долгого времени.","price":"55,60 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337875597487_1_l0wm3lmdirsh0j9z.jpg","typeScin":"для нормальной кожи","volume":"52 мл","purpose":"защита от солнца"},{"type":"шампунь","nameProduct":"Шампунь для сухих и поврежденных волос","code":37,"description":"Бережно очищает и помогает восстановить естественный уровень влаги в волосах, предотвращает обезвоживание. Придаёт волосам мягкость и блеск.","price":"23,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4630079566730_1_c9jucsulizccbcat.jpg","typeScin":"для сухих и поврежденных волос","volume":"250 мл","purpose":"увлажнение волос"},{"type":"крем","nameProduct":"Увлажняющий крем-сорбет","code":38,"description":" Крем устраняет ощущение стянутости кожи и восстанавливает ее природные ресурсы. С каждым днем ощущение комфорта на коже только усиливается. Тонкие цитрусовые нотки в ее аромате переплетаются с освежающим букетом из цветов мандарина, листьев лимонного дерева, огуречной воды и свежей мяты.","price":"36,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/5/3522930003335_1_y8mbrsbuavy081xw.jpg","typeScin":"для чувствительной кожи","volume":"40 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь для светлых волос","code":39,"description":"Пигменты, входящие в состав шампуня, придают свежесть и сияние оттенкам блонд, нейтрализуют нежелательный желтый оттенок на осветленных и окрашенных в светлые тона волосах. Полезные масла (касторовое, репейное), мягкие ПАВы, получаемые из плодов кокоса, и эффективные кондиционирующие добавки обеспечивают необходимое увлажнение, питание и защиту волосам.","price":"50,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4640130792039_1_m2n4uqdaw8qb95kv.jpg","typeScin":"для окрашенных волос","volume":"1000 мл","purpose":"тонирование"},{"type":"маска","nameProduct":"Маска с красной глиной","code":40,"description":" Красная пеларгическая глина поглощает токсины и выделения сальных желез, наполняя клетки микроэлементами. Масло шиповника стимулирует внутриклеточный обмен, способствуя регенерации дермы и увлажнению. Букет натуральных масел манго лаванды и лимона в составе маски для лица матирующей с красной глиной питают и защищают кожу, а экстракты элеутерококка и гречихи улучшают кровообращение и снимают воспаление.","price":"17,50 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/9/a/9a37a12244990fbf53ff614050a78baf.jpg","typeScin":"для комбинированной кожи","volume":"50 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка с ретинолом","code":41,"description":"Эта вечерняя сыворотка с ретинолом и ниацинамидом подойдет для для тех, кто начинает пользоваться ретиноидами. Ретинол - один из самых действенных препаратов для борьбы со старением, также помогает при гиперпигментации и борьбе с акне. Ниацинамид улучшает барьерные свойства кожи и усиливает синтез церамидов.","price":" 21,61 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4631148521452_1_6q3x7jitcsksw4pz.jpg","typeScin":"для проблемной кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь с UV-фильтром","code":42,"description":"Мягко очищает, освежает и увлажняет кожу головы. Протеины шёлка кондиционируют волосы, придают им гладкость. Соки апельсина  и грейпфрута богатые витаминами оказывают антиоксидантное действие  и увлажняют волосы и кожу головы.","price":"23,13 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4606453069913_1_d7yk4kkcgqnzbv80.jpg","typeScin":"для всех типов волос","volume":"250 мл","purpose":"очищение"},{"type":"крем","nameProduct":"Крем увлажняющий","code":43,"description":"Содержит экстракт маточного молочка, который делает кожу увлажнённой и продлевает этот эффект, предотвращая потерю влаги.Витамины и аминокислоты, полученные из экстракта облепихи и сока березы, питают кожу и снимают стресс, вызванный воздействием негативных факторов окружающей среды.","price":"70,17 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809340383550_1_qbpp1lyfgvp17oj5.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"тоник","nameProduct":"Тоник с витаминами","code":44,"description":"Витаминизирующий тонер вместо воды содержит 88% ферментированный фильтрат дрожжевого гриба Галактомисис. В сочетании с витамином С и ниацинамидом тонер возвращает коже ровный и здоровый цвет, делает ее гладкой и эластичной. Комплекс из 15 растений не только восстанавливает кислотно-щелочной баланс после применения очищающих средств, но и обеспечивает питательными веществами безжизненную и уставшую кожу, замедляя ее старение.","price":"69,71 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809511764638_1_wjqfwzes9kxdeqzl.jpg","typeScin":"для всех типов кожи","volume":"250 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка для глубокого очищения","code":45,"description":"Средство содержит органические и натуральные ингредиенты для бережного ухода: ментол помогает эффективно очистить кожу и поры, экстракт листьев хурмы выравнивает текстуру кожи. Пенка подходит для ежедневного ухода и не вызывает раздражения или сухости. После умывания кожа остаётся увлажнённой, свежей и мягкой.","price":"40,31 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809353930345_1_u3flufbpfqd3id2g.jpg","typeScin":"для комбинированной кожи","volume":"180 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с экстрактом чайного дерева","code":46,"description":"Мягкое очищающее средство на основе Чайного Дерева для борьбы с акне. Уход за кожей с низким уровнем pH.","price":"113,21 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809642712874_1_wj6avorbymy6idwa.jpg","typeScin":"для проблемной кожи","volume":"150 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка подтягивающая","code":47,"description":"Профессиональная высокоактивная концентрированная сплэш-сыворотка для ревитализирующего 3D-лифтингового ухода за кожей лица и шеи на основе низкомолекулярной гиалуроновой кислоты, витаминов и полисахаридов экзотических растений. Применяется для пролонгации эффекта, достигнутого в результате инъекционных процедур биоревитализации, пилингов, а также для регулярного ежедневного ухода за кожей лица. ","price":"43,25 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494710_1_ylttlkro98c9mxmh.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против признаков старения"},{"type":"тоник","nameProduct":"Тоник с фруктовыми кислотами","code":48,"description":"Тоник для интенсивного ухода за кожей склонной к жирности, появлению акне, а также сухости и гиперкератозу. Снижает рН-кожи, способствуя замедлению развития бактерий, провоцирующих акне. Отшелушивает ороговевшие клетки эпидермиса, способствуя усилению регенерации. Стимулирует выработку собственного коллагена и эластина кожи, повышает упругость, уменьшая проявления морщин. Обладает лёгким осветляющим действием.","price":"10,14 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008493249_1_oa8j9ze8zaekimdb.jpg","typeScin":"для комбинированной кожи","volume":"250 мл","purpose":"против несовершенств"},{"type":"крем","nameProduct":"Легкий успокаивающий крем-гель","code":49,"description":"Мгновенное увлажнение, устраняет раздражение. Легкий увлажняющий крем для жирной, склонной к акне кожи Легкий гель-крем активно успокаивает чувствительную и проблемную кожу, а также увлажняет и защищает кожу с помощью комплекса Multi Tiger grass. Приятный травяной аромат снимает стресс кожи, а его легкая текстура обволакивает кожу.","price":"54,15 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535807953_1_nioduvilzyqujq93.jpg","typeScin":"для чувствительной кожи","volume":"80 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь глубокой очистки","code":50,"description":"Шампунь глубокой очистки High Amplify эффективно удаляет жир, кожные отложения и остатки стайлинговых продуктов у корней, мешающих объёму. Использовать шампунь не чаще 1 раза в неделю.","price":"80,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/4/3474636890712_1_dmkmzvs0tg9xyv0d.jpg","typeScin":"для всех типов волос","volume":"400 мл","purpose":"очищение"},{"type":"маска","nameProduct":"Маска SOS","code":51,"description":"Ветер, холод, жара, серьезная косметическая процедура в салоне – частые причины повышенной чувствительности и сухости кожи. Чтобы помочь уставшей коже и вернуть ей нормальные настройки, достаточно добавить в свою бьюти-рутину средства ухода с успокаивающими и восстанавливающими компонентами.","price":"65,01 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/7640399230799_1_fzrb7unipk49yoc5.jpg","typeScin":"для сухой кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка с гиалуроновой кислотой","code":52,"description":"Пенка деликатно удаляет грязь и отмершие клетки с поверхности кожи. Содержит 2 вида гиалуроновой кислоты: гиалуронат натрия и супергиалуроновую кислоту. Не содержит отдушек, искусственных красителей, минеральных масел и спирта. Нежная и плотная пенка в одно нажатие. Кожа становится необыкновенно чистая, гладкая и нежная.","price":"124,66 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/9/4987241145614_1_pxwa8fzbimo11mz0.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник регенерирующий","code":53,"description":"Регенерирующий тоник для лица с молочной кислотой оказывает противовоспалительное действие, выравнивает тон и микрорельеф, повышает уровень увлажнённости кожи. В основе тоника водный экстракт лаванды, который успокаивает кожу и снимает воспаление. Экстракт ламинарии увлажняет, регенерирует, регулирует активность сальных желез. Экстракт фиалки улучшает кислородное питание кожи, сужает поры. Экстракт донника оказывает успокаивающее и антиоксидантное действие.","price":"55,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603781379042_1_ashpntdsjzmxqhfg.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"против несовершенств"},{"type":"сыворотка","nameProduct":"Сыворотка против постакне","code":54,"description":"Активная формула средства, впервые1 содержащая комплекс из Трех Кислот борется с несовершенствами, дополняя ваш привычный ритуал ухода. Ультра Концентрированная Сыворотка Effaclar cодержит интенсивный комплекс из Салицилловой, Гликолевой и Липо-Гидрокси-Кислоты, дополяющих действие друг друга для оптимальной эффективности в борьбе против несовершенств, черных точек и следов постакне. День за днем сыворотка ощутимо обновляет кожу, заметно улучшая микрорельеф кожи и тон лица, а также предотвращая повторного появления следов постакне.","price":"150,44 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337875722827_1_kdtpa7kv37gfzpw0.jpg","typeScin":"для проблемной кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь ревитализирующий","code":55,"description":"Ревитализирующий Шампунь-Ванна для бережного очищения кожи головы и волос. Содержит Гиалуроновую кислоту, Молекулу Абиссин и Витамин Е, которые борются с основными признаками старения. Обеспечивает длительное увлажнение кожи головы, укрепляет волосы, насыщая их влагой, возвращает упругость и придает роскошный блеск. Средство обладает узнаваемым тонким ароматом Chronologiste с нотами чайный розы, древесины светлых пород и мускуса. Дарит ощущение комфорта.","price":"160,80 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/4/3474636728268_1_ulet8oh1owjcszb0.jpg","typeScin":"для сухих и поврежденных волос","volume":"250 мл","purpose":"увлажнение волос"},{"type":"маска","nameProduct":"Маска с AHA кислотами","code":56,"description":"Маска для лица с АНА кислотами помогает очистить и увлажнить кожу, повысить ее тонус. АНА кислоты в маске для лица деликатно отшелушивают ороговевшие клетки, стимулируют их обновление. Миндальное масло питает ткани влагой, восстанавливает повреждения, способствует разглаживанию рельефа и выравниванию морщин.","price":"8,49 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4627090994239_1_qignhecyw6xayryz.jpg","typeScin":"для всех типов кожи","volume":"110 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Мист солнцезащитный","code":57,"description":"Солнцезащитный спрей для лица и тела мгновенно впитывается и остается незаметным на коже без ощущения липкой пленки. Идеальное средство для активного отдыха и спорта на открытом воздухе. Технология WetForce обеспечивает более эффективную защиту при контакте с водой и потом, покрывая кожу защитной вуалью. Чем больше Вы потеете, тем лучше работает защита! Кроме того, новая технология Invisible Feel с быстросохнущими маслами создает гладкое шелковистое покрытие, которое не ощущается на коже. ","price":"120 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/a/6/a683d589633b4d5a54e068729286e611.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем для проблемной кожи","code":58,"description":"Чайное дерево широко известно как отличное средство для улучшения состояния жирной и проблемной кожи. Крем с экстрактом чайного дерева поможет уменьшить выработку себума и избавиться от жирного блеска, подсушит имеющиеся проблемные участки и предотвратит появление новых. Легкая текстура быстро впитывается, не перегружая кожу и придавая ей здоровую естественную матовость. ","price":"62,47 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809623291985_1_hk7a3fsd4tqolaf1.jpg","typeScin":"для жирной кожи","volume":"50 мл","purpose":"матирование"},{"type":"маска","nameProduct":"Маска для проблемной кожи","code":59,"description":"Профессиональная маска для интенсивного ухода за проблемной кожей лица. Изготовлена на основе биоактивного хлорофилл-каротинового комплекса. Оказывает интенсивное противовоспалительное, бактерицидное и себорегулирующее действие, способствует устранению акне, комедонов, постакне и шелушения, снимает покраснение и отек, сужает поры. Идеальное для жирной кожи сочетание салициловой и яблочной кислот снижает проявление себореи.","price":"26,08 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494468_1_rqihcu0zvuikbr22.jpg","typeScin":"для проблемной кожи","volume":"150 мл","purpose":"против несовершенств"},{"type":"тоник","nameProduct":"Тоник увлажняющий","code":60,"description":"Максимально эффективен при регулярном использовании. Активный состав увлажняющего тоника проникает глубоко в ткани и клетки, производя очищение и питание. ","price":"15,94 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/f/8f82007e49436211b391ec6139aac608.jpg","typeScin":"для комбинированной кожи","volume":"200 мл","purpose":"увлажнение и питание"},{"type":"сыворотка","nameProduct":"Сыворотка коллагеновая","code":61,"description":"Collagen 5% + Peptides 7% Lifting Complex - биоактивный серум-концентрат направлен на каскадное укрепление внутреннего коллаген-эластинового каркаса кожи лица, повышение упругости кожи, разглаживание ее микрорельефа и борьбу с преждевременным птозом. Основой средства являются коллаген и трио синергичных друг другу пептидных комплексов.","price":"27,85 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4627163316036_1_nfshvs2goo9mo4re.jpg","typeScin":"для всех типов кожи","volume":"15 мл","purpose":"против признаков старения"},{"type":"маска","nameProduct":"Маска увлажняющая","code":62,"description":"Позаботиться о коже и насытить её влагой помогают органические ингредиенты: миндальное масло, содержащее витамин E, экстракт кунжута, глицерин, который поддерживает баланс влаги в коже, алоэ вера и экстракт огурца, оказывающие противовоспалительное действие и успокаивающие кожу.","price":"20,32 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/2/0/2030150400038_1_xiwjbmwhvx1bq91m.jpg","typeScin":"для всех типов кожи","volume":"15 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь для красоты волос","code":63,"description":"Шампунь для абсолютной красоты OI деликатно очищает волосы и придает необычайную мягкость, блеск и объем.Содержит масло аннато (другое название — масло рукку) из растения, произрастающего в лесах Амазонии, а также активный ингредиент, полученный из розового масла, который придает волосам исключительный блеск, благодаря высокому коэффициенту преломления.","price":"58,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/0/8004608247630_1_00yn8zx3ur5qdekn.jpg","typeScin":"для всех типов волос","volume":"280 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Восстанавливающий крем SPF 50","code":64,"description":"Травяные экстракты снимают воспаления, препятствуют образованию сухости и шелушений, успокаивают ткани. Солнцезащитный крем препятствует преждевременному увяданию кожи, благодаря богатому антиоксидантами авокадо.","price":"35,90 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8803348040903_1_xjmcg5t94awy0w1d.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"пенка","nameProduct":"Пенка с AHA кислотами","code":65,"description":"Предназначена для глубокого и при этом очень бережного очищения сухой и чувствительной кожи. Она легко и абсолютно безопасно удаляет ороговевший слой эпидермиса, не повреждая живые клетки. Пенка хорошо удаляет макияж и глубоко очищает кожу, проникая в поры, очищая их и сужая, смягчает кожу и улучшает ее текстуру, а также осветляет пигментацию.","price":"13,16 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/f/b/fb0b0e6a05563c68a339e043a38a96c9.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Масло помадного дерева SPF 6","code":66,"description":"Это легендарное масло для загара содержит кокосовое масло и отборные растительные масла с ценным экстрактом аннато, который воплощает в себе насыщенное карибское лето. Араваки традиционно используют темно-красные семена помадного дерева с их высоким содержанием провитамина А в качестве солнцезащитного средства, которое стимулирует образование меланина и собственные защитные механизмы кожи. ","price":"210,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/7/3700648806770_1_zpypclfuhablszfo.jpg","typeScin":"для всех типов кожи","volume":"200 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем ночной антивозрастной","code":67,"description":"Пока вы спите, омолаживающий ночной крем продолжает активно трудиться, совершенствуя вашу кожу лица! В питательную формулу, разработанную лучшими израильскими учеными, входят самые эффективные в уходе косметические компоненты: ускоряющий регенерацию тканей витамин Е; формирующий структуру кожи коллаген; Д-пантенол – провитамин В5 – который увлажняет самые глубинные слои.","price":"26,55 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/2/7290015816434_1_dhdzm4dm8facb6rf.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"маска","nameProduct":"Маска альгинатный коктейль","code":68,"description":"В состав средства входит глутатион, мощный антиоксидант, обеспечивающий ровный тон кожи, и природный растительный комплекс, способствующий свежему цвету лица за счет экстрактов облепихи и грейфрута. Сочетание ингредиентов маски подарит вам сияющую ухоженную кожу. Назначение: возвращает сияние и свежий цвет лица усталой, тусклой коже МАСКА «АЛЬГИНАТНЫЙ КОКТЕЙЛЬ» СИЯНИЕ & ДЕТОКС обладает высокой эффективностью альгинатных масок и при этом очень проста в использовании.","price":"43,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535802071_1_uld0ejezmwhefkw9.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"тоник","nameProduct":"Тоник увлажняющий","code":69,"description":"Созданный на основе натуральных ингредиентов, увлажняет кожу, помогая сделать её мягкой и чистой. Благодаря комплексу экстрактов с корейского острова Чеджу средство оказывает охлаждающее действие и понижает температуру кожи на 2 градуса, чтобы сократить выработку себума, улучшить вид кожи и успокоить её. В состав также входит экстракт лаванды, который стимулирует регенерацию кожи. ","price":"72,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809513390125_1_z4tsnqk1gvfvxcje.jpg","typeScin":"для сухой кожи","volume":"150 мл","purpose":"увлажнение и питание"},{"type":"сыворотка","nameProduct":"Сыворотка для сияния кожи","code":70,"description":"Средство содержит богатое витамином C масло лимона, которое помогает удалить омертвевшие клетки и сделать кожу чистой и сияющей. Экстракт бурых водорослей повышает эластичность кожи и оказывает антивозрастное действие, а экстракт софоры японской улучшает состояние кожи благодаря противовоспалительным свойствам. Для увлажнения кожи и ощущения свежести в состав входит гиалуронат натрия.","price":"36,64 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809079250536_1_vzsaf8rrz3drgzna.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против признаков старения"}]
-
-/***/ }),
-/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37624,7 +37426,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(83);
+__webpack_require__(78);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37960,13 +37762,13 @@ exports.default = function (props) {
 };
 
 /***/ }),
-/* 83 */
+/* 78 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 84 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37982,7 +37784,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(85);
+__webpack_require__(80);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38126,20 +37928,69 @@ var Page_Contacts = function (_React$PureComponent) {
 exports.default = Page_Contacts;
 
 /***/ }),
-/* 85 */
+/* 80 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 86 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(2);
+
+var _reactRedux = __webpack_require__(3);
+
+var _InfoAboutProduct = __webpack_require__(82);
+
+var _InfoAboutProduct2 = _interopRequireDefault(_InfoAboutProduct);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var intPage_Item = function intPage_Item(props) {
+
+    var params = (0, _reactRouterDom.useParams)();
+
+    var productCode = parseInt(params.prodcode);
+
+    var productData = props.infoAboutProduct.find(function (el) {
+        return el.code == productCode;
+    });
+
+    return _react2.default.createElement(_InfoAboutProduct2.default, {
+        info: productData });
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        infoAboutProduct: state.infoProduct.info
+    };
+};
+
+var Page_Item = (0, _reactRedux.connect)(mapStateToProps)(intPage_Item);
+
+exports.default = Page_Item;
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -38147,6 +37998,16 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(12);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRedux = __webpack_require__(3);
+
+var _explanForReducer = __webpack_require__(14);
+
+__webpack_require__(83);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38156,35 +38017,175 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Page_Basket = function (_React$PureComponent) {
-  _inherits(Page_Basket, _React$PureComponent);
+var intInfoAboutProduct = function (_React$PureComponent) {
+    _inherits(intInfoAboutProduct, _React$PureComponent);
 
-  function Page_Basket() {
-    _classCallCheck(this, Page_Basket);
+    function intInfoAboutProduct() {
+        var _ref;
 
-    return _possibleConstructorReturn(this, (Page_Basket.__proto__ || Object.getPrototypeOf(Page_Basket)).apply(this, arguments));
-  }
+        var _temp, _this, _ret;
 
-  _createClass(Page_Basket, [{
-    key: 'render',
-    value: function render() {
-      return null;
-      /* return (
-        <MobileCompany 
-          name={appData.companyName}
-          clients={appData.clientsArr}
-        />
-      ); */
+        _classCallCheck(this, intInfoAboutProduct);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = intInfoAboutProduct.__proto__ || Object.getPrototypeOf(intInfoAboutProduct)).call.apply(_ref, [this].concat(args))), _this), _this.buyThisProduct = function () {
+            _this.props.dispatch((0, _explanForReducer.addForBascet)(_this.props.info.code));
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
-  }]);
+    //пропсы из Page_Item
 
-  return Page_Basket;
+
+    _createClass(intInfoAboutProduct, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'contanerForInfo' },
+                _react2.default.createElement('img', { className: 'imgProd', src: this.props.info.urlProduct, title: this.props.info.nameProduct }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'infoProd' },
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        this.props.info.nameProduct
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        this.props.info.description
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'priceProd' },
+                        '\u0426\u0435\u043D\u0430: ',
+                        this.props.info.price
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'dopInfo' },
+                        '\u0422\u0438\u043F \u043A\u043E\u0436\u0438: ',
+                        this.props.info.typeScin
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'dopInfo' },
+                        '\u041D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: ',
+                        this.props.info.purpose
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'dopInfo' },
+                        '\u041E\u0431\u044A\u0435\u043C: ',
+                        this.props.info.volume
+                    ),
+                    _react2.default.createElement('input', { className: 'buttonBuy', type: 'button', defaultValue: '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432 \u043A\u043E\u0440\u0437\u0438\u043D\u0443', onClick: this.buyThisProduct })
+                )
+            );
+        }
+    }]);
+
+    return intInfoAboutProduct;
 }(_react2.default.PureComponent);
+
+intInfoAboutProduct.propTypes = {
+    info: _propTypes2.default.shape({
+        code: _propTypes2.default.number.isRequired,
+        description: _propTypes2.default.string.isRequired,
+        nameProduct: _propTypes2.default.string.isRequired,
+        price: _propTypes2.default.string.isRequired,
+        purpose: _propTypes2.default.string.isRequired,
+        typeScin: _propTypes2.default.string.isRequired,
+        urlProduct: _propTypes2.default.string.isRequired,
+        volume: _propTypes2.default.string.isRequired
+    })
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {};
+};
+
+var InfoAboutProduct = (0, _reactRedux.connect)(mapStateToProps)(intInfoAboutProduct);
+
+exports.default = InfoAboutProduct;
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _reactRouterDom = __webpack_require__(2);
+
+var _ProductInBasket = __webpack_require__(85);
+
+var _ProductInBasket2 = _interopRequireDefault(_ProductInBasket);
+
+__webpack_require__(87);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var intPage_Basket = function intPage_Basket(props) {
+  console.log(props.itemInBasket);
+  if (props.itemInBasket.length === 0) {
+    return _react2.default.createElement(
+      'div',
+      { className: 'emptyBasket' },
+      _react2.default.createElement(
+        'p',
+        null,
+        '\u0412\u044B \u0435\u0449\u0435 \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0434\u043E\u0431\u0430\u0432\u0438\u043B\u0438 \u0432 \u043A\u043E\u0440\u0437\u0438\u043D\u0443\u044E. \u0421\u0434\u0435\u043B\u0430\u0439\u0442\u0435 \u0441\u0432\u043E\u044E \u043F\u0435\u0440\u0432\u0443\u044E \u043F\u043E\u043A\u0443\u043F\u043A\u0443!'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'goToCatalog' },
+        _react2.default.createElement(
+          _reactRouterDom.NavLink,
+          { to: "/catalog" },
+          '\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u0432 \u043A\u0430\u0442\u0430\u043B\u043E\u0433'
+        )
+      )
+    );
+  } else {
+    props.itemInBasket.map(function (el) {
+      return _react2.default.createElement(_ProductInBasket2.default, {
+        infoPr: el });
+    });
+  }
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    itemInBasket: state.infoProduct.basket
+  };
+};
+
+var Page_Basket = (0, _reactRedux.connect)(mapStateToProps)(intPage_Basket);
 
 exports.default = Page_Basket;
 
 /***/ }),
-/* 87 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38200,9 +38201,164 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(3);
+var _reactRedux = __webpack_require__(3);
 
-__webpack_require__(88);
+__webpack_require__(86);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var intProductInBasket = function (_React$PureComponent) {
+  _inherits(intProductInBasket, _React$PureComponent);
+
+  function intProductInBasket() {
+    _classCallCheck(this, intProductInBasket);
+
+    return _possibleConstructorReturn(this, (intProductInBasket.__proto__ || Object.getPrototypeOf(intProductInBasket)).apply(this, arguments));
+  }
+
+  _createClass(intProductInBasket, [{
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }]);
+
+  return intProductInBasket;
+}(_react2.default.PureComponent);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {};
+};
+
+var ProductInBasket = (0, _reactRedux.connect)(mapStateToProps)(intProductInBasket);
+
+exports.default = ProductInBasket;
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _getData = __webpack_require__(89);
+
+var _explanForReducer = __webpack_require__(14);
+
+var productsArr = __webpack_require__(90);
+var initState = {
+  info: productsArr,
+  basket: []
+};
+/*  getData().then(data=>{initState.info=data},
+   error=>{initState.error=error}); */
+// в редьюсере state - это не весь state Redux, а только тот раздел state,
+// за который отвечает данный редьюсер
+
+function infoReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initState;
+  var action = arguments[1];
+
+
+  switch (action.type) {
+
+    //добавление товара в корзину
+    case _explanForReducer.add_for_backet:
+      {
+        var newState = _extends({}, state);
+        state.info.forEach(function (el) {
+          if (el.code === action.isSelected) {
+            newState.basket.push(el);
+          }
+        });
+
+        console.log(newState);
+
+        return newState;
+      }
+
+    case "buyProduct":
+      {
+
+        var _newState = _extends({}, state);
+        _newState.cnt--;
+
+        return _newState;
+      }
+
+    default:
+      return state;
+  }
+}
+
+exports.default = infoReducer;
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var getData = exports.getData = function getData() {
+  return fetch("http://d.zaix.ru/uIYI.txt").then(function (response) {
+    return response.json();
+  });
+};
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports) {
+
+module.exports = [{"type":"солнцезащита","nameProduct":"Увлажняющий крем SPF 50","code":1,"description":"Солнцезащитный крем для лица с экстрактом зеленого чая сохраняет кожу мягкой и увлажненной, обладает антибактериальными свойствами. SPF 50 не только защищает от УФ-лучей, но и предотвращает появление пигментных пятен, и предотвращает фотостарение кожи.","price":"35,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809426957651_1_jwkxzzil8ywtj6gd.jpg","typeScin":"для всех типов кожи","volume":"70 мл","purpose":"защита от солнца"},{"type":"тоник","nameProduct":"Тоник для сухой кожи","code":2,"description":"Увлажняющий тоник Tonique Confort деликатно освобождает от загрязнений, наполняет мягкостью и эффективно ухаживает за сухой кожей. Для кого? Деликатное средство очищения сухой кожи. Действие: Эффективно, но бережно очищает сухую кожу. Результат: Безупречно чистая, свежая, бархатистая кожа, увлажненная и ухоженная.","price":"91,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/f/4f6f7ee4c6b1855e496efa3c25e46307.jpg","typeScin":"для сухой кожи","volume":"200 мл","purpose":"увлажнение и питание"},{"type":"крем","nameProduct":"Крем увлажняющий от покраснений","code":3,"description":"Успокаивает кожу за 30 секунд. Успокаивает покраснение, чувство стянутости, покалывания и ощущение жара. Восстанавливает кожный барьер через 48 часов, увлажняет. Для реактивной, сверхчувствительной и склонной к аллергии кожи. Для нормальной и комбинированной кожи. Подходит детям с 2х и взрослым. Не содержит консервантов. Без запаха. Формула протестирована на склонной к аллергии коже. Состав на 98% из ингредиентов натурального происхождения. ","price":"14,46 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/2/3282770138801_1_c63covbvz14aafdl.jpg","typeScin":"для чувствительной кожи","volume":"40 мл","purpose":"против несовершенств"},{"type":"крем","nameProduct":"Крем с азелаиновой кислотой","code":4,"description":"Крем с азелаиновой кислотой идеален для коррекции недостатков проблемной кожи. Выравнивает поверхность кожи и обладает осветляющим эффектом. Нормализует процессы регенерации клеток. Помогает минимизировать следы постакне, пигментные пятна и покраснения. Азелаиновая кислота (5%) – мощное средство для борьбы с акне. Снимает воспаления и регулирует выработку кожного сала.","price":"23,13 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008495663_1_htjnndztjqnqruzs.jpg","typeScin":"для проблемной кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Восстанавливающий шампунь","code":5,"description":"Благодаря входящим в состав натуральным ингредиентам, заботится о волосах, укрепляет и питает их. Придает волосам ухоженный, здоровый вид. Продукт содержит более 98% ингредиентов растительного происхождения.","price":"21,94 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4620046171777_1_0ttkh4wt9jiexmql.jpg","typeScin":"для сухих и поврежденных волос","volume":"600 мл","purpose":"увлажнение волос"},{"type":"шампунь","nameProduct":"Шампунь с натуральными ингредиентами","code":6,"description":"Органический шампунь, максимально натуральный, содержащий экологически чистые и сертифицированные экстракты и эфирные масла, имеет нейтральный pH баланс 5,5. В составе шампуня неагрессивная натуральная моющая основа, которая мягко очищает от повседневных загрязнений и секреции сальных желез, не повреждая ни волосы, ни кожу.","price":"20,88 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809500811008_1_3nhahcs78ly1wjq8.jpg","typeScin":"для всех типов волос","volume":"150 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка очищающая","code":7,"description":"Состав мягко растворяет загрязнители, снимает слой пыли и себума без механического повреждения клеток кожи. В составе сыворотки для лица присутствует древесный уголь, который комплексно воздействует на кожу, придает ей сияние, устраняет потемнения, способствует отшелушиванию кожных чешуек и сужению пор.","price":" 186,29 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/c/1/c171bd7b9bcf5b1326ee84ce627399c0.jpg","typeScin":"проблемная и нормальная","volume":"30 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка регенерирующая","code":8,"description":" Благодаря календуле и алоэ вера в составе регенерирующей сыворотки для лица Обновление кожных клеток средство успокаивает воспаления и борется с раздражением кожи, снижая ее чувствительность.","price":"26,97 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603726088442_1_rtanwl7rnblvw8u3.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против признаков старения"},{"type":"солнцезащита","nameProduct":"Масло спрей SPF 30","code":9,"description":"Питание масла с ощущением легкой, обволакивающей дымки. Шелковистая, нелипкая текстура. Быстрое впитывание. Водостойкая формула","price":"112,65 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/2/3282770114669_1_oj8h20bf70znbhox.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"солнцезащита","nameProduct":"Флюид SPF 50","code":10,"description":"Содержит гиалуроновую кислоту, экстракт маточного молочка, и увлажняющие компоненты. Подходит для ежедневного ухода круглый год, может использоваться как база под макияж. Флюид для лица длительного действия с высоким уровнем защиты лица и тела SPF+ PA++++. Водостойкая формула, устойчива к воде и поту. Эффективно защищает кожу от UVB лучей, которые являются причиной появления веснушек и пигментных пятен, а также от UVA лучей которые вызывают ослабление кожных покровов и приводят к появлению морщин. ","price":"50,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/9/4901301363183_1_j26c1e1puqxv6f0q.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"солнцезащита","nameProduct":"Флюид с витамином Е SPF 50","code":11,"description":"Подходит для чувствительной кожи. Без парабенов. Флюид интенсивно увлажняет кожу и обеспечивает защиту широкого спектра от коротких и длинных уф-лучей (UVA/UVB), а также от агрессивных факторов окружающей среды. Разработан специально для защиты кожи лица от фотостарения (преждевременного появления пигментных пятен, морщинок) и солнечных ожогов. Быстро впитывается, обеспечивая незаметное покрытие.","price":"208,08 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/6/3605971613449_1_pf3amdkipaepaw7k.jpg","typeScin":"для чувствительной кожи","volume":"60 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем антивозрастной восстанавливающий","code":12,"description":"Активные ингредиенты дневного крема оказывают комплексное антивозрастное действие, а пребиотик зеленых морских водорослей укрепляет защитный барьер кожи. Крем также увлажняет кожу и усиливает её естественную защиту. В составе – пептиды, полисахариды, аденозин, гиалуроновая кислота, витамин B3 и алоэ вера. ","price":"96,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/1/3139436552573_1_bebyeirmaclibl47.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против признаков старения"},{"type":"тоник","nameProduct":"Тоник успокаивающий","code":13,"description":"Успокаивающий тоник эффективно удаляет макияж, успокаивает и защищает кожу. Средство обладает оптимальной переносимостью и имеет физиологический уровень pH. Тоник создан на основе Термальной воды и подходит для чувствительной кожи лица и глаз. Не содержит мыла, спирта, красителей и парабенов. Некомедогенно.","price":"58,17 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337872410321_1_9tc9qycrbdalhjmw.jpg","typeScin":"для чувствительной кожи","volume":"200 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка витаминная","code":14,"description":"Сыворотка создана, чтобы напитать кожу витаминами, восстановить гидро-липидный барьер и оздоровить ее внешний вид. Особенно актуально для уставшей, тусклой и нуждающейся в свечении кожи, а также для жителей городов, с плохой экологической ситуацией. Сыворотка имеет аромат свежего апельсина, благодаря гидролату и органическому эфирному маслу апельсина.","price":"71,52 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603744660316_1_rowb1vo0aox8bubg.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"солнцезащита","nameProduct":"Крем для лица SPF 30","code":15,"description":"Образует на поверхности кожи покрытие, защитные свойства которого возрастают при усилении жары или при взаимодействии с водой или потом. Крем обеспечивает непрерывную защиту от ультрафиолетовых лучей спектра А и В и сухости. Содержит фактор защиты от солнца SPF 30. В состав крема входят ингредиенты, которые ухаживают за кожей и предотвращают появление морщин и неровного тона в результате фотостарения. ","price":"115,23 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/768614156741_1_k95ldu8mtmre2nze.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"пенка","nameProduct":"Пенка с ниацинамидом","code":16,"description":"Пенка с ниацинамидом, цинком и салициловой кислотой предназначена для глубокого, но щадящего очищения, не пересушивает кожу. Эффективно удаляет макияж, остатки кожного сала и внешние загрязнения. Салициловая кислота стабилизирует работу сальных желёз, сужает поры, борется с несовершенствами кожи, выравнивает микрорельеф. Ниацинамид стимулирует обменные процессы, способствует более глубокому проникновению активных веществ, улучшает эластичность кожи, эффективно выравнивает. ","price":"61,19 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603757312820_1_u5yzhir7taawjtpg.jpg","typeScin":"для комбинированной кожи","volume":"150 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с экстрактом алоэ вера","code":17,"description":"Пенка мягко удаляет загрязнения, излишки себума и ороговевшие клетки, очищает поры, не забивая их. Экстракт алоэ оказывает антибактериальное и антисептическое действия, предотвращает появление воспалений, успокаивает кожу и возвращает ей здоровый вид.","price":"87,54 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/9/9/99730300046_1_g1zjenur769zc0tp.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"очищение"},{"type":"крем","nameProduct":"Крем для сияния кожи","code":18,"description":"Крем обеспечивает глубокое и длительное увлажнение для сухой и нормальной, а также комбинированной и чувствительной кожи. Средство питает её и возвращает естественное сияние. В состав средства входят кристаллы рубина, которые улучшают цвет лица и помогают разгладить морщины.","price":"52,12 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5990688142503_1_ucsnbh7dgchkx6jv.jpg","typeScin":"для сухой кожи","volume":"30 мл","purpose":"увлажнение и питание"},{"type":"маска","nameProduct":"Маска восстанавливающая","code":19,"description":"Легкая в использовании, ночная маска интенсивного восстановления, устраняет покраснения и восстанавливает поврежденную кожу, пока вы спите. В основе Центелла Азиатская или Тигровая Трава, широко известная своими заживляющими свойствами.","price":"145,32 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809642711631_1_kjmjzz7g58qh5ufo.jpg","typeScin":"для всех типов кожи","volume":"110 мл","purpose":"осветление и восстановление"},{"type":"пенка","nameProduct":"Пенка для глубокого очищения PH 5,5","code":20,"description":"Идеально сбалансированное средство для очищения с нейтральным уровнем pH 5.5 подходит для самой чувствительной кожи, нежно, но при этом тщательно очищая её. Гель при соприкосновении с водой преобразуется в легкую пенку.","price":"17,00 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535804907_1_t9asnwkbjdppdaok.jpg","typeScin":"для чувствительной кожи","volume":"30 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник корректирующий","code":21,"description":"Активный корректирующий тоник эффективно очищает и освежает кожу. Деликатно и постепенно отшелушивает ороговевшие клетки, заметно уменьшает блеск кожи и сужает поры, осветляет пигментацию. Выравнивает цвет и обновляет, не раздражает кожу. Увлажняет уже на этапе очищения, подготавливая к нанесению сыворотки или крема. Уменьшает покраснения, придаёт сияние. Не сушит кожу, восстанавливает pH баланс 5,5.","price":"127,48 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169018245_1_b7xv5nm2k9iad749.jpg","typeScin":"для комбинированной кожи","volume":"200 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник оживляющий","code":22,"description":"Может применяться как самостоятельный живительно-очищающий комплекс или на завершающем этапе освобождения эпидермиса от внешних и естественных загрязнений в комплекте с молочком из соответствующей линии. Композиция Refining Toner очень богата природными компонентами: розовый экстракт москета, вытяжка гамамелиса, насыщенного танинами, лимонный сок, эфирные масла и т.д. Такой состав способствует глубокому и тщательному, но одновременно нежному очищению, успокаиванию и тонизированию кожных покровов, укреплению сосудов и сужению пор, восстановлению структуры и эластичности, улучшению рельефа и гидролипидного баланса.","price":"43,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/0/4001638095709_1_sagopbovzmdafcyw.jpg","typeScin":"для всех типов кожи","volume":"100 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь с кератином","code":23,"description":"Мягко очищает и реконструирует поврежденные волосы, пополняя естественные запасы кератина в волосе. Эфирные масла Арганы и Жожоба проникают в глубь волоса и обеспечивают максимальный блеск, предотвращают ломкость и сечение.","price":"53,99 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/6/3/633911728857_1_9k7tg8p2rvlcvfso.jpg","typeScin":"для сухих и поврежденных волос","volume":"355 мл","purpose":"увлажнение волос"},{"type":"маска","nameProduct":"Маска ночная осветляющая","code":24,"description":"Маска ночная осветляющая подарит вашей коже благородный аристократический оттенок и решит ряд проблем, которые возникают на кожном покрове. Экстракт лаванды превосходно борется с пигментацией и оказывает великолепное осветляющее воздействие на вашу кожу. Особенно хорошо и эффективно работает в ночные часы, когда ваша кожа отдыхает и совершенно расслаблена. ","price":"25,45 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/h/t/http192.168.0.11mizonimages8809390120358_1.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"осветление и восстановление"},{"type":"сыворотка","nameProduct":"Сыворотка с витамином С","code":25,"description":"Отлично освежает, отбеливает веснушки и выравнивает цвет лица. Является антиоксидантом и защищает клетки от различных патологий и заболеваний. Повышает защитные свойства кожи и укрепляет сосуды, регулирует водный баланс и защищает от УФ лучей. Витамин С помогает выглядеть всегда выспавшейся и свежей, благодаря своим свойствам сильного восстановления.","price":"25,43 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603757312318_1_53rjeoshdkgqc250.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"осветление и восстановление"},{"type":"маска","nameProduct":"Маска ночная","code":26,"description":"Немного красного вина перед сном сделают тебя прекрасной, если это ночная винная маска! Обновляет кожу на клеточном уровне, возвращает ей упругость и эластичность. Ускоряет процесс регенерации и подтягивает контур лица. Имеет антивозрастной эффект, убирает мелкие морщинки. Легкая и нежная текстура желе быстро впитывается, оставляя на коже тонкую пленку. Действительно эффективная маска для тех, кто хочет быстрого эффекта!","price":"45,15 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8806334338572_1_c2qx7ldcm4irsokf.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка для жирной кожи","code":27,"description":"Высокоактивные компоненты уходового продукта Geranium Foam, полученные из яблок и кокоса, оказывают интенсивное увлажняющее, тонизирующее и антиоксидантное действие. Экстракты артишока, земляничных листьев и органические эмоленты в составе пенки для умывания для жирной кожи.","price":"23,49 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/d/7d8c17a46abc7845a17ea7101df00488.jpg","typeScin":"для жирной кожи","volume":"150 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с муцином улитки","code":28,"description":"Универсальная мягкая пенка для умывания мягко очищает кожу лица, удаляя загрязнения и остатки макияжа. Комплекс с муцином улитки, экстрактом зеленого чая и солодки обладает антиоксидантным действием, укрепляет стенки сосудов, препятствует появлению купероза. Оказывает лёгкое осветляющее действие на кожу. Пенка бережно очищает и смягчает кожу, выравнивает цвет лица, оказывает успокаивающее и восстанавливающее действие.","price":"123,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494840_1_wfqcm727jjpasp2w.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник осветляющий","code":29,"description":"Тоник освежает кожу, обладает осветляющими свойствами и способствует выравниванию тона кожи. Гликолевая кислота - идеально выравнивает тон кожи, борется с пигментацией, разглаживает, предотвращает преждевременное старение и стимулирует выработку коллагена. Витамин С - один из сильнейших антиоксидантов. ","price":"83,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169046842_1.png_9jmo9gj3kapgxxbs.jpg","typeScin":"для всех типов кожи","volume":"200 мл","purpose":"осветление и восстановление"},{"type":"солнцезащита","nameProduct":"Крем солнцезащитный SPF 30","code":30,"description":"Светостойкие фильтры последнего поколения в сочетании с природными светоотражающими свойствами экстрактов мускатного шалфея, рябины и боярышника образуют мощный блок, обеспечивающий высокий уровень защиты кожи от полного спектра UVA/UVB лучей, ослабляя их воздействие и защищая кожу от фотостарения. Крем создает тончайшее матовое покрытие, которое удерживает влагу в коже даже во время длительного пребывания на солнце.","price":"38,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4607012142313_1_vqcg2aucikb1wzmk.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"маска","nameProduct":"Маска глиняная","code":31,"description":"Эта маска мечты похожа на мороженое: мягкая и легкосмываемая. Каолиновая глина очищает и выводит токсины из пор, в то время как фруктоолигосахариды питают кожу, сохраняя ее баланс и здоровье. Фруктоза и Гиалуронат натрия помогают удерживать влагу, поэтому кожа остается такой же упругой и нежной, как сама маска.","price":"30,54 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/7640399230676_1_mpabsw3c0prvcnlb.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка очищающая","code":32,"description":"Насыщенная пенка с необычной тягучей текстурой глубоко очищает, оставляя кожу безупречно чистой. Поддерживает идеальный pH баланс, не пересушивая и защищая внешний барьер кожи. Гиалуроновая кислота увлажняет, а экстракты персика, цитруса, центеллы и др.растений смягчают и питают кожу.","price":"32,18 BYN","urlProduct":"https://goldapple.by/web_scripts/webp/catalog/product/cache/fb5d06f7acfb2f26f85333624ccbfb5e/8/8/8803348040514_1_qd03nof58urgrrh2.jpg?quality=95","typeScin":"для всех типов","volume":"150 мл","purpose":"очищение"},{"type":"шампунь","nameProduct":"Шампунь оттеночный","code":33,"description":"Питательный оттеночный шампунь для придания и поддержания цвета волосам оттенков блонд. Содержащийся в составе экстракт Облепихи увлажняет осветлённые, обесцвеченные волосы и кожу головы; питает и защищает сухие и повреждённые волосы. Сбалансированный комплекс цветовых пигментов придаёт пепельный оттенок волосам.","price":"20,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/d/1/d1390dd4-da42-4972-a432-94e673e30fda_slkawxhxn3bavnt4.jpg","typeScin":"для окрашенных волос","volume":"250 мл","purpose":"тонирование"},{"type":"крем","nameProduct":"Очищающий крем","code":34,"description":"Деликатно, но тщательно, очищает от любых загрязнений, остатков макияжа и лишнего себума, нейтрализует покраснения и раздражения, заметно уменьшает расширенные поры. Благодаря невесомой кремовой консистенции этого очищающего крема для лица, он легко наносится и мгновенно впитывается. Восстанавливает гидролипидный баланс, оживляет и укрепляет кожу.","price":"16,16 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/a/a/aaf29491980a156c5ff55f12aa8ed921_1.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка кислотная","code":35,"description":"Концентрированная сыворотка мягко отшелушивает, снижает выработку сальных желез, сужает поры, уменьшает постакне. Кислоты AHA + PHA – обладают увлажняющими свойствами, а также отшелушивают омертвевшие клетки эпидермиса. Кислоты AHA + PHA – обладают увлажняющими свойствами, а также отшелушивают омертвевшие клетки эпидермиса. Ниацинамид - сильный антиоксидант, помогает замедлить образование морщин, регулирует чрезмерную секрецию кожного сала, препятствует появлению воспалений.","price":"41,39 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/5/9/5902169046866_1.png_z0ftyhsyut3cazp6.jpg","typeScin":"для проблемной кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"солнцезащита","nameProduct":"Увлажняющий лосьон SPF 25","code":36,"description":"Увлажняющий лосьон для лица SPF 25 обеспечивает эффективную защиту широкого спектра действия от UVA и UVB солнечных лучей и интенсивно увлажняет кожу в течение 24 часов.Гиалуроновая кислота и технология MVE позволяют поддерживать естественный уровень увлажнения кожи в течение долгого времени.","price":"55,60 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337875597487_1_l0wm3lmdirsh0j9z.jpg","typeScin":"для нормальной кожи","volume":"52 мл","purpose":"защита от солнца"},{"type":"шампунь","nameProduct":"Шампунь для сухих и поврежденных волос","code":37,"description":"Бережно очищает и помогает восстановить естественный уровень влаги в волосах, предотвращает обезвоживание. Придаёт волосам мягкость и блеск.","price":"23,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4630079566730_1_c9jucsulizccbcat.jpg","typeScin":"для сухих и поврежденных волос","volume":"250 мл","purpose":"увлажнение волос"},{"type":"крем","nameProduct":"Увлажняющий крем-сорбет","code":38,"description":" Крем устраняет ощущение стянутости кожи и восстанавливает ее природные ресурсы. С каждым днем ощущение комфорта на коже только усиливается. Тонкие цитрусовые нотки в ее аромате переплетаются с освежающим букетом из цветов мандарина, листьев лимонного дерева, огуречной воды и свежей мяты.","price":"36,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/5/3522930003335_1_y8mbrsbuavy081xw.jpg","typeScin":"для чувствительной кожи","volume":"40 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь для светлых волос","code":39,"description":"Пигменты, входящие в состав шампуня, придают свежесть и сияние оттенкам блонд, нейтрализуют нежелательный желтый оттенок на осветленных и окрашенных в светлые тона волосах. Полезные масла (касторовое, репейное), мягкие ПАВы, получаемые из плодов кокоса, и эффективные кондиционирующие добавки обеспечивают необходимое увлажнение, питание и защиту волосам.","price":"50,20 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4640130792039_1_m2n4uqdaw8qb95kv.jpg","typeScin":"для окрашенных волос","volume":"1000 мл","purpose":"тонирование"},{"type":"маска","nameProduct":"Маска с красной глиной","code":40,"description":" Красная пеларгическая глина поглощает токсины и выделения сальных желез, наполняя клетки микроэлементами. Масло шиповника стимулирует внутриклеточный обмен, способствуя регенерации дермы и увлажнению. Букет натуральных масел манго лаванды и лимона в составе маски для лица матирующей с красной глиной питают и защищают кожу, а экстракты элеутерококка и гречихи улучшают кровообращение и снимают воспаление.","price":"17,50 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/9/a/9a37a12244990fbf53ff614050a78baf.jpg","typeScin":"для комбинированной кожи","volume":"50 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка с ретинолом","code":41,"description":"Эта вечерняя сыворотка с ретинолом и ниацинамидом подойдет для для тех, кто начинает пользоваться ретиноидами. Ретинол - один из самых действенных препаратов для борьбы со старением, также помогает при гиперпигментации и борьбе с акне. Ниацинамид улучшает барьерные свойства кожи и усиливает синтез церамидов.","price":" 21,61 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4631148521452_1_6q3x7jitcsksw4pz.jpg","typeScin":"для проблемной кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь с UV-фильтром","code":42,"description":"Мягко очищает, освежает и увлажняет кожу головы. Протеины шёлка кондиционируют волосы, придают им гладкость. Соки апельсина  и грейпфрута богатые витаминами оказывают антиоксидантное действие  и увлажняют волосы и кожу головы.","price":"23,13 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4606453069913_1_d7yk4kkcgqnzbv80.jpg","typeScin":"для всех типов волос","volume":"250 мл","purpose":"очищение"},{"type":"крем","nameProduct":"Крем увлажняющий","code":43,"description":"Содержит экстракт маточного молочка, который делает кожу увлажнённой и продлевает этот эффект, предотвращая потерю влаги.Витамины и аминокислоты, полученные из экстракта облепихи и сока березы, питают кожу и снимают стресс, вызванный воздействием негативных факторов окружающей среды.","price":"70,17 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809340383550_1_qbpp1lyfgvp17oj5.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"тоник","nameProduct":"Тоник с витаминами","code":44,"description":"Витаминизирующий тонер вместо воды содержит 88% ферментированный фильтрат дрожжевого гриба Галактомисис. В сочетании с витамином С и ниацинамидом тонер возвращает коже ровный и здоровый цвет, делает ее гладкой и эластичной. Комплекс из 15 растений не только восстанавливает кислотно-щелочной баланс после применения очищающих средств, но и обеспечивает питательными веществами безжизненную и уставшую кожу, замедляя ее старение.","price":"69,71 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809511764638_1_wjqfwzes9kxdeqzl.jpg","typeScin":"для всех типов кожи","volume":"250 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка для глубокого очищения","code":45,"description":"Средство содержит органические и натуральные ингредиенты для бережного ухода: ментол помогает эффективно очистить кожу и поры, экстракт листьев хурмы выравнивает текстуру кожи. Пенка подходит для ежедневного ухода и не вызывает раздражения или сухости. После умывания кожа остаётся увлажнённой, свежей и мягкой.","price":"40,31 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809353930345_1_u3flufbpfqd3id2g.jpg","typeScin":"для комбинированной кожи","volume":"180 мл","purpose":"очищение"},{"type":"пенка","nameProduct":"Пенка с экстрактом чайного дерева","code":46,"description":"Мягкое очищающее средство на основе Чайного Дерева для борьбы с акне. Уход за кожей с низким уровнем pH.","price":"113,21 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809642712874_1_wj6avorbymy6idwa.jpg","typeScin":"для проблемной кожи","volume":"150 мл","purpose":"очищение"},{"type":"сыворотка","nameProduct":"Сыворотка подтягивающая","code":47,"description":"Профессиональная высокоактивная концентрированная сплэш-сыворотка для ревитализирующего 3D-лифтингового ухода за кожей лица и шеи на основе низкомолекулярной гиалуроновой кислоты, витаминов и полисахаридов экзотических растений. Применяется для пролонгации эффекта, достигнутого в результате инъекционных процедур биоревитализации, пилингов, а также для регулярного ежедневного ухода за кожей лица. ","price":"43,25 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494710_1_ylttlkro98c9mxmh.jpg","typeScin":"для всех типов кожи","volume":"30 мл","purpose":"против признаков старения"},{"type":"тоник","nameProduct":"Тоник с фруктовыми кислотами","code":48,"description":"Тоник для интенсивного ухода за кожей склонной к жирности, появлению акне, а также сухости и гиперкератозу. Снижает рН-кожи, способствуя замедлению развития бактерий, провоцирующих акне. Отшелушивает ороговевшие клетки эпидермиса, способствуя усилению регенерации. Стимулирует выработку собственного коллагена и эластина кожи, повышает упругость, уменьшая проявления морщин. Обладает лёгким осветляющим действием.","price":"10,14 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008493249_1_oa8j9ze8zaekimdb.jpg","typeScin":"для комбинированной кожи","volume":"250 мл","purpose":"против несовершенств"},{"type":"крем","nameProduct":"Легкий успокаивающий крем-гель","code":49,"description":"Мгновенное увлажнение, устраняет раздражение. Легкий увлажняющий крем для жирной, склонной к акне кожи Легкий гель-крем активно успокаивает чувствительную и проблемную кожу, а также увлажняет и защищает кожу с помощью комплекса Multi Tiger grass. Приятный травяной аромат снимает стресс кожи, а его легкая текстура обволакивает кожу.","price":"54,15 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535807953_1_nioduvilzyqujq93.jpg","typeScin":"для чувствительной кожи","volume":"80 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь глубокой очистки","code":50,"description":"Шампунь глубокой очистки High Amplify эффективно удаляет жир, кожные отложения и остатки стайлинговых продуктов у корней, мешающих объёму. Использовать шампунь не чаще 1 раза в неделю.","price":"80,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/4/3474636890712_1_dmkmzvs0tg9xyv0d.jpg","typeScin":"для всех типов волос","volume":"400 мл","purpose":"очищение"},{"type":"маска","nameProduct":"Маска SOS","code":51,"description":"Ветер, холод, жара, серьезная косметическая процедура в салоне – частые причины повышенной чувствительности и сухости кожи. Чтобы помочь уставшей коже и вернуть ей нормальные настройки, достаточно добавить в свою бьюти-рутину средства ухода с успокаивающими и восстанавливающими компонентами.","price":"65,01 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/6/7640399230799_1_fzrb7unipk49yoc5.jpg","typeScin":"для сухой кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"пенка","nameProduct":"Пенка с гиалуроновой кислотой","code":52,"description":"Пенка деликатно удаляет грязь и отмершие клетки с поверхности кожи. Содержит 2 вида гиалуроновой кислоты: гиалуронат натрия и супергиалуроновую кислоту. Не содержит отдушек, искусственных красителей, минеральных масел и спирта. Нежная и плотная пенка в одно нажатие. Кожа становится необыкновенно чистая, гладкая и нежная.","price":"124,66 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/9/4987241145614_1_pxwa8fzbimo11mz0.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"очищение"},{"type":"тоник","nameProduct":"Тоник регенерирующий","code":53,"description":"Регенерирующий тоник для лица с молочной кислотой оказывает противовоспалительное действие, выравнивает тон и микрорельеф, повышает уровень увлажнённости кожи. В основе тоника водный экстракт лаванды, который успокаивает кожу и снимает воспаление. Экстракт ламинарии увлажняет, регенерирует, регулирует активность сальных желез. Экстракт фиалки улучшает кислородное питание кожи, сужает поры. Экстракт донника оказывает успокаивающее и антиоксидантное действие.","price":"55,11 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4603781379042_1_ashpntdsjzmxqhfg.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"против несовершенств"},{"type":"сыворотка","nameProduct":"Сыворотка против постакне","code":54,"description":"Активная формула средства, впервые1 содержащая комплекс из Трех Кислот борется с несовершенствами, дополняя ваш привычный ритуал ухода. Ультра Концентрированная Сыворотка Effaclar cодержит интенсивный комплекс из Салицилловой, Гликолевой и Липо-Гидрокси-Кислоты, дополяющих действие друг друга для оптимальной эффективности в борьбе против несовершенств, черных точек и следов постакне. День за днем сыворотка ощутимо обновляет кожу, заметно улучшая микрорельеф кожи и тон лица, а также предотвращая повторного появления следов постакне.","price":"150,44 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/3/3337875722827_1_kdtpa7kv37gfzpw0.jpg","typeScin":"для проблемной кожи","volume":"30 мл","purpose":"против несовершенств"},{"type":"шампунь","nameProduct":"Шампунь ревитализирующий","code":55,"description":"Ревитализирующий Шампунь-Ванна для бережного очищения кожи головы и волос. Содержит Гиалуроновую кислоту, Молекулу Абиссин и Витамин Е, которые борются с основными признаками старения. Обеспечивает длительное увлажнение кожи головы, укрепляет волосы, насыщая их влагой, возвращает упругость и придает роскошный блеск. Средство обладает узнаваемым тонким ароматом Chronologiste с нотами чайный розы, древесины светлых пород и мускуса. Дарит ощущение комфорта.","price":"160,80 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/4/3474636728268_1_ulet8oh1owjcszb0.jpg","typeScin":"для сухих и поврежденных волос","volume":"250 мл","purpose":"увлажнение волос"},{"type":"маска","nameProduct":"Маска с AHA кислотами","code":56,"description":"Маска для лица с АНА кислотами помогает очистить и увлажнить кожу, повысить ее тонус. АНА кислоты в маске для лица деликатно отшелушивают ороговевшие клетки, стимулируют их обновление. Миндальное масло питает ткани влагой, восстанавливает повреждения, способствует разглаживанию рельефа и выравниванию морщин.","price":"8,49 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4627090994239_1_qignhecyw6xayryz.jpg","typeScin":"для всех типов кожи","volume":"110 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Мист солнцезащитный","code":57,"description":"Солнцезащитный спрей для лица и тела мгновенно впитывается и остается незаметным на коже без ощущения липкой пленки. Идеальное средство для активного отдыха и спорта на открытом воздухе. Технология WetForce обеспечивает более эффективную защиту при контакте с водой и потом, покрывая кожу защитной вуалью. Чем больше Вы потеете, тем лучше работает защита! Кроме того, новая технология Invisible Feel с быстросохнущими маслами создает гладкое шелковистое покрытие, которое не ощущается на коже. ","price":"120 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/a/6/a683d589633b4d5a54e068729286e611.jpg","typeScin":"для всех типов кожи","volume":"150 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем для проблемной кожи","code":58,"description":"Чайное дерево широко известно как отличное средство для улучшения состояния жирной и проблемной кожи. Крем с экстрактом чайного дерева поможет уменьшить выработку себума и избавиться от жирного блеска, подсушит имеющиеся проблемные участки и предотвратит появление новых. Легкая текстура быстро впитывается, не перегружая кожу и придавая ей здоровую естественную матовость. ","price":"62,47 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809623291985_1_hk7a3fsd4tqolaf1.jpg","typeScin":"для жирной кожи","volume":"50 мл","purpose":"матирование"},{"type":"маска","nameProduct":"Маска для проблемной кожи","code":59,"description":"Профессиональная маска для интенсивного ухода за проблемной кожей лица. Изготовлена на основе биоактивного хлорофилл-каротинового комплекса. Оказывает интенсивное противовоспалительное, бактерицидное и себорегулирующее действие, способствует устранению акне, комедонов, постакне и шелушения, снимает покраснение и отек, сужает поры. Идеальное для жирной кожи сочетание салициловой и яблочной кислот снижает проявление себореи.","price":"26,08 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4670008494468_1_rqihcu0zvuikbr22.jpg","typeScin":"для проблемной кожи","volume":"150 мл","purpose":"против несовершенств"},{"type":"тоник","nameProduct":"Тоник увлажняющий","code":60,"description":"Максимально эффективен при регулярном использовании. Активный состав увлажняющего тоника проникает глубоко в ткани и клетки, производя очищение и питание. ","price":"15,94 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/f/8f82007e49436211b391ec6139aac608.jpg","typeScin":"для комбинированной кожи","volume":"200 мл","purpose":"увлажнение и питание"},{"type":"сыворотка","nameProduct":"Сыворотка коллагеновая","code":61,"description":"Collagen 5% + Peptides 7% Lifting Complex - биоактивный серум-концентрат направлен на каскадное укрепление внутреннего коллаген-эластинового каркаса кожи лица, повышение упругости кожи, разглаживание ее микрорельефа и борьбу с преждевременным птозом. Основой средства являются коллаген и трио синергичных друг другу пептидных комплексов.","price":"27,85 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/4/6/4627163316036_1_nfshvs2goo9mo4re.jpg","typeScin":"для всех типов кожи","volume":"15 мл","purpose":"против признаков старения"},{"type":"маска","nameProduct":"Маска увлажняющая","code":62,"description":"Позаботиться о коже и насытить её влагой помогают органические ингредиенты: миндальное масло, содержащее витамин E, экстракт кунжута, глицерин, который поддерживает баланс влаги в коже, алоэ вера и экстракт огурца, оказывающие противовоспалительное действие и успокаивающие кожу.","price":"20,32 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/2/0/2030150400038_1_xiwjbmwhvx1bq91m.jpg","typeScin":"для всех типов кожи","volume":"15 мл","purpose":"увлажнение и питание"},{"type":"шампунь","nameProduct":"Шампунь для красоты волос","code":63,"description":"Шампунь для абсолютной красоты OI деликатно очищает волосы и придает необычайную мягкость, блеск и объем.Содержит масло аннато (другое название — масло рукку) из растения, произрастающего в лесах Амазонии, а также активный ингредиент, полученный из розового масла, который придает волосам исключительный блеск, благодаря высокому коэффициенту преломления.","price":"58,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/0/8004608247630_1_00yn8zx3ur5qdekn.jpg","typeScin":"для всех типов волос","volume":"280 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Восстанавливающий крем SPF 50","code":64,"description":"Травяные экстракты снимают воспаления, препятствуют образованию сухости и шелушений, успокаивают ткани. Солнцезащитный крем препятствует преждевременному увяданию кожи, благодаря богатому антиоксидантами авокадо.","price":"35,90 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8803348040903_1_xjmcg5t94awy0w1d.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"защита от солнца"},{"type":"пенка","nameProduct":"Пенка с AHA кислотами","code":65,"description":"Предназначена для глубокого и при этом очень бережного очищения сухой и чувствительной кожи. Она легко и абсолютно безопасно удаляет ороговевший слой эпидермиса, не повреждая живые клетки. Пенка хорошо удаляет макияж и глубоко очищает кожу, проникая в поры, очищая их и сужая, смягчает кожу и улучшает ее текстуру, а также осветляет пигментацию.","price":"13,16 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/f/b/fb0b0e6a05563c68a339e043a38a96c9.jpg","typeScin":"для всех типов кожи","volume":"120 мл","purpose":"очищение"},{"type":"солнцезащита","nameProduct":"Масло помадного дерева SPF 6","code":66,"description":"Это легендарное масло для загара содержит кокосовое масло и отборные растительные масла с ценным экстрактом аннато, который воплощает в себе насыщенное карибское лето. Араваки традиционно используют темно-красные семена помадного дерева с их высоким содержанием провитамина А в качестве солнцезащитного средства, которое стимулирует образование меланина и собственные защитные механизмы кожи. ","price":"210,30 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/3/7/3700648806770_1_zpypclfuhablszfo.jpg","typeScin":"для всех типов кожи","volume":"200 мл","purpose":"защита от солнца"},{"type":"крем","nameProduct":"Крем ночной антивозрастной","code":67,"description":"Пока вы спите, омолаживающий ночной крем продолжает активно трудиться, совершенствуя вашу кожу лица! В питательную формулу, разработанную лучшими израильскими учеными, входят самые эффективные в уходе косметические компоненты: ускоряющий регенерацию тканей витамин Е; формирующий структуру кожи коллаген; Д-пантенол – провитамин В5 – который увлажняет самые глубинные слои.","price":"26,55 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/7/2/7290015816434_1_dhdzm4dm8facb6rf.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"увлажнение и питание"},{"type":"маска","nameProduct":"Маска альгинатный коктейль","code":68,"description":"В состав средства входит глутатион, мощный антиоксидант, обеспечивающий ровный тон кожи, и природный растительный комплекс, способствующий свежему цвету лица за счет экстрактов облепихи и грейфрута. Сочетание ингредиентов маски подарит вам сияющую ухоженную кожу. Назначение: возвращает сияние и свежий цвет лица усталой, тусклой коже МАСКА «АЛЬГИНАТНЫЙ КОКТЕЙЛЬ» СИЯНИЕ & ДЕТОКС обладает высокой эффективностью альгинатных масок и при этом очень проста в использовании.","price":"43,18 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809535802071_1_uld0ejezmwhefkw9.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против несовершенств"},{"type":"тоник","nameProduct":"Тоник увлажняющий","code":69,"description":"Созданный на основе натуральных ингредиентов, увлажняет кожу, помогая сделать её мягкой и чистой. Благодаря комплексу экстрактов с корейского острова Чеджу средство оказывает охлаждающее действие и понижает температуру кожи на 2 градуса, чтобы сократить выработку себума, улучшить вид кожи и успокоить её. В состав также входит экстракт лаванды, который стимулирует регенерацию кожи. ","price":"72,10 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809513390125_1_z4tsnqk1gvfvxcje.jpg","typeScin":"для сухой кожи","volume":"150 мл","purpose":"увлажнение и питание"},{"type":"сыворотка","nameProduct":"Сыворотка для сияния кожи","code":70,"description":"Средство содержит богатое витамином C масло лимона, которое помогает удалить омертвевшие клетки и сделать кожу чистой и сияющей. Экстракт бурых водорослей повышает эластичность кожи и оказывает антивозрастное действие, а экстракт софоры японской улучшает состояние кожи благодаря противовоспалительным свойствам. Для увлажнения кожи и ощущения свежести в состав входит гиалуронат натрия.","price":"36,64 BYN","urlProduct":"https://goldapple.by/media/catalog/product/cache/d19ff61fc2489b2762000db60825d3b7/8/8/8809079250536_1_vzsaf8rrz3drgzna.jpg","typeScin":"для всех типов кожи","volume":"50 мл","purpose":"против признаков старения"}]
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(2);
+
+__webpack_require__(92);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38278,7 +38434,7 @@ var PagesLinks = function (_React$Component) {
 exports.default = PagesLinks;
 
 /***/ }),
-/* 88 */
+/* 92 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

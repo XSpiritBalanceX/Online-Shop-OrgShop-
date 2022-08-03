@@ -6,18 +6,23 @@
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",
     "browse": ".\\node_modules\\.bin\\lite-server",
-    "livebuild": ".\\node_modules\\.bin\\webpack-dev-server --progress --colors --history-api-fallback"
+    "livebuild": ".\\node_modules\\.bin\\webpack-dev-server --progress --colors --history-api-fallback",
+    "json:server": ".\\node_modules\\.bin\\json-server --watch db.json",
+    "goall": ".\\node_modules\\.bin\\concurrently \"npm run livebuild\" \"npm run json:server\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.18.10",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "concurrently": "^7.3.0",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
+    "json-server": "^0.17.0",
     "lite-server": "^2.3.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
@@ -28,6 +33,7 @@
     "react-dom": "^17.0.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "shortid": "^2.2.16"
   }
 }

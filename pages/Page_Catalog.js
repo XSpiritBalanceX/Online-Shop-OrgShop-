@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import regeneratorRuntime from "regenerator-runtime";
 
 import Product from '../components/Product';
 
@@ -22,16 +23,41 @@ class intPage_Catalog extends React.PureComponent {
       volume:PropTypes.string.isRequired,
     })),
   }
+
+  state={
+    isLoad:false,
+    productArr:[]
+  }
+
+  componentDidMount(){
+    this.getProduct();
+  };
+
+  getProduct= async ()=>{
+    const response=await fetch('http://localhost:3000/products');
+    if ( !response.ok ) {
+      console.log("fetch error " + response.status);
+    }
+    else {
+      const data=await response.json();
+      this.setState({isLoad:true, productArr:data});
+    }
+  };
+
         
   render() {
-    return (<div>{this.props.infoAboutProduct.map(el=>
+    if(!this.state.isLoad){
+      return (<div>Подождите, идет загрузка данных...</div>)
+    }
+    else{
+      return (<div>{this.state.productArr.map(el=>
       <Product key={el.code}
        code={el.code}
        nameProduct={el.nameProduct}
        price={el.price}
        urlProduct={el.urlProduct}
        />)}</div>)
-   
+    }
   }
 
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
-import {setInfoProduct} from '../redux/explanForReducer';
+import {addForBascet} from '../redux/explanForReducer';
 
 import './Product.css';
 
@@ -13,12 +13,10 @@ class intProduct extends React.PureComponent {
         nameProduct: PropTypes.string.isRequired,
         price: PropTypes.string.isRequired,
         urlProduct:PropTypes.string.isRequired,
-    }
-
-    
+    };
 
     buyProduct=()=>{
-      this.props.dispatch( { type:"buyProduct" } );
+      this.props.dispatch( addForBascet(this.props.code) );
     };
 
   render(){
@@ -35,7 +33,6 @@ class intProduct extends React.PureComponent {
 };
 
 const mapStateToProps = function (state) {
-  // этому компоненту ничего не нужно из хранилища Redux
   return { }; 
 };
 
