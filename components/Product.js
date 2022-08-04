@@ -15,8 +15,13 @@ class intProduct extends React.PureComponent {
         urlProduct:PropTypes.string.isRequired,
     };
 
+    state={
+      count:0
+    }
     buyProduct=()=>{
-      this.props.dispatch( addForBascet(this.props.code) );
+      let coun=this.state.count+1;
+      this.setState({count:coun});
+      this.props.dispatch( addForBascet(this.props.code,coun) );      
     };
 
   render(){

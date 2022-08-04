@@ -2,9 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import regeneratorRuntime from "regenerator-runtime";
-
 import Product from '../components/Product';
-
+import {gotoFilter} from '../redux/explanForReducer';
 import './Page_Catalog.css';
 
 
@@ -22,16 +21,36 @@ class intPage_Catalog extends React.PureComponent {
       urlProduct:PropTypes.string.isRequired,
       volume:PropTypes.string.isRequired,
     })),
+    filterWord:PropTypes.string.isRequired
   }
 
   state={
     isLoad:false,
-    productArr:[]
+    productArr:[], 
+    buttFilter:false
   }
 
+  //при первом открытии страницы обращаемся к серверу, при последующих берем загруженные данные из Redux
   componentDidMount(){
-    this.getProduct();
+    if(this.props.infoAboutProduct.length===0){
+      this.getProduct();
+    }
+    else{
+      this.setState({isLoad:true, productArr:this.props.infoAboutProduct});
+    }
+    //если были пременены фильты с главной страницы, выводим предупреждение при перезагрузке страницы
+    if(this.props.filterWord!==''){
+      window.addEventListener("beforeunload", this.onUnload);
+    }    
   };
+  componentWillUnmount() {
+    window.removeEventListener("beforeunload", this.onUnload);
+  }
+
+  onUnload = (EO) => { 
+    EO.preventDefault();
+    EO.returnValue = '';
+ } 
 
   getProduct= async ()=>{
     const response=await fetch('http://localhost:3000/products');
@@ -44,26 +63,43 @@ class intPage_Catalog extends React.PureComponent {
     }
   };
 
+  allCatalog=()=>{
+    this.props.dispatch( gotoFilter('') );
+  }
+
         
   render() {
+    //если пользователь выбрал определенную категорию с главной страницы, то выводим отфильтрованные товары
+    let newArr;
+    if(this.props.filterWord!==''){
+      newArr=this.state.productArr.filter(el=>el.type===this.props.filterWord);
+    }
+    else if(this.props.filterWord===''){
+      newArr=this.state.productArr.slice();
+    }
+  
     if(!this.state.isLoad){
       return (<div>Подождите, идет загрузка данных...</div>)
     }
     else{
-      return (<div>{this.state.productArr.map(el=>
+      return (<div>
+        <input type={'button'} defaultValue='Показать весь каталог' 
+          onClick={this.allCatalog} style={{display:this.props.filterWord!==''?'block':'none'}} className='buttAllCatalog'/>
+        <div>{newArr.map(el=>
       <Product key={el.code}
        code={el.code}
        nameProduct={el.nameProduct}
        price={el.price}
        urlProduct={el.urlProduct}
-       />)}</div>)
+       />)}</div></div>)
     }
   }
 
 }
-const mapStateToProps = function (state) {
+const mapStateToProps = function (state) { 
   return {
     infoAboutProduct: state.infoProduct.info, 
+    filterWord:state.infoProduct.filter
   }; 
 };
 

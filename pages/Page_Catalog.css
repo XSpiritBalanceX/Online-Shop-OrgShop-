@@ -1,2 +1,14 @@
-.contForProduct{width: auto;
- }
+.contForProduct{
+    width: auto;
+}
+.buttAllCatalog{
+    background-color: rgba(247, 247, 136, 0.7);
+    border: solid rgb(247, 247, 136) 1px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2% 0 2% 7%;
+}
+.buttAllCatalog:hover{
+    cursor: pointer;
+      background-color: rgb(250, 250, 96);
+}
