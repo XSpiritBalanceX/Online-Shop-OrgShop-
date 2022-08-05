@@ -22,7 +22,7 @@ class intInfoAboutProduct extends React.PureComponent {
     }
 
     buyThisProduct=()=>{
-      this.props.dispatch( addForBascet(this.props.info.code) );
+      this.props.dispatch( addForBascet(this.props.info.code,1) );
     }
           
   render() {

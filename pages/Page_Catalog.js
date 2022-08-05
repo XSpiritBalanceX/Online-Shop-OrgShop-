@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import regeneratorRuntime from "regenerator-runtime";
 import Product from '../components/Product';
 import {gotoFilter} from '../redux/explanForReducer';
 import './Page_Catalog.css';
@@ -25,19 +24,15 @@ class intPage_Catalog extends React.PureComponent {
   }
 
   state={
-    isLoad:false,
     productArr:[], 
     buttFilter:false
   }
 
-  //при первом открытии страницы обращаемся к серверу, при последующих берем загруженные данные из Redux
-  componentDidMount(){
-    if(this.props.infoAboutProduct.length===0){
-      this.getProduct();
-    }
-    else{
-      this.setState({isLoad:true, productArr:this.props.infoAboutProduct});
-    }
+  //при первом открытии страницы загружаем данные в state из Redux
+  componentDidMount(){   
+      this.setState({isLoad:true, 
+        productArr:this.props.infoAboutProduct});
+    
     //если были пременены фильты с главной страницы, выводим предупреждение при перезагрузке страницы
     if(this.props.filterWord!==''){
       window.addEventListener("beforeunload", this.onUnload);
@@ -50,22 +45,11 @@ class intPage_Catalog extends React.PureComponent {
   onUnload = (EO) => { 
     EO.preventDefault();
     EO.returnValue = '';
- } 
-
-  getProduct= async ()=>{
-    const response=await fetch('http://localhost:3000/products');
-    if ( !response.ok ) {
-      console.log("fetch error " + response.status);
-    }
-    else {
-      const data=await response.json();
-      this.setState({isLoad:true, productArr:data});
-    }
-  };
+  } ;
 
   allCatalog=()=>{
     this.props.dispatch( gotoFilter('') );
-  }
+  };
 
         
   render() {
@@ -78,11 +62,7 @@ class intPage_Catalog extends React.PureComponent {
       newArr=this.state.productArr.slice();
     }
   
-    if(!this.state.isLoad){
-      return (<div>Подождите, идет загрузка данных...</div>)
-    }
-    else{
-      return (<div>
+    return (<div>
         <input type={'button'} defaultValue='Показать весь каталог' 
           onClick={this.allCatalog} style={{display:this.props.filterWord!==''?'block':'none'}} className='buttAllCatalog'/>
         <div>{newArr.map(el=>
@@ -92,7 +72,7 @@ class intPage_Catalog extends React.PureComponent {
        price={el.price}
        urlProduct={el.urlProduct}
        />)}</div></div>)
-    }
+    
   }
 
 }

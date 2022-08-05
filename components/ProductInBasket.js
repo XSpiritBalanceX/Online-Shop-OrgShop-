@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import './ProductInBasket.css';
+import {ubdateCount, addForBascet, deleteOneElement} from '../redux/explanForReducer';
 
 
 class intProductInBasket  extends React.PureComponent{
@@ -16,43 +17,31 @@ class intProductInBasket  extends React.PureComponent{
         cbDeleteProduct:PropTypes.func.isRequired,
         
     };
-    state={
-      dataCount:{}
-    }
-
-    componentDidMount(){
-      
-      if(/* Object.keys(this.props.counters) */this.props.counters.length===0){
-        this.getData();
-      }
-      else{
-        this.setState({dataCount:this.props.counters});
-      }
-    }
-  
-    getData=()=>{
-      fetch('http://localhost:3000/counters')
-      .then(response=>response.json())
-      .then(data=>this.setState({dataCount:data.count} ))
-      .catch(error => { alert('ошибка!\n'+error);}); 
-    };
 
     deleteProduct=()=>{
       this.props.cbDeleteProduct(this.props.infoPr.code)
     };
 
+    incCounter=()=>{
+      this.props.dispatch( ubdateCount(this.props.infoPr.code,1) );
+      this.props.dispatch( addForBascet(this.props.infoPr.code) );   
+    };
+
+    decCounter=()=>{
+      this.props.dispatch( ubdateCount(this.props.infoPr.code,-1) );
+      this.props.dispatch( deleteOneElement(this.props.infoPr.code) );
+    };
+
 
   render(){
-    let counterValue=this.state.dataCount[this.props.infoPr.code];
-    
     return (<div className='contForItem'>
         <img src={this.props.infoPr.urlProduct} title={this.props.infoPr.nameProduct}/>
         <div className='nameProd'>{this.props.infoPr.nameProduct}</div>
         <div className='priceP'>{this.props.infoPr.price}</div>
-        <div>
-          <input type={'button'} defaultValue='-'/>
-          <input type={'text'} defaultValue={counterValue}/>
-          <input type={'button'} defaultValue='+'/>
+        <div className='counter'>
+          <input  type={'button'} defaultValue='-' onClick={this.decCounter} disabled={this.props.counters[this.props.infoPr.code]===1?true:false}/>
+          <p className='count'>{this.props.counters[this.props.infoPr.code]}</p>
+          <input  type={'button'} defaultValue='+' onClick={this.incCounter}/>
         </div>
         <div><input type={'button'} onClick={this.deleteProduct} defaultValue='Удалить' className='buttForDel'/></div>
     </div>)
