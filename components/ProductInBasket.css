@@ -6,7 +6,11 @@
   width: 40em;
   align-items: center;
   padding: 10px;
+  opacity: 1;
 }
+.deleteItem{opacity: 0.01;
+  transition: opacity 300ms ease-in;}
+
 .contForItem img{
     width: 8em;
     height: 8em;

@@ -31,6 +31,8 @@
     background-color: rgb(250, 250, 96);
 }
 
+
+
 @media all and (max-width: 60em){
     .emptyBasket{
         width: 30em;

@@ -17,9 +17,14 @@ class intProductInBasket  extends React.PureComponent{
         cbDeleteProduct:PropTypes.func.isRequired,
         
     };
-
+    divRef=React.createRef()
+    
     deleteProduct=()=>{
-      this.props.cbDeleteProduct(this.props.infoPr.code)
+      this.divRef.current.className='contForItem deleteItem'
+      setTimeout(() => {
+        this.props.cbDeleteProduct(this.props.infoPr.code);
+      }, 300) 
+      
     };
 
     incCounter=()=>{
@@ -34,7 +39,8 @@ class intProductInBasket  extends React.PureComponent{
 
 
   render(){
-    return (<div className='contForItem'>
+    return (
+        <div className='contForItem' ref={this.divRef}>
         <img src={this.props.infoPr.urlProduct} title={this.props.infoPr.nameProduct}/>
         <div className='nameProd'>{this.props.infoPr.nameProduct}</div>
         <div className='priceP'>{this.props.infoPr.price}</div>
@@ -44,7 +50,8 @@ class intProductInBasket  extends React.PureComponent{
           <input  type={'button'} defaultValue='+' onClick={this.incCounter}/>
         </div>
         <div><input type={'button'} onClick={this.deleteProduct} defaultValue='Удалить' className='buttForDel'/></div>
-    </div>)
+    </div>
+    )
   }
 }
 

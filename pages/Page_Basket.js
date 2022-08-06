@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import ProductInBasket  from '../components/ProductInBasket';
-import shortid from 'shortid';//генерация всегда нового key для продукта в корзине
 import regeneratorRuntime from "regenerator-runtime";
 import {deleteFromBasket, addCount} from '../redux/explanForReducer';
+
 
 import './Page_Basket.css';
 
@@ -25,7 +25,6 @@ class intPage_Basket extends React.PureComponent {
     }))
   }
   
-
   deleteProduct=(code)=>{
     this.props.dispatch( deleteFromBasket(code) );
   };
@@ -36,34 +35,23 @@ class intPage_Basket extends React.PureComponent {
       <button className='goToCatalog'><NavLink to={"/catalog"} >Перейти в каталог</NavLink ></button></div>);
     }
     else{
-      /* let currentSum=0;
-      this.props.basketRedux.forEach(el=>
-      currentSum+=parseFloat(el.price));
-
-      //обновляем конечную цену в корзине при добавлении нового продукта
-      fetch("http://localhost:3000/price", {method:'PUT',headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        }, 
-        body:JSON.stringify({
-          id: 1,
-          price:currentSum.toFixed(2),
-      })}); */
-
       const uniqItem=[];
       const countItems = this.props.basketRedux.reduce((acc, el) => {
         acc[el.code] = acc[el.code] ? acc[el.code] + 1 : 1;
         acc[el.code]===1?uniqItem.push(el):null;
         return acc;
       }, {});
+
       this.props.dispatch( addCount(countItems) );
-     return ( <div>{uniqItem.map(el=>      
-            <ProductInBasket 
+      
+     return (<div>
+            { uniqItem.map(el=>
+              <ProductInBasket 
                key={el.code}
                infoPr={el}
                cbDeleteProduct={this.deleteProduct}
-             />)    
-            }
+             />
+              ) } 
             <div className='allPrice'><p>К оплате {this.props.price} BYN</p>
             <input type={'button'} defaultValue='Оплатить' className='butForBuy' /></div>
             </div> 
