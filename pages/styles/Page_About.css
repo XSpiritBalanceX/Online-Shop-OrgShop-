@@ -137,7 +137,7 @@
  cursor: pointer;}
  .onlineStaff:hover{background-color: transparent;
  border: rgba(253, 223, 65, 1) solid 1px;}
-.modalWind{width: 30em;
+.modalWind{width: 60%;
   height: 15em;
   z-index: 10;
   text-align: center;

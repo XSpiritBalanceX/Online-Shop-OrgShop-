@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Product from '../components/Product';
-import './Page_PageByPage.css';
+import './styles/Page_PageByPage.css';
 
 const intPage_PageByPage = props => {
     

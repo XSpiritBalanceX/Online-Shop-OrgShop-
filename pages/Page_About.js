@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import './Page_About.css'
+import './styles/Page_About.css'
 
 export default props=>{
   const [count, setCount] = useState(1);

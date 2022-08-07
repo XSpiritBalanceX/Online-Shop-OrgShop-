@@ -1,6 +1,6 @@
 import React from 'react';
 import Preloader from '../components/Preloader';
-import './Page_Contacts.css';
+import './styles/Page_Contacts.css';
 
 class Page_Contacts extends React.PureComponent {
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Product from '../components/Product';
 import {gotoFilter} from '../redux/explanForReducer';
 import { NavLink } from 'react-router-dom';
-import './Page_Catalog.css';
+import './styles/Page_Catalog.css';
 
 
 class intPage_Catalog extends React.PureComponent {

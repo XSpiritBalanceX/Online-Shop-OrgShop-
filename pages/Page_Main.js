@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {gotoFilter} from '../redux/explanForReducer';
 
-import './Page_Main.css';
+import './styles/Page_Main.css';
 
 class intPage_Main extends React.PureComponent {
 

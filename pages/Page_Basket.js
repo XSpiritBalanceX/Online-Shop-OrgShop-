@@ -7,7 +7,7 @@ import regeneratorRuntime from "regenerator-runtime";
 import {deleteFromBasket, addCount} from '../redux/explanForReducer';
 
 
-import './Page_Basket.css';
+import './styles/Page_Basket.css';
 
 class intPage_Basket extends React.PureComponent {
 
