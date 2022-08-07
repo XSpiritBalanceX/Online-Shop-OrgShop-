@@ -23,7 +23,7 @@ class intProductInBasket  extends React.PureComponent{
       this.divRef.current.className='contForItem deleteItem'
       setTimeout(() => {
         this.props.cbDeleteProduct(this.props.infoPr.code);
-      }, 300) 
+      }, 400) 
       
     };
 

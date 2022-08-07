@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Preloader from '../components/Preloader';
 import './Page_Contacts.css';
 
 class Page_Contacts extends React.PureComponent {
@@ -46,7 +46,7 @@ class Page_Contacts extends React.PureComponent {
       return <div>Ошибка: {error.message}</div>;
      }
     else if(!isLoaded){
-      return (<div className='loading'>Подождите, идет загрузка данных...</div>)
+      return (<Preloader/>)
     }
     else{
       return(

@@ -23,6 +23,8 @@ export default props=>{
     //проверка согласия с пользовательским соглашением
     const [agreeWiPo, setCheck] = useState(false);
     const [forPoliti, setForPolitic] = useState('');
+    //показ модального окна
+    const [show, setShow]=useState(false);
     
     //валидируем поля подписки на новости
   function handleClick() {
@@ -40,10 +42,13 @@ export default props=>{
       
     !agreeWiPo?errorCheck='Вы должны дать согласие на обработку персональных данных':errorCheck='';
       setForPolitic(errorCheck);
+      errorEmail==''&errorCheck==''&errorNumber==''?setShow(true):null;
+      setTimeout(()=>{setShow(false);setEmail(''); setNumber('');setCheck(false)},2000);
+      
   }
 
   //получаем данные о сутрудниках
-  function testClick(){
+  function getPersonal(){
     fetch('https://my-json-server.typicode.com/XSpiritBalanceX/datast/posts11')
     .then(response => response.json())
     .then(json => readData(json))
@@ -70,7 +75,7 @@ export default props=>{
     <React.Fragment>
        {showDopData?<div className='showStaff'><input type={'button'} defaultValue='&times;' className='buttonClose' onClick={()=>setShowData(false)}/>{dopData}</div>:null} 
       <div className='aboutShop'>
-      <h3>О МАГАЗИНЕ</h3> <input type={'button'} defaultValue='сотрудники online магазина' className='onlineStaff' onClick={testClick}/>
+      <h3>О МАГАЗИНЕ</h3> <input type={'button'} defaultValue='сотрудники online магазина' className='onlineStaff' onClick={getPersonal}/>
     </div>
     <div className='firstContent'>
       <div className='firstImg'></div>
@@ -118,6 +123,7 @@ export default props=>{
     </div>
     <input type={'button'} name='podpiska' defaultValue={'Подписаться'} className='buttonPodp' onClick={handleClick}/>
     </div>
+    {show?<div className='modalWind'><p className='infoPod'>Информация о самых свежих новинках будет отправлена Вам на почту.</p></div>:null}
     </React.Fragment>
   );
   

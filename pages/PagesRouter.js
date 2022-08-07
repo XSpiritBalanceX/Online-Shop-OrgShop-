@@ -8,13 +8,18 @@ import Page_About from './Page_About';
 import Page_Contacts from './Page_Contacts';
 import Page_Item from './Page_Item';
 import Page_Basket from './Page_Basket';
+import Page_PageByPage from './Page_PageByPage';
 import {loadData} from '../redux/explanForReducer';
+import Preloader from '../components/Preloader';
+import Counter from '../components/Counter';
+
+
 class intPagesRouter extends React.Component {
   state={
     isLoadData:false,
     isLoadBasket:false,
     productArr:[],
-    productBasket:[]
+    productBasket:[],
   }
   componentDidMount(){
     this.getProduct();
@@ -43,20 +48,25 @@ class intPagesRouter extends React.Component {
   }
   render() {
     if(!this.state.isLoadData || !this.state.isLoadBasket){
-      return(<div>Загрузка данных</div>)
+      return(<Preloader />)
     }else{
       this.props.dispatch( loadData(this.state.productArr, this.state.productBasket) );
       return (
-      <div style={{position:'absolute', top: "15%"}}>
-      <Routes>       
+      <React.Fragment>
+        <div style={{position:'absolute', right:'3%',top:'2%', fontSize:'15px', color:'#ebc642'}}><Counter/>  </div>
+        
+      <div style={{position:'absolute', top: "15%"}}> 
+      <Routes> 
         <Route path="/" element={<Page_Main/>} />
         <Route path="/catalog" element={<Page_Catalog/>} />
+        <Route path="/pages/:page" element={<Page_PageByPage/>} />
         <Route path="/catalog/:prodcode" element={<Page_Item/>} />
         <Route path="/about_shop" element={<Page_About/>} />
         <Route path="/contacts" element={<Page_Contacts/>} />
         <Route path="/basket" element={<Page_Basket/>} />             
       </Routes> 
       </div>
+        </React.Fragment>
       
     );
     }
@@ -66,8 +76,7 @@ class intPagesRouter extends React.Component {
 
 }
 const mapStateToProps = function (state) {
-  return { 
-        }; 
+  return { }; 
 };
 
 const PagesRouter = connect(mapStateToProps)(intPagesRouter);

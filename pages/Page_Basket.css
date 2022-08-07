@@ -31,11 +31,48 @@
     background-color: rgb(250, 250, 96);
 }
 
+.payNow{
+    position: absolute;top: 1%; left: 50%;
+    width: 30em;
+    height: auto;
+    background-color: rgba(248, 248, 100, 0.9);
+    border: solid rgb(248, 248, 100) 1px;
+    z-index: 10;
+    border-radius: 20px;
+}
+.contInfo{
+    margin: 2% 5% 2% 5%;
+    padding: 2% 5% 2% 5%;
+    display: flex;flex-direction: column;
+}
+.contInfo input:not(:last-child){margin-bottom: 5%;
+ padding: 2%;}
 
+.inputPay{
+   border: none;
+   border-bottom: 2px solid grey;
+   background-color: rgb(234, 233, 233);
+   color: grey;
+}
+.buttPay{
+    width: 30%;
+    background-color: rgb(91, 247, 91);
+    border-radius: 10px;
+    border: solid 1px rgb(91, 247, 91);
+    font-size: 20px;
+}
+.buttPay:hover{
+    background-color: green;
+    border: solid 1px green;
+    cursor: pointer;
+}
 
 @media all and (max-width: 60em){
     .emptyBasket{
         width: 30em;
+    }
+    .payNow{
+        left: 15%;
     }
 }
 @media all and (max-width: 40em){
@@ -45,4 +82,11 @@
     .allPrice{
         margin: 2% 0 10% 10%;  
       }
+      .payNow{
+        left: 5%;
+        width: 25em;
+    }
+    .buttPay{
+        font-size: 15px;
+    }
 }

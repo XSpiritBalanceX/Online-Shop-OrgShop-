@@ -1,0 +1,32 @@
+.pages{
+    background-color: rgba(247, 247, 136, 0.7);
+    border: solid rgb(247, 247, 136) 1px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2% 0 2% 7%;
+}
+
+.pagesItem{ background-color: rgba(247, 243, 136, 0.7);
+    border: solid rgb(250, 222, 62) 1px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.pages a,.pagesItem a{
+    text-decoration: none; 
+    color: black;
+}
+
+.pages:hover, .pagesItem:hover{
+    cursor: pointer;
+    background-color: rgb(250, 250, 96);
+}
+
+.divPages{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.divPages button:not(:last-child){
+    margin-right: 1%;
+}

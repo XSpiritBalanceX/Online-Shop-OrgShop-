@@ -137,6 +137,14 @@
  cursor: pointer;}
  .onlineStaff:hover{background-color: transparent;
  border: rgba(253, 223, 65, 1) solid 1px;}
+.modalWind{width: 30em;
+  height: 15em;
+  z-index: 10;
+  text-align: center;
+  background-color: rgb(239, 239, 140);
+  border: solid rgb(238, 238, 125) 5px;
+  position: absolute;bottom: 10%; left: 20%;}
+.infoPod{margin: 5em 0 5em 0;}
 
 @media all and (max-width: 60em){
   .secStat{margin-left: 5%;}
@@ -173,4 +181,5 @@
 .text-field_floating-2 .text-field__input {width: 20em;}
 .buttonPodp{margin-left: 20%;}
 .aboutPodp{font-size: 13px;}
+.modalWind{width: 20em; left: 10%;}
 }

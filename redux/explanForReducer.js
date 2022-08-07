@@ -58,7 +58,9 @@ const deleteOneElement=function(code){
         type:delete_one_elem,
         codeElem:code
     }
-}
+};
+
+
 
 
 export {loadData, load_data,
@@ -67,4 +69,5 @@ export {loadData, load_data,
     deleteFromBasket, delete_from_basket,
     addCount, add_count,
     ubdateCount, update_count_item,
-    deleteOneElement, delete_one_elem }
+    deleteOneElement, delete_one_elem ,
+    }

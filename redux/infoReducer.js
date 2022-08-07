@@ -1,6 +1,6 @@
 import {add_for_backet, click_button_filter,
   delete_from_basket, load_data, add_count,
-  update_count_item, delete_one_elem} from './explanForReducer';
+  update_count_item, delete_one_elem,} from './explanForReducer';
 import regeneratorRuntime from "regenerator-runtime";
 
 
@@ -9,7 +9,8 @@ const initState={
   basket:[],
   filter:'',
   cnts:{},
-  price:null
+  price:null,
+  pages:1
 };
 
 
@@ -81,14 +82,14 @@ function infoReducer(state=initState,action) {
         .catch( error => { alert('ошибка!\n'+error); } );
       return newState;
     }
-
+//создаем счетчик количества товара в корзине
     case add_count:{
       let newState={...state};
       newState.cnts=action.cnts;
 
       return newState;
     }
-
+//обновляем счетчик товара
     case update_count_item:{
       let newState={...state}
         newState.cnts={...state.cnts,
@@ -96,13 +97,17 @@ function infoReducer(state=initState,action) {
         };
       return newState;
     }
-
+//удаляем один элемент из корзины при нажатии кнопки
     case delete_one_elem:{
       let newState={...state};
-      newState.basket.forEach((el,index)=>{
-        if(el.code===action.codeElem){
-          newState.basket.splice(index,1);
-        }});
+        let arrIndexDupl=[];
+        state.basket.forEach((el,index)=>{
+          if(el.code===action.codeElem){
+            arrIndexDupl.push(index)
+          }          
+        });
+        newState.basket.splice(arrIndexDupl[0],1);
+
         let allprice=0;
       newState.basket.forEach(el=>
         allprice+=parseFloat(el.price));
@@ -121,10 +126,8 @@ function infoReducer(state=initState,action) {
         return newState;
     }
 
-    
-  
     default:
-        return state;
+      return state;
     }
 }
   

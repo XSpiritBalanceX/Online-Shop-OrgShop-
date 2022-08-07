@@ -24,10 +24,13 @@ class intPage_Basket extends React.PureComponent {
       volume:PropTypes.string.isRequired,
     }))
   }
+
   
   deleteProduct=(code)=>{
     this.props.dispatch( deleteFromBasket(code) );
   };
+
+  
 
   render(){
      if(this.props.basketRedux.length==0){
@@ -53,10 +56,10 @@ class intPage_Basket extends React.PureComponent {
              />
               ) } 
             <div className='allPrice'><p>К оплате {this.props.price} BYN</p>
-            <input type={'button'} defaultValue='Оплатить' className='butForBuy' /></div>
+            <input type={'button'} defaultValue='Оплатить' className='butForBuy'/></div>
             </div> 
        )
-    };
+    }
   }
 };
 

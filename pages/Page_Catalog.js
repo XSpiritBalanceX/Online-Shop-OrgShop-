@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Product from '../components/Product';
 import {gotoFilter} from '../redux/explanForReducer';
+import { NavLink } from 'react-router-dom';
 import './Page_Catalog.css';
 
 
@@ -25,7 +26,7 @@ class intPage_Catalog extends React.PureComponent {
 
   state={
     productArr:[], 
-    buttFilter:false
+    buttFilter:false,
   }
 
   //при первом открытии страницы загружаем данные в state из Redux
@@ -51,6 +52,8 @@ class intPage_Catalog extends React.PureComponent {
     this.props.dispatch( gotoFilter('') );
   };
 
+  
+
         
   render() {
     //если пользователь выбрал определенную категорию с главной страницы, то выводим отфильтрованные товары
@@ -65,13 +68,15 @@ class intPage_Catalog extends React.PureComponent {
     return (<div>
         <input type={'button'} defaultValue='Показать весь каталог' 
           onClick={this.allCatalog} style={{display:this.props.filterWord!==''?'block':'none'}} className='buttAllCatalog'/>
+          <button  className='buttAllCatalog' ><NavLink to={"/pages/"+'first'} >Постраничный просмотр товаров</NavLink ></button>
         <div>{newArr.map(el=>
       <Product key={el.code}
        code={el.code}
        nameProduct={el.nameProduct}
        price={el.price}
        urlProduct={el.urlProduct}
-       />)}</div></div>)
+       />)}</div>
+       </div>)
     
   }
 
@@ -79,7 +84,7 @@ class intPage_Catalog extends React.PureComponent {
 const mapStateToProps = function (state) { 
   return {
     infoAboutProduct: state.infoProduct.info, 
-    filterWord:state.infoProduct.filter
+    filterWord:state.infoProduct.filter,
   }; 
 };
 
