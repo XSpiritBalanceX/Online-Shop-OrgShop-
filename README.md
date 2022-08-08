@@ -11,7 +11,7 @@ _____
 Для правильной сборки и работы приложения выполните эту команду.
 
     npm run goall
- Для работы приложения требуется одновременно выполнять две команды, чтобы работало само приложение, а также json-server со всеми данными. Был использован пакет [concurrently](https://www.npmjs.com/package/concurrently?activeTab=readme), который объединяет в данном проекте команды "webpack-dev-server --progress --colors --history-api-fallback" и "json-server --watch db.json".
+ Откройте в браузере http://localhost:8080/, где будет располагаться само приложение и на порту http://localhost:3000/ размещен json-server.Для работы приложения требуется одновременно выполнять две команды, чтобы работало само приложение, а также json-server со всеми данными. Был использован пакет [concurrently](https://www.npmjs.com/package/concurrently?activeTab=readme), который объединяет в данном проекте команды "webpack-dev-server --progress --colors --history-api-fallback" и "json-server --watch db.json".
 
 Также есть дополнительные команды:
 
