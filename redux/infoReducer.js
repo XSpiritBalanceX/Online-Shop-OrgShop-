@@ -10,7 +10,6 @@ const initState={
   filter:'',
   cnts:{},
   price:null,
-  pages:1
 };
 
 

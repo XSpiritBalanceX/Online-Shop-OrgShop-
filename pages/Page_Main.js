@@ -65,7 +65,7 @@ class intPage_Main extends React.PureComponent {
 };
 
 const mapStateToProps = function (state) {
-  return { basketRedux: state.infoProduct.basket }; 
+  return { }; 
 };
 
 const Page_Main = connect(mapStateToProps)(intPage_Main);
