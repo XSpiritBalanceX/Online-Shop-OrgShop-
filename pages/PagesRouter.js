@@ -12,7 +12,7 @@ import Page_PageByPage from './Page_PageByPage';
 import {loadData} from '../redux/explanForReducer';
 import Preloader from '../components/Preloader';
 import Counter from '../components/Counter';
-
+import './styles/PageRoutes.css';
 
 class intPagesRouter extends React.Component {
   state={
@@ -53,9 +53,9 @@ class intPagesRouter extends React.Component {
       this.props.dispatch( loadData(this.state.productArr, this.state.productBasket) );
       return (
       <React.Fragment>
-        <div style={{position:'absolute', right:'3%',top:'2%', fontSize:'15px', color:'#ebc642'}}><Counter/>  </div>
+        <div className='basketCount' ><Counter/>  </div>
         
-      <div style={{position:'absolute', top: "15%"}}> 
+      <div className='contanerForRout' > 
       <Routes> 
         <Route path="/" element={<Page_Main/>} />
         <Route path="/catalog" element={<Page_Catalog/>} />

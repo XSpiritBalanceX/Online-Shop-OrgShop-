@@ -1,0 +1,15 @@
+.basketCount{
+    position:absolute; right:3%;top:2%; 
+    font-size:15px;
+     color:#ebc642;
+}
+
+.contanerForRout{
+    position: absolute;top: 15%;
+}
+
+
+
+@media all and (max-width: 40em){
+    .basketCount{right: 1%;}
+}
